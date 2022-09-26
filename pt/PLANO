@@ -1,0 +1,282 @@
+
+programas
+
+- função print e valor string
+
+---------- hello.py
+
+print('Hello World')
+
+
+
+- type. tipo string
+
+---------- tipo_string.py
+
+print(type('Hello World'))
+
+
+
+- números e operadores
+
+---------- desconto.py
+
+print(1.23 * (1.0 - 0.13))
+print(1.23 * 0.13)
+
+
+
+- type. tipo float
+
+---------- tipo_float.py
+
+print(type(1.23))
+
+
+
+- round
+
+---------- desconto_v2.py
+
+print(round(1.23 * (1.0 - 0.13), 2))
+print(round(1.23 * 0.13, 2))
+
+
+
+- variáveis
+
+---------- desconto_v3.py
+
+preco    = 1.23
+desconto = 13
+
+print(round(preco * (1.0 - desconto/100), 2))
+print(round(preco * desconto/100, 2))
+
+
+
+- comentários. erro
+
+---------- desconto_v4.py
+
+preco    = 1.23
+desconto = 13 desconto em percentagem
+
+print(round(preco * (1.0 - desconto/100), 2))
+print(round(preco * desconto/100, 2))
+
+
+
+- comentários
+
+---------- desconto_v5.py
+
+preco    = 1.23
+desconto = 13 # desconto em percentagem
+
+print(round(preco * (1.0 - desconto/100), 2))
+print(round(preco * desconto/100, 2))
+
+
+
+- mais comentários
+
+---------- desconto_v6.py
+
+# dados um preço, e um desconto em pecentagem, este programa calcula o
+# valor a pagar e o valor do desconto
+
+preco    = 1.23
+desconto = 13 # desconto em percentagem
+
+print(round(preco * (1.0 - desconto/100), 2))
+print(round(preco * desconto/100, 2))
+
+
+
+- clhocolate e água
+
+---------- desconto_v7.py
+
+# dados um preço, e um desconto em pecentagem, este programa calcula o
+# valor a pagar e o valor do desconto
+
+# chocolate
+preco    = 1.23
+desconto = 13 # o desconto está em percentagem
+
+print(round(preco * (1.0 - desconto/100), 2))
+print(round(preco * desconto/100, 2))
+
+# água
+preco    = 0.78
+desconto = 5.5 # o desconto está em percentagem
+
+print(round(preco * (1.0 - desconto/100), 2))
+print(round(preco * desconto/100, 2))
+
+
+
+- funções
+
+---------- desconto_v8.py
+
+# dados um preço, e um desconto em pecentagem, este programa calcula o
+# valor a pagar e o valor do desconto
+
+def mostra_valores(preco, desconto):
+
+    print(round(preco * (1.0 - desconto/100), 2))
+    print(round(preco * desconto/100, 2))
+
+# chocolate
+preco    = 1.23
+desconto = 13 # o desconto está em percentagem
+mostra_valores(preco, desconto)
+
+# água
+preco    = 0.78
+desconto = 5.5 # o desconto está em percentagem
+mostra_valores(preco, desconto)
+
+
+
+- alterar os preços à mão 
+
+---------- desconto_v9.py
+
+# dados um preço, e um desconto em pecentagem, este programa calcula o
+# valor a pagar e o valor do desconto
+
+def mostra_valores(preco, desconto):
+
+    print(round(preco * (1.0 - desconto/100), 2))
+    print(round(preco * desconto/100, 2))
+
+# chocolate
+preco    = 1.17
+desconto = 12 # o desconto está em percentagem
+mostra_valores(preco, desconto)
+
+# água
+preco    = 0.88
+desconto = 6.5 # o desconto está em percentagem
+mostra_valores(preco, desconto)
+
+
+
+- input (erro)
+
+---------- desconto_v10.py
+
+# dados um preço, e um desconto em pecentagem, este programa calcula o
+# valor a pagar e o valor do desconto
+
+def mostra_valores(preco, desconto):
+
+    print(round(preco * (1.0 - desconto/100), 2))
+    print(round(preco * desconto/100, 2))
+
+# chocolate
+preco    = input('escreva o valor do preço, seguido de enter/return ')
+# o desconto está em percentagem
+desconto = input('escreva o valor do desconte, em percentagem, seguido de enter/return ')
+mostra_valores(preco, desconto)
+
+# água
+preco    = input('escreva o valor do preço, seguido de enter/return ')
+# o desconto está em percentagem
+desconto = input('escreva o valor do desconte, em percentagem, seguido de enter/return ')
+mostra_valores(preco, desconto)
+
+
+
+- função float
+
+---------- desconto_v11.py
+
+# dados um preço, e um desconto em pecentagem, este programa calcula o
+# valor a pagar e o valor do desconto
+
+def mostra_valores(preco, desconto):
+
+    print(round(preco * (1.0 - desconto/100), 2))
+    print(round(preco * desconto/100, 2))
+
+# chocolate
+preco    = input('escreva o valor do preço, seguido de enter/return ')
+# o desconto está em percentagem
+desconto = input('escreva o valor do desconte, em percentagem, seguido de enter/return ')
+mostra_valores(preco, desconto)
+
+# água
+preco    = input('escreva o valor do preço, seguido de enter/return ')
+# o desconto está em percentagem
+desconto = input('escreva o valor do desconte, em percentagem, seguido de enter/return ')
+mostra_valores(preco, desconto)
+
+
+
+- concatenação erro
+
+---------- desconto_v12.py
+
+# dados um preço, e um desconto em pecentagem, este programa calcula o
+# valor a pagar e o valor do desconto
+
+def mostra_valores(preco, desconto):
+
+    valor_a_pagar     = round(preco * (1.0 - desconto/100), 2)
+    valor_do_desconto = round(preco * desconto/100, 2)
+
+    print()
+
+    print('o valor a pagar é' + valor_a_pagar)
+    print('o valor do desconto é ' + valor_do_desconto)
+
+# chocolate
+preco    = input('escreva o valor do preço, seguido de enter/return ')
+# o desconto está em percentagem
+desconto = input('escreva o valor do desconte, em percentagem, seguido de enter/return ')
+mostra_valores(preco, desconto)
+
+# água
+preco    = input('escreva o valor do preço, seguido de enter/return ')
+# o desconto está em percentagem
+desconto = input('escreva o valor do desconte, em percentagem, seguido de enter/return ')
+mostra_valores(preco, desconto)
+
+
+
+- função str
+
+---------- desconto_v13.py
+
+# dados um preço, e um desconto em pecentagem, este programa calcula o
+# valor a pagar e o valor do desconto
+
+def mostra_valores(preco, desconto):
+
+    valor_a_pagar     = round(preco * (1.0 - desconto/100), 2)
+    valor_do_desconto = round(preco * desconto/100, 2)
+
+    print()
+
+    print('o valor a pagar é' + str(valor_a_pagar))
+    print('o valor do desconto é ' + str(valor_do_desconto))
+
+# chocolate
+preco    = input('escreva o valor do preço, seguido de enter/return ')
+# o desconto está em percentagem
+desconto = input('escreva o valor do desconte, em percentagem, seguido de enter/return ')
+mostra_valores(preco, desconto)
+
+# água
+preco    = input('escreva o valor do preço, seguido de enter/return ')
+# o desconto está em percentagem
+desconto = input('escreva o valor do desconte, em percentagem, seguido de enter/return ')
+mostra_valores(preco, desconto)
+
+
+
+

@@ -1,0 +1,60 @@
+
+- acrescentar as palavras reservadas à secção "sobre variáveis"?
+
+(parece-me que não. isto são detalhes)
+
+  * Há agumas palavras que são consideradas palavras reservadas
+    Python. Porque estão associadas a instruções específicas. Por
+    exemplo a palavra `and`, em português `e`, representa o operador
+    lógico de comjunção. O `e` lógico. Os nomes da variáveis não pode
+    ser palavras reservadas Python.
+
+- acrescentar variáveis como endereçoes de memória à secção "sobre variáveis"?
+
+(parece-me que não. isto são detalhes)
+
+**Endereços de memória**
+
+As posições da memória disponíveis nos computadores estão
+numeradas. Podemos aceder à posição `1`, à posição `2`, etc. Os
+números que identificam as posições de memória chamam-se
+endereços. São referências para posições de memória.
+
+Num computador com memória de `8G`, há `8 000 000 000` posições de
+memória. Imagine-se o que seria um programa que usasse posições de
+memória diretamente.
+
+**Hipótese de programa**
+
+```
+294 593 395 = 5.2
+963 334 108 = 7.3
+439 155 089 = 294 593 395 + 963 334 108
+print(439 155 089)
+```
+
+Seria praticamente impossível programar assim. Essencialmente porque:
+
+* teriamos que conhecer as posições de memória que estivessem livres
+  para armazenar valores.
+
+* um programa poderia funcionar num computador e não funcionar noutro
+  que tivesse, por exemplo, menos memória.
+
+* facilmente nos enganariamos ao ter que manipular tantos números tão
+  grandes.
+
+* os programas seriam particamente impossíeis de ler e, como tal, de
+  perceber.
+
+Em Python, as posições de memória onde os valores são armazenados, são
+escolhidas automatcamente pelo intrepretador Python (em conjunto com o
+sistema operativo do computador).
+
+Em Python, as variáveis são nomes atribuídos às referências para as
+posições de memória onde estão os valores com os quais foram
+inicializadas. Por outras palavras, são referências para posições de
+memória com nomes escolhidos pelos programadores. Esta característica
+é diferente de outras linguagens de programação e tem consequências
+que veremos mais às frente.
+

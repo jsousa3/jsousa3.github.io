@@ -1,0 +1,15 @@
+{
+  "name": "202209_hello_world_extended_version",
+  "version": "1.0.0",
+  "description": "\"Hello World - Extended Version :-)\" é um livro livre de introdução à linguagem de programação Python.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "honkit": "^4.0.0"
+  }
+}

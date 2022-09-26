@@ -1,0 +1,4 @@
+  File "/home/jbs/develop/202209_hello_python_world/pt/hello_world/hello_comentarios/desconto_v5.py", line 2
+    desconto = 9    este desconto é em percentagem
+                    ^
+SyntaxError: invalid syntax
