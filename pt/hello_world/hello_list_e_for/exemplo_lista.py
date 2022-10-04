@@ -1,16 +1,18 @@
-uma_lista = [1.0, 'hello', 2.0, 'world'] # isto é uma lista
-print(uma_lista[0])                      # este é o primeiro elemento
+# precos é uma lista
+precos = [1.23, 7.08, 3.00, 0.53, 2.01, 4.44, 9.99, 2.50, 0.20, 7.70]
+
+print(precos[0])                      # este é o primeiro elemento
 indice = 1
-print(uma_lista[indice])                 # este é o segundo elemento
+print(precos[indice])                 # este é o segundo elemento
 indice = 2
-print(uma_lista[indice])                 # este é o terceiro elemento
-print(uma_lista[3])                      # este é o quarto elemento
+print(precos[indice])                 # este é o terceiro elemento
+print(precos[3])                      # este é o quarto elemento
 
 # alterar o terceiro elemento
-uma_lista[2] = 'python'
+precos[2] = 'esgotado'
 
-print(uma_lista)
+print('aqui está a lista completa')
+print(precos)
 
-# o quinto elemento não existe
-# a próxima linha dá erro
-print(uma_lista[4])
+# o décimo primeiro elemento não existe
+print(precos[10]) # esta linha dá erro

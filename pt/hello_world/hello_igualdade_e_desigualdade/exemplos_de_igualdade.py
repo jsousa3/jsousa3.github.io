@@ -1,22 +1,11 @@
-a = 'abc'
-b = 'abc'
-c = 'abdd'
-if a == b:
-    print('as strings a e b são iguais')
+preco_1 = 1.0
+preco_2 = 1.0
+preco_3 = 1.1
+if preco_1 == preco_2:
+    print('os preços 1 e 2 são iguais')
 else:
-    print('as strings a e b são diferentes')
-if a == c:
-    print('as strings a e c são iguais')
+    print('os preços 1 e 2 são diferentes')
+if preco_2 == preco_3:
+    print('os preços 2 e 3 são iguais')
 else:
-    print('as strings a e c são diferentes')
-d = 1.0
-e = 1.0
-f = 1.1
-if d == e:
-    print('os números d e e são iguais')
-else:
-    print('os números d e e são diferentes')
-if d == f:
-    print('os números d e f são iguais')
-else:
-    print('os números d e f são diferentes')
+    print('os preços 2 e 3 são diferentes')

@@ -1,6 +1,7 @@
 def mostra_valores(preco, desconto):
-    # resolvemos alterar a fórmula como calculamos os valores
-    # desconto é em percentagem
+    # o argumento desconto é em percentagem
+    
+    # resolvemos alterar a forma como calculamos os valores
     valor_desconto = preco * desconto/100
     valor_preco    = preco - valor_desconto
     print(round(valor_preco, 2))

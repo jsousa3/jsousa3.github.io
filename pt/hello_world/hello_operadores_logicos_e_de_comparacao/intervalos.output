@@ -1,0 +1,18 @@
+preços menores que 2.00 ou maiores que 7.00:
+1.23
+7.08
+0.53
+9.99
+0.2
+7.7
+preços que não são menores que 2.00 ou maiores que 7.00:
+3.0
+2.01
+4.44
+2.5
+preços menores que 2.00 e com descontos maiores ou iguais que 5.0%:
+1.23
+0.2
+preços maiores que 7.00 e com descontos menores ou iguais que 4.0%:
+9.99
+7.7

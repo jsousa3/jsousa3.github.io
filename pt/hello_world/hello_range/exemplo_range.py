@@ -1,6 +1,6 @@
-for n in range(4):
+for n in range(10):
     print(n)
-print('----')
-uma_lista = ['p', 'y', 't', 'h', 'o', 'n'] # esta lista tem 6 elemntos
-for n in range(6):
-    print(uma_lista[n])
+print('-----') # isto é um separador
+precos    = [1.23, 7.08, 3.00, 0.53, 2.01, 4.44, 9.99, 2.50, 0.20, 7.70]
+for n in range(10):
+    print(precos[n])

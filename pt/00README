@@ -58,7 +58,7 @@ num ficheiro com o mesmo nome do programa com extensão `output`.
 
 Para servir o livro com github pages
 
-npx honkit build
+(adaptado de https://hackernoon.com/how-to-publish-a-book-with-gitbook-cli-and-github-pages-in-7-minutes-i61w3wjn)
 
 colocar o jsousa3.github.io no .gitignore de develop
 
@@ -66,15 +66,19 @@ criar o repositório no git: jsousa3.github.io
 
 git clone http://github.com/jsousa3/jsousa3.github.io
 
-mv jsousa3.github.io/.git _book
+npx honkit build
 
-mv jsousa3.github.io/LICENSE _book
+cp -r _book/* jsousa3.github.io
 
-rmdir jsousa3.github.io
-
-ln -s _book jsousa3.github.io
+rsync -r --exclude 'venv' --exclude 'env' --exclude 'tmp' _book/* jsousa3.github.io
 
 cd jsousa3.github.io
+
+find . -name \*~ -exec rm {} \;
+
+git ls-files --others --exclude-standard
+
+xargs -a ficheiros_que_faltam_ao_git -d '\n' git add
 
 find . -name \*.html -exec git add {} \;
 
