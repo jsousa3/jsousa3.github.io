@@ -1,4 +1,0 @@
-Traceback (most recent call last):
-  File "./if.py", line 1, in <module>
-    if x ==2:
-NameError: name 'x' is not defined

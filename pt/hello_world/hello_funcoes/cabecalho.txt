@@ -1,1 +1,0 @@
-def mostra_valores(preco, desconto):

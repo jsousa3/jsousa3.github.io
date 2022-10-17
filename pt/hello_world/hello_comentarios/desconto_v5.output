@@ -1,4 +1,0 @@
-  File "desconto_v5.py", line 2
-    desconto = 9.0  este desconto é em percentagem
-                       ^
-SyntaxError: invalid syntax

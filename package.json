@@ -1,7 +1,7 @@
 {
-  "name": "202209_hello_world_extended_version",
+  "name": "202209_hello_python_world",
   "version": "1.0.0",
-  "description": "\"Hello World - Extended Version :-)\" é um livro livre de introdução à linguagem de programação Python.",
+  "description": "\"Hello Python World\" é um livro livre de introdução à linguagem de programação Python.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
