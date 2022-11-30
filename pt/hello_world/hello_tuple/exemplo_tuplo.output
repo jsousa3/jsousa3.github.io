@@ -1,0 +1,8 @@
+7.32
+0.39
+aqui está a tuplo completo
+(7.32, 0.39)
+Traceback (most recent call last):
+  File "exemplo_tuplo.py", line 12, in <module>
+    resultado[1] = 0.0 # esta linha dá erro. tem que ser comentada
+TypeError: 'tuple' object does not support item assignment

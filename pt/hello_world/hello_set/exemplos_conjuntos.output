@@ -1,0 +1,7 @@
+{'água', 'café', 'chocolate'}
+{'água', 'café', 'pão'}
+------
+{'água', 'pão', 'café', 'chocolate'}
+{'água', 'café'}
+{'chocolate'}
+{'chocolate', 'pão'}
