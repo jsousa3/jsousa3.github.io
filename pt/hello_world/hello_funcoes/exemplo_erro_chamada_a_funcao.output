@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/home/jbs/develop/202209_hello_python_world/pt/hello_world/hello_funcoes/exemplo_erro_chamada_a_funcao.py", line 2, in <module>
+    hello()
+NameError: name 'hello' is not defined

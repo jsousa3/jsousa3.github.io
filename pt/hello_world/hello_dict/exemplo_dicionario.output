@@ -1,0 +1,19 @@
+0.53
+par chave/valor
+pão
+1.23
+par chave/valor
+água
+7.08
+par chave/valor
+café
+3.0
+par chave/valor
+sal
+0.55
+cacau
+produto não existente
+Traceback (most recent call last):
+  File "exemplo_dicionario.py", line 29, in <module>
+    print(nomes_precos['cacau'])
+KeyError: 'cacau'

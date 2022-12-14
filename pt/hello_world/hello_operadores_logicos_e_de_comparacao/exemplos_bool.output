@@ -1,0 +1,12 @@
+True
+False
+True
+False
+False
+True
+True
+False
+Traceback (most recent call last):
+  File "/home/jbs/develop/202209_hello_python_world/pt/hello_world/hello_operadores_logicos_e_de_comparacao/exemplos_bool.py", line 18, in <module>
+    z = true # esta linha dá erro porque true com t minúsculo não existe
+NameError: name 'true' is not defined
