@@ -1,0 +1,4 @@
+  File "/home/jbs/develop/202309_hello_python_world_v2/pt/comentarios/hello_com_autor_e_data.py", line 1
+    Autor: João Beleza
+                 ^
+SyntaxError: invalid syntax

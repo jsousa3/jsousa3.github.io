@@ -1,0 +1,15 @@
+{
+  "name": "202309_hello_python_world_v2",
+  "version": "1.0.0",
+  "description": "\"Hello Python World\" é um livro livre de introdução à linguagem de programação Python.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "honkit": "^5.1.0"
+  }
+}
