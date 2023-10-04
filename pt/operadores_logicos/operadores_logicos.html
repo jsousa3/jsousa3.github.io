@@ -3,7 +3,7 @@
 <html lang="pt" >
     <head>
         <meta charset="UTF-8">
-        <title>Operadores Aritméticos · HonKit</title>
+        <title>Operadores Lógicos · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="HonKit 5.1.0">
@@ -56,10 +56,8 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../aplicacao_precos/aplicacao_precos.html" />
     
-    
-    <link rel="prev" href="../none/none.html" />
+    <link rel="prev" href="../aplicacao_precos_v3/aplicacao_precos_v3.html" />
     
 
     </head>
@@ -250,9 +248,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.8" data-path="operadores_aritmeticos.html">
+        <li class="chapter " data-level="1.8" data-path="../operadores_aritmeticos/operadores_aritmeticos.html">
             
-                <a href="operadores_aritmeticos.html">
+                <a href="../operadores_aritmeticos/operadores_aritmeticos.html">
             
                     
                     Operadores Aritméticos
@@ -328,9 +326,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.14" data-path="../operadores_logicos/operadores_logicos.html">
+        <li class="chapter active" data-level="1.14" data-path="operadores_logicos.html">
             
-                <a href="../operadores_logicos/operadores_logicos.html">
+                <a href="operadores_logicos.html">
             
                     
                     Operadores Lógicos
@@ -371,7 +369,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Operadores Aritméticos</a>
+        <a href=".." >Operadores Lógicos</a>
     </h1>
 </div>
 
@@ -386,32 +384,58 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="operadores-aritméticos">Operadores Aritméticos</h1>
-<p>São suportadas as operações de adição <code>+</code>, subtração
-<code>-</code>, multiplicação <code>*</code>, divisão <code>/</code>, exponenciação <code>**</code>, divisão
-inteira <code>//</code> e resto da divisão inteira <code>%</code>.</p>
-<p>Em geral, os operadores <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>**</code>, <code>//</code> e <code>%</code>,
-aplicam-se apenas a números, isto é, tanto do lado esquerdo do
-operador, como do lado direito, têm que estar números.</p>
-<h3 id="exemplos-no-ficheiro-exemplosoperadorespy">Exemplos (no ficheiro <code>exemplos_operadores.py</code>)</h3>
-<pre><code class="lang-python"><span class="hljs-comment"># adição</span>
-<span class="hljs-built_in">print</span>(<span class="hljs-number">7</span> + <span class="hljs-number">2</span>)
-<span class="hljs-comment"># subtração</span>
-<span class="hljs-built_in">print</span>(<span class="hljs-number">7</span> - <span class="hljs-number">2</span>)
-<span class="hljs-comment"># multiplicação</span>
-<span class="hljs-built_in">print</span>(<span class="hljs-number">7</span> * <span class="hljs-number">2</span>)
-<span class="hljs-comment"># divisão (o resultado é sempre um float)</span>
-<span class="hljs-built_in">print</span>(<span class="hljs-number">7</span> / <span class="hljs-number">2</span>)
-<span class="hljs-comment"># exponenciação</span>
-<span class="hljs-built_in">print</span>(<span class="hljs-number">7</span> ** <span class="hljs-number">2</span>)
-<span class="hljs-comment"># divisão inteira (o resultado é sempre um inteiro)</span>
-<span class="hljs-built_in">print</span>(<span class="hljs-number">7</span> // <span class="hljs-number">2</span>)
-<span class="hljs-comment"># resto da divisão inteira</span>
-<span class="hljs-built_in">print</span>(<span class="hljs-number">7</span> % <span class="hljs-number">2</span>)
-<span class="hljs-comment"># esta linha dá erro</span>
-<span class="hljs-comment"># porque não faz sentido dividir a palavra &apos;hello&apos; pela palavra &apos;world&apos;</span>
-<span class="hljs-comment"># para evitar o erro esta linha tem que ser apagada ou comentada</span>
-<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;hello&apos;</span> / <span class="hljs-string">&apos;world&apos;</span>)
+                                <h1 id="operadores-lógicos">Operadores Lógicos</h1>
+<p>São suportados os operadores de negação, <code>not</code>, conjunção, <code>and</code> e
+disjunção <code>or</code>.</p>
+<p>Estes operadores aplicam-se a valores booleanos.</p>
+<h3 id="exemplos-no-ficheiro-exemplosoperadoreslogicospy">Exemplos (no ficheiro <code>exemplos_operadores_logicos.py</code>)</h3>
+<pre><code class="lang-python"><span class="hljs-comment"># negação - not</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;not&apos;</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-keyword">not</span> <span class="hljs-literal">True</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-keyword">not</span> <span class="hljs-literal">False</span>)
+<span class="hljs-comment"># conjunção - and</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;and&apos;</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-literal">True</span>  <span class="hljs-keyword">and</span> <span class="hljs-literal">True</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-literal">True</span>  <span class="hljs-keyword">and</span> <span class="hljs-literal">False</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-literal">False</span> <span class="hljs-keyword">and</span> <span class="hljs-literal">True</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-literal">False</span> <span class="hljs-keyword">and</span> <span class="hljs-literal">False</span>)
+<span class="hljs-comment"># disjunção - or</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;or&apos;</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-literal">True</span>  <span class="hljs-keyword">or</span> <span class="hljs-literal">True</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-literal">True</span>  <span class="hljs-keyword">or</span> <span class="hljs-literal">False</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-literal">False</span> <span class="hljs-keyword">or</span> <span class="hljs-literal">True</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-literal">False</span> <span class="hljs-keyword">or</span> <span class="hljs-literal">False</span>)
+</code></pre>
+
+<h2 id="funções-booleanas">Funções booleanas</h2>
+<p>Fórmulas booleanas podem ser implementadas como funções Python.</p>
+<h3 id="exemplos-no-ficheiro-funcaobooleanapy">Exemplos (no ficheiro <code>funcao_booleana.py</code>)</h3>
+<pre><code class="lang-python"><span class="hljs-comment"># f(p, q) = ((não p) ou q) e ((não q) ou p)</span>
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">f</span>(<span class="hljs-params">p, q</span>):
+
+    resultado = ((<span class="hljs-keyword">not</span> p) <span class="hljs-keyword">or</span> q) <span class="hljs-keyword">and</span> ((<span class="hljs-keyword">not</span> q) <span class="hljs-keyword">or</span> p)
+
+    <span class="hljs-keyword">return</span> resultado
+
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;((não p) ou q) e ((não q) ou p)&apos;</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Tabela de Verdade&apos;</span>)
+p = <span class="hljs-literal">True</span>
+q = <span class="hljs-literal">True</span>
+f_pq = f(p, q)
+<span class="hljs-built_in">print</span>(p, q, <span class="hljs-string">&apos;|&apos;</span>, f_pq)
+p = <span class="hljs-literal">True</span>
+q = <span class="hljs-literal">False</span>
+f_pq = f(p, q)
+<span class="hljs-built_in">print</span>(p, q, <span class="hljs-string">&apos;|&apos;</span>, f_pq)
+p = <span class="hljs-literal">False</span>
+q = <span class="hljs-literal">True</span>
+f_pq = f(p, q)
+<span class="hljs-built_in">print</span>(p, q, <span class="hljs-string">&apos;|&apos;</span>, f_pq)
+p = <span class="hljs-literal">False</span>
+q = <span class="hljs-literal">False</span>
+f_pq = f(p, q)
+<span class="hljs-built_in">print</span>(p, q, <span class="hljs-string">&apos;|&apos;</span>, f_pq)
 </code></pre>
 
                                 
@@ -440,14 +464,10 @@ operador, como do lado direito, têm que estar números.</p>
 
             
                 
-                <a href="../none/none.html" class="navigation navigation-prev " aria-label="Previous page: NoneType">
+                <a href="../aplicacao_precos_v3/aplicacao_precos_v3.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Aplicação - Preços v3">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="../aplicacao_precos/aplicacao_precos.html" class="navigation navigation-next " aria-label="Next page: Aplicação - Preços">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -456,7 +476,7 @@ operador, como do lado direito, têm que estar números.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Operadores Aritméticos","level":"1.8","depth":1,"next":{"title":"Aplicação - Preços","level":"1.9","depth":1,"path":"aplicacao_precos/aplicacao_precos.md","ref":"aplicacao_precos/aplicacao_precos.md","articles":[]},"previous":{"title":"NoneType","level":"1.7.5","depth":2,"path":"none/none.md","ref":"none/none.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"pt","gitbook":"*"},"file":{"path":"operadores_aritmeticos/operadores_aritmeticos.md","mtime":"2023-10-04T04:56:53.037Z","type":"markdown"},"gitbook":{"version":"5.1.0","time":"2023-10-04T05:19:55.983Z"},"basePath":"..","book":{"language":"pt"}});
+            gitbook.page.hasChanged({"page":{"title":"Operadores Lógicos","level":"1.14","depth":1,"previous":{"title":"Aplicação - Preços v3","level":"1.13","depth":1,"path":"aplicacao_precos_v3/aplicacao_precos_v3.md","ref":"aplicacao_precos_v3/aplicacao_precos_v3.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"pt","gitbook":"*"},"file":{"path":"operadores_logicos/operadores_logicos.md","mtime":"2023-10-04T05:21:04.530Z","type":"markdown"},"gitbook":{"version":"5.1.0","time":"2023-10-04T05:19:55.983Z"},"basePath":"..","book":{"language":"pt"}});
         });
     </script>
 </div>
