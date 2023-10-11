@@ -3,7 +3,7 @@
 <html lang="pt" >
     <head>
         <meta charset="UTF-8">
-        <title>Operadores Aritméticos · HonKit</title>
+        <title>Listas · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="HonKit 5.1.0">
@@ -56,10 +56,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../aplicacao_precos/aplicacao_precos.html" />
+    <link rel="next" href="../ciclo_for/ciclo_for.html" />
     
     
-    <link rel="prev" href="../none/none.html" />
+    <link rel="prev" href="../if/if.html" />
     
 
     </head>
@@ -250,9 +250,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.8" data-path="operadores_aritmeticos.html">
+        <li class="chapter " data-level="1.8" data-path="../operadores_aritmeticos/operadores_aritmeticos.html">
             
-                <a href="operadores_aritmeticos.html">
+                <a href="../operadores_aritmeticos/operadores_aritmeticos.html">
             
                     
                     Operadores Aritméticos
@@ -367,9 +367,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.17" data-path="../listas/listas.html">
+        <li class="chapter active" data-level="1.17" data-path="listas.html">
             
-                <a href="../listas/listas.html">
+                <a href="listas.html">
             
                     
                     Listas
@@ -423,7 +423,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Operadores Aritméticos</a>
+        <a href=".." >Listas</a>
     </h1>
 </div>
 
@@ -438,32 +438,57 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="operadores-aritméticos">Operadores Aritméticos</h1>
-<p>São suportadas as operações de adição <code>+</code>, subtração
-<code>-</code>, multiplicação <code>*</code>, divisão <code>/</code>, exponenciação <code>**</code>, divisão
-inteira <code>//</code>, e resto da divisão inteira <code>%</code>.</p>
-<p>Em geral, os operadores <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>**</code>, <code>//</code> e <code>%</code>,
-aplicam-se apenas a números, isto é, tanto do lado esquerdo do
-operador, como do lado direito, têm que estar números.</p>
-<h3 id="exemplos-no-ficheiro-exemplosoperadorespy">Exemplos (no ficheiro <code>exemplos_operadores.py</code>)</h3>
-<pre><code class="lang-python"><span class="hljs-comment"># adição</span>
-<span class="hljs-built_in">print</span>(<span class="hljs-number">7</span> + <span class="hljs-number">2</span>)
-<span class="hljs-comment"># subtração</span>
-<span class="hljs-built_in">print</span>(<span class="hljs-number">7</span> - <span class="hljs-number">2</span>)
-<span class="hljs-comment"># multiplicação</span>
-<span class="hljs-built_in">print</span>(<span class="hljs-number">7</span> * <span class="hljs-number">2</span>)
-<span class="hljs-comment"># divisão (o resultado é sempre um float)</span>
-<span class="hljs-built_in">print</span>(<span class="hljs-number">7</span> / <span class="hljs-number">2</span>)
-<span class="hljs-comment"># exponenciação</span>
-<span class="hljs-built_in">print</span>(<span class="hljs-number">7</span> ** <span class="hljs-number">2</span>)
-<span class="hljs-comment"># divisão inteira (o resultado é sempre um inteiro)</span>
-<span class="hljs-built_in">print</span>(<span class="hljs-number">7</span> // <span class="hljs-number">2</span>)
-<span class="hljs-comment"># resto da divisão inteira</span>
-<span class="hljs-built_in">print</span>(<span class="hljs-number">7</span> % <span class="hljs-number">2</span>)
-<span class="hljs-comment"># esta linha dá erro</span>
-<span class="hljs-comment"># porque não faz sentido dividir a palavra &apos;hello&apos; pela palavra &apos;world&apos;</span>
-<span class="hljs-comment"># para evitar o erro esta linha tem que ser apagada ou comentada</span>
-<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;hello&apos;</span> / <span class="hljs-string">&apos;world&apos;</span>)
+                                <h1 id="listas">Listas</h1>
+<p>Para além dos valores elementares como as <em>strings</em>, os números
+inteiros, os números decimais, ou os valores booleanos, existem em
+Python outros valores que permitem armazenar informação. É o caso das
+listas.</p>
+<p>Uma lista é uma sequência ordenada de valores. Aos valores das listas
+também se chamam elementos. Os valores numa lista podem ser de tipos
+diferentes. Isto é, uma lista pode ter um número inteiro, uma
+<em>string</em>, e até outra lista, por exemplo.</p>
+<p>Os valores nas listas podem ser obtidos pelo seu índice na
+sequência. Chama-se a isto indexação da lista, ou indexar a lista. Os
+índices das listas iniciam-se em zero. Quer isto dizer que o índice do
+primeiro valor é zero, o do segundo é um, o do terceiro é dois, e
+assim por diante.</p>
+<p>As listas são mutáveis, o que quer dizer que podem ser alteradas.
+Pode-se acrescentar elementos ao fim das listas usando a função
+<code>append</code>. Pode-se inserir elementos num dado índice usando a função
+<code>insert</code>. Pode-se remover elementos através do índice usando a função
+<code>pop</code>. A função <code>pop</code> retorna o elemento removido.</p>
+<p>As funções <code>append</code>, <code>insert</code> e <code>pop</code> só existem no contexto das
+listas. Por isso têm que ser chamadas a partir das próprias listas,
+usando o operador ponto <code>.</code>.</p>
+<p>Pode obter-se o número de elementos de uma lista usando a função
+<em>buitl-in</em> <code>len</code>. São as três primeiras letras da palavra inglesa
+<em>length</em>, que quer dizer comprimento. Neste contexto, a função <code>len</code>
+retorna o número de elementos da lista, ou o comprimentos da lista.</p>
+<p>Indexar uma lista num elemento que não existe, dá erro.</p>
+<h3 id="exemplos-no-ficheiro-exemploslistapy">Exemplos (no ficheiro <code>exemplos_lista.py</code>)</h3>
+<pre><code class="lang-python"><span class="hljs-comment"># uma lista com um número inteiro, uma string,</span>
+<span class="hljs-comment"># e um boleano</span>
+uma_lista = [<span class="hljs-number">10</span>, <span class="hljs-string">&apos;hello&apos;</span>, <span class="hljs-literal">False</span>]
+<span class="hljs-built_in">print</span>(uma_lista)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;primeiro elemento&apos;</span>)
+<span class="hljs-built_in">print</span>(uma_lista[<span class="hljs-number">0</span>])
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;segundo elemento&apos;</span>)
+<span class="hljs-built_in">print</span>(uma_lista[<span class="hljs-number">1</span>])
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;terceiro elemento&apos;</span>)
+<span class="hljs-built_in">print</span>(uma_lista[<span class="hljs-number">2</span>])
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;acrescentar um float no fim&apos;</span>)
+uma_lista.append(<span class="hljs-number">2.0</span>)
+<span class="hljs-built_in">print</span>(uma_lista)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;inserir uma string no terceiro elemento&apos;</span>)
+uma_lista.insert(<span class="hljs-number">2</span>, <span class="hljs-string">&apos;world&apos;</span>)
+<span class="hljs-built_in">print</span>(uma_lista)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;remover o primeiro elemento&apos;</span>)
+uma_lista.pop(<span class="hljs-number">0</span>)
+<span class="hljs-built_in">print</span>(uma_lista)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;número de elemntos da lista&apos;</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-built_in">len</span>(uma_lista))
+<span class="hljs-comment"># a próxima linha dá erro, porque o elemento quinto não existe</span>
+<span class="hljs-built_in">print</span>(uma_lista[<span class="hljs-number">4</span>])
 </code></pre>
 
                                 
@@ -492,12 +517,12 @@ operador, como do lado direito, têm que estar números.</p>
 
             
                 
-                <a href="../none/none.html" class="navigation navigation-prev " aria-label="Previous page: NoneType">
+                <a href="../if/if.html" class="navigation navigation-prev " aria-label="Previous page: Execução Condicional - if">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../aplicacao_precos/aplicacao_precos.html" class="navigation navigation-next " aria-label="Next page: Aplicação - Preços">
+                <a href="../ciclo_for/ciclo_for.html" class="navigation navigation-next " aria-label="Next page: Ciclo for">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -508,7 +533,7 @@ operador, como do lado direito, têm que estar números.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Operadores Aritméticos","level":"1.8","depth":1,"next":{"title":"Aplicação - Preços","level":"1.9","depth":1,"path":"aplicacao_precos/aplicacao_precos.md","ref":"aplicacao_precos/aplicacao_precos.md","articles":[]},"previous":{"title":"NoneType","level":"1.7.5","depth":2,"path":"none/none.md","ref":"none/none.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"pt","gitbook":"*"},"file":{"path":"operadores_aritmeticos/operadores_aritmeticos.md","mtime":"2023-10-10T13:12:05.116Z","type":"markdown"},"gitbook":{"version":"5.1.0","time":"2023-10-11T00:01:16.672Z"},"basePath":"..","book":{"language":"pt"}});
+            gitbook.page.hasChanged({"page":{"title":"Listas","level":"1.17","depth":1,"next":{"title":"Ciclo for","level":"1.18","depth":1,"path":"ciclo_for/ciclo_for.md","ref":"ciclo_for/ciclo_for.md","articles":[]},"previous":{"title":"Execução Condicional - if","level":"1.16","depth":1,"path":"if/if.md","ref":"if/if.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"pt","gitbook":"*"},"file":{"path":"listas/listas.md","mtime":"2023-10-10T23:45:33.781Z","type":"markdown"},"gitbook":{"version":"5.1.0","time":"2023-10-11T00:01:16.672Z"},"basePath":"..","book":{"language":"pt"}});
         });
     </script>
 </div>

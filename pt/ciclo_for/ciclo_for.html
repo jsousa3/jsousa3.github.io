@@ -3,7 +3,7 @@
 <html lang="pt" >
     <head>
         <meta charset="UTF-8">
-        <title>Operadores Aritméticos · HonKit</title>
+        <title>Ciclo for · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="HonKit 5.1.0">
@@ -56,10 +56,8 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../aplicacao_precos/aplicacao_precos.html" />
     
-    
-    <link rel="prev" href="../none/none.html" />
+    <link rel="prev" href="../listas/listas.html" />
     
 
     </head>
@@ -250,9 +248,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.8" data-path="operadores_aritmeticos.html">
+        <li class="chapter " data-level="1.8" data-path="../operadores_aritmeticos/operadores_aritmeticos.html">
             
-                <a href="operadores_aritmeticos.html">
+                <a href="../operadores_aritmeticos/operadores_aritmeticos.html">
             
                     
                     Operadores Aritméticos
@@ -380,9 +378,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.18" data-path="../ciclo_for/ciclo_for.html">
+        <li class="chapter active" data-level="1.18" data-path="ciclo_for.html">
             
-                <a href="../ciclo_for/ciclo_for.html">
+                <a href="ciclo_for.html">
             
                     
                     Ciclo for
@@ -423,7 +421,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Operadores Aritméticos</a>
+        <a href=".." >Ciclo for</a>
     </h1>
 </div>
 
@@ -438,33 +436,44 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="operadores-aritméticos">Operadores Aritméticos</h1>
-<p>São suportadas as operações de adição <code>+</code>, subtração
-<code>-</code>, multiplicação <code>*</code>, divisão <code>/</code>, exponenciação <code>**</code>, divisão
-inteira <code>//</code>, e resto da divisão inteira <code>%</code>.</p>
-<p>Em geral, os operadores <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>**</code>, <code>//</code> e <code>%</code>,
-aplicam-se apenas a números, isto é, tanto do lado esquerdo do
-operador, como do lado direito, têm que estar números.</p>
-<h3 id="exemplos-no-ficheiro-exemplosoperadorespy">Exemplos (no ficheiro <code>exemplos_operadores.py</code>)</h3>
-<pre><code class="lang-python"><span class="hljs-comment"># adição</span>
-<span class="hljs-built_in">print</span>(<span class="hljs-number">7</span> + <span class="hljs-number">2</span>)
-<span class="hljs-comment"># subtração</span>
-<span class="hljs-built_in">print</span>(<span class="hljs-number">7</span> - <span class="hljs-number">2</span>)
-<span class="hljs-comment"># multiplicação</span>
-<span class="hljs-built_in">print</span>(<span class="hljs-number">7</span> * <span class="hljs-number">2</span>)
-<span class="hljs-comment"># divisão (o resultado é sempre um float)</span>
-<span class="hljs-built_in">print</span>(<span class="hljs-number">7</span> / <span class="hljs-number">2</span>)
-<span class="hljs-comment"># exponenciação</span>
-<span class="hljs-built_in">print</span>(<span class="hljs-number">7</span> ** <span class="hljs-number">2</span>)
-<span class="hljs-comment"># divisão inteira (o resultado é sempre um inteiro)</span>
-<span class="hljs-built_in">print</span>(<span class="hljs-number">7</span> // <span class="hljs-number">2</span>)
-<span class="hljs-comment"># resto da divisão inteira</span>
-<span class="hljs-built_in">print</span>(<span class="hljs-number">7</span> % <span class="hljs-number">2</span>)
-<span class="hljs-comment"># esta linha dá erro</span>
-<span class="hljs-comment"># porque não faz sentido dividir a palavra &apos;hello&apos; pela palavra &apos;world&apos;</span>
-<span class="hljs-comment"># para evitar o erro esta linha tem que ser apagada ou comentada</span>
-<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;hello&apos;</span> / <span class="hljs-string">&apos;world&apos;</span>)
+                                <h1 id="ciclo-for">Ciclo for</h1>
+<p>E se quiséssemos fazer <em>output</em> de <code>Hello World!</code> mil vezes. No ecrã
+de um estádio. Faziamos mil <em>prints</em> todos iguais? Um programa com mil
+linhas? Nem pensar! Há uma forma de executar código em ciclo. Por
+exemplo, com ciclos <code>for</code>.</p>
+<p>Um ciclo <code>for</code> tem uma variável de ciclo, uma sequência de valores e
+um bloco de código. Executa o bloco de código para cada valor da
+sequência, por ordem. Antes de executar o bloco de código inicializa a
+variável de ciclo com o valor da sequência em casua.</p>
+<p>O bloco de código distingue-se do restante programa porque está
+indentado com quatro espaço relativamente à instrução <code>for</code>.</p>
+<h3 id="exemplos-no-ficheiro-exemploscicloforpy">Exemplos (no ficheiro <code>exemplos_ciclo_for.py</code>)</h3>
+<pre><code class="lang-python"><span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]:
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;a executar&apos;</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;um ciclo for&apos;</span>)
+    <span class="hljs-built_in">print</span>(x)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;fim&apos;</span>) <span class="hljs-comment"># esta linha está fora do ciclo for. experimnte indentar</span>
+             <span class="hljs-comment"># esta linha. qual é a diferença?</span>
 </code></pre>
+
+<p>Mas então para fazermos mil <em>prints</em> de <code>Hello World!</code> temos que
+escrever uma lista com mil números? Não!. A função <em>built-in</em> <code>range</code>
+faz isso.</p>
+<h2 id="função-built-in-range">Função built-in <code>range</code></h2>
+<p>A função <code>range</code> é muito útil para construir sequências de índices de
+listas. Quando se usa um único argumento, esse argumento tem que ser
+um número inteiro e a função <code>range</code> retorna uma sequência que vai de
+zero até ao argumento menos um.</p>
+<pre><code class="lang-python"><span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">10</span>):
+    <span class="hljs-built_in">print</span>(x)
+
+<span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">10</span>): <span class="hljs-comment"># altere esta valor para mil. qual é a diferença?</span>
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Hello World!&apos;</span>)
+
+
+</code></pre>
+
+
 
                                 
                                 </section>
@@ -492,14 +501,10 @@ operador, como do lado direito, têm que estar números.</p>
 
             
                 
-                <a href="../none/none.html" class="navigation navigation-prev " aria-label="Previous page: NoneType">
+                <a href="../listas/listas.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Listas">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="../aplicacao_precos/aplicacao_precos.html" class="navigation navigation-next " aria-label="Next page: Aplicação - Preços">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -508,7 +513,7 @@ operador, como do lado direito, têm que estar números.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Operadores Aritméticos","level":"1.8","depth":1,"next":{"title":"Aplicação - Preços","level":"1.9","depth":1,"path":"aplicacao_precos/aplicacao_precos.md","ref":"aplicacao_precos/aplicacao_precos.md","articles":[]},"previous":{"title":"NoneType","level":"1.7.5","depth":2,"path":"none/none.md","ref":"none/none.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"pt","gitbook":"*"},"file":{"path":"operadores_aritmeticos/operadores_aritmeticos.md","mtime":"2023-10-10T13:12:05.116Z","type":"markdown"},"gitbook":{"version":"5.1.0","time":"2023-10-11T00:01:16.672Z"},"basePath":"..","book":{"language":"pt"}});
+            gitbook.page.hasChanged({"page":{"title":"Ciclo for","level":"1.18","depth":1,"previous":{"title":"Listas","level":"1.17","depth":1,"path":"listas/listas.md","ref":"listas/listas.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"pt","gitbook":"*"},"file":{"path":"ciclo_for/ciclo_for.md","mtime":"2023-10-10T23:57:52.160Z","type":"markdown"},"gitbook":{"version":"5.1.0","time":"2023-10-11T00:01:16.672Z"},"basePath":"..","book":{"language":"pt"}});
         });
     </script>
 </div>

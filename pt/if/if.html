@@ -3,7 +3,7 @@
 <html lang="pt" >
     <head>
         <meta charset="UTF-8">
-        <title>Operadores Aritméticos · HonKit</title>
+        <title>Execução Condicional - if · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="HonKit 5.1.0">
@@ -56,10 +56,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../aplicacao_precos/aplicacao_precos.html" />
+    <link rel="next" href="../listas/listas.html" />
     
     
-    <link rel="prev" href="../none/none.html" />
+    <link rel="prev" href="../operadores_de_comparacao/operadores_de_comparacao.html" />
     
 
     </head>
@@ -250,9 +250,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.8" data-path="operadores_aritmeticos.html">
+        <li class="chapter " data-level="1.8" data-path="../operadores_aritmeticos/operadores_aritmeticos.html">
             
-                <a href="operadores_aritmeticos.html">
+                <a href="../operadores_aritmeticos/operadores_aritmeticos.html">
             
                     
                     Operadores Aritméticos
@@ -354,9 +354,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.16" data-path="../if/if.html">
+        <li class="chapter active" data-level="1.16" data-path="if.html">
             
-                <a href="../if/if.html">
+                <a href="if.html">
             
                     
                     Execução Condicional - if
@@ -423,7 +423,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Operadores Aritméticos</a>
+        <a href=".." >Execução Condicional - if</a>
     </h1>
 </div>
 
@@ -438,33 +438,78 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="operadores-aritméticos">Operadores Aritméticos</h1>
-<p>São suportadas as operações de adição <code>+</code>, subtração
-<code>-</code>, multiplicação <code>*</code>, divisão <code>/</code>, exponenciação <code>**</code>, divisão
-inteira <code>//</code>, e resto da divisão inteira <code>%</code>.</p>
-<p>Em geral, os operadores <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>**</code>, <code>//</code> e <code>%</code>,
-aplicam-se apenas a números, isto é, tanto do lado esquerdo do
-operador, como do lado direito, têm que estar números.</p>
-<h3 id="exemplos-no-ficheiro-exemplosoperadorespy">Exemplos (no ficheiro <code>exemplos_operadores.py</code>)</h3>
-<pre><code class="lang-python"><span class="hljs-comment"># adição</span>
-<span class="hljs-built_in">print</span>(<span class="hljs-number">7</span> + <span class="hljs-number">2</span>)
-<span class="hljs-comment"># subtração</span>
-<span class="hljs-built_in">print</span>(<span class="hljs-number">7</span> - <span class="hljs-number">2</span>)
-<span class="hljs-comment"># multiplicação</span>
-<span class="hljs-built_in">print</span>(<span class="hljs-number">7</span> * <span class="hljs-number">2</span>)
-<span class="hljs-comment"># divisão (o resultado é sempre um float)</span>
-<span class="hljs-built_in">print</span>(<span class="hljs-number">7</span> / <span class="hljs-number">2</span>)
-<span class="hljs-comment"># exponenciação</span>
-<span class="hljs-built_in">print</span>(<span class="hljs-number">7</span> ** <span class="hljs-number">2</span>)
-<span class="hljs-comment"># divisão inteira (o resultado é sempre um inteiro)</span>
-<span class="hljs-built_in">print</span>(<span class="hljs-number">7</span> // <span class="hljs-number">2</span>)
-<span class="hljs-comment"># resto da divisão inteira</span>
-<span class="hljs-built_in">print</span>(<span class="hljs-number">7</span> % <span class="hljs-number">2</span>)
-<span class="hljs-comment"># esta linha dá erro</span>
-<span class="hljs-comment"># porque não faz sentido dividir a palavra &apos;hello&apos; pela palavra &apos;world&apos;</span>
-<span class="hljs-comment"># para evitar o erro esta linha tem que ser apagada ou comentada</span>
-<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;hello&apos;</span> / <span class="hljs-string">&apos;world&apos;</span>)
+                                <h1 id="execução-condicional-if">Execução condicional <code>if</code></h1>
+<p>É útil poder alterar-se o fluxo de execução do código. Passar da
+execução linha a alinha, para uma execução condicional. O código passa
+a ser executado apenas se uma determinada condição se verificar. Para
+tal usa-se a instrução <code>if</code>. Opcionalmente pode acrescentar-se à
+instrução <code>if</code> as instruções <code>elif</code> e <code>else</code>.</p>
+<p>O código executado pelas instruções <code>if</code>, <code>elif</code> e <code>else</code>, tem que
+estar indentado com quatro espaços relativamente a essas instruções.</p>
+<h3 id="exemplos-no-ficheiro-exemplosifpy">Exemplos (no ficheiro <code>exemplos_if.py</code>)</h3>
+<pre><code class="lang-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">mensagens</span>(<span class="hljs-params">preco_a_pagar, desconto</span>):
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Detalhes da sua compra&apos;</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Preço a pagar:&apos;</span>)
+    <span class="hljs-built_in">print</span>(preco_a_pagar)
+    <span class="hljs-keyword">if</span> desconto &gt; <span class="hljs-number">0</span>:
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Desconto que obteve nesta compra:&apos;</span>)
+        <span class="hljs-built_in">print</span>(desconto)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Até à próxima&apos;</span>) <span class="hljs-comment"># esta linha está fora do if. é sempre</span>
+                           <span class="hljs-comment"># executada, incondicionalmente</span>
+
+
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;compra 1&apos;</span>)
+preco_a_pagar = <span class="hljs-number">5</span>
+desconto      = <span class="hljs-number">0</span>
+mensagens(preco_a_pagar, desconto)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;compra 2&apos;</span>)
+preco_a_pagar = <span class="hljs-number">10</span>
+desconto      = <span class="hljs-number">1</span>
+mensagens(preco_a_pagar, desconto)
 </code></pre>
+
+<h3 id="exemplos-no-ficheiro-exemplosifelsepy">Exemplos (no ficheiro <code>exemplos_if_else.py</code>)</h3>
+<pre><code class="lang-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">login</span>(<span class="hljs-params">password_fornecida, password_armazenada</span>):
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Início de login...&apos;</span>)
+    <span class="hljs-keyword">if</span> password_fornecida == password_armazenada:
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Bem vindo!&apos;</span>)
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Fez login com sucesso.&apos;</span>)
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Password incorreta.&apos;</span>)
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Tente novamente.&apos;</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Fim de login.&apos;</span>) <span class="hljs-comment"># esta linha está fora do else. é sempre</span>
+                           <span class="hljs-comment"># executada, incondicionalmente</span>
+
+password_armazenada = <span class="hljs-string">&apos;portugal&apos;</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Primeira tentativa&apos;</span>)
+password_fornecida  = <span class="hljs-string">&apos;espanha&apos;</span>
+login(password_fornecida, password_armazenada)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Segunda tentativa&apos;</span>)
+password_fornecida  = <span class="hljs-string">&apos;portugal&apos;</span>
+login(password_fornecida, password_armazenada)
+</code></pre>
+
+<h3 id="exemplos-no-ficheiro-exemplosifelifelsepy">Exemplos (no ficheiro <code>exemplos_if_elif_else.py</code>)</h3>
+<pre><code class="lang-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">desconto_quantidade</span>(<span class="hljs-params">quantidade</span>):
+    <span class="hljs-keyword">if</span> quantidade &gt; <span class="hljs-number">10</span>:
+        desconto = <span class="hljs-number">20</span> <span class="hljs-comment"># em percentagem</span>
+    <span class="hljs-keyword">elif</span> quantidade &gt; <span class="hljs-number">5</span>:
+        desconto = <span class="hljs-number">10</span> <span class="hljs-comment"># em percentagem</span>
+    <span class="hljs-keyword">else</span>:
+        desconto = <span class="hljs-number">2</span> <span class="hljs-comment"># em percentagem</span>
+    <span class="hljs-keyword">return</span> desconto <span class="hljs-comment"># esta linha está fora do else. é sempre</span>
+                    <span class="hljs-comment"># executada, incondicionalmente</span>
+
+<span class="hljs-built_in">print</span>(desconto_quantidade(<span class="hljs-number">15</span>)) <span class="hljs-comment"># apesar de 15 ser maior que 10 e</span>
+                               <span class="hljs-comment"># também ser maior que 5, só um dos</span>
+                               <span class="hljs-comment"># ramos é que é executado. o primeiro</span>
+                               <span class="hljs-comment"># em que a condição correpondente seja</span>
+                               <span class="hljs-comment"># verdadeira. mesta caso, o ramo</span>
+                               <span class="hljs-comment"># correspondente a quantidade &gt; 10</span>
+<span class="hljs-built_in">print</span>(desconto_quantidade(<span class="hljs-number">7</span>))
+<span class="hljs-built_in">print</span>(desconto_quantidade(<span class="hljs-number">3</span>))
+</code></pre>
+
 
                                 
                                 </section>
@@ -492,12 +537,12 @@ operador, como do lado direito, têm que estar números.</p>
 
             
                 
-                <a href="../none/none.html" class="navigation navigation-prev " aria-label="Previous page: NoneType">
+                <a href="../operadores_de_comparacao/operadores_de_comparacao.html" class="navigation navigation-prev " aria-label="Previous page: Operadores de Comparação">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../aplicacao_precos/aplicacao_precos.html" class="navigation navigation-next " aria-label="Next page: Aplicação - Preços">
+                <a href="../listas/listas.html" class="navigation navigation-next " aria-label="Next page: Listas">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -508,7 +553,7 @@ operador, como do lado direito, têm que estar números.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Operadores Aritméticos","level":"1.8","depth":1,"next":{"title":"Aplicação - Preços","level":"1.9","depth":1,"path":"aplicacao_precos/aplicacao_precos.md","ref":"aplicacao_precos/aplicacao_precos.md","articles":[]},"previous":{"title":"NoneType","level":"1.7.5","depth":2,"path":"none/none.md","ref":"none/none.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"pt","gitbook":"*"},"file":{"path":"operadores_aritmeticos/operadores_aritmeticos.md","mtime":"2023-10-10T13:12:05.116Z","type":"markdown"},"gitbook":{"version":"5.1.0","time":"2023-10-11T00:01:16.672Z"},"basePath":"..","book":{"language":"pt"}});
+            gitbook.page.hasChanged({"page":{"title":"Execução Condicional - if","level":"1.16","depth":1,"next":{"title":"Listas","level":"1.17","depth":1,"path":"listas/listas.md","ref":"listas/listas.md","articles":[]},"previous":{"title":"Operadores de Comparação","level":"1.15","depth":1,"path":"operadores_de_comparacao/operadores_de_comparacao.md","ref":"operadores_de_comparacao/operadores_de_comparacao.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"pt","gitbook":"*"},"file":{"path":"if/if.md","mtime":"2023-10-10T18:14:01.864Z","type":"markdown"},"gitbook":{"version":"5.1.0","time":"2023-10-11T00:01:16.672Z"},"basePath":"..","book":{"language":"pt"}});
         });
     </script>
 </div>
