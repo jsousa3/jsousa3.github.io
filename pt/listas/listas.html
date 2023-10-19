@@ -393,6 +393,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.19" data-path="../indexacao/indexacao.html">
+            
+                <a href="../indexacao/indexacao.html">
+            
+                    
+                    Indexação de Sequências
+            
+                </a>
+            
+
+            
+        </li>
+    
 
     
 
@@ -442,33 +455,37 @@
 <p>Para além dos valores elementares como as <em>strings</em>, os números
 inteiros, os números decimais, ou os valores booleanos, existem em
 Python outros valores que permitem armazenar informação. É o caso das
-listas.</p>
+listas. O tipo das listas é <code>list</code>.</p>
+<h2 id="criação">Criação</h2>
 <p>Uma lista é uma sequência ordenada de valores. Aos valores das listas
 também se chamam elementos. Os valores numa lista podem ser de tipos
 diferentes. Isto é, uma lista pode ter um número inteiro, uma
-<em>string</em>, e até outra lista, por exemplo.</p>
-<p>Os valores nas listas podem ser obtidos pelo seu índice na
-sequência. Chama-se a isto indexação da lista, ou indexar a lista. Os
-índices das listas iniciam-se em zero. Quer isto dizer que o índice do
-primeiro valor é zero, o do segundo é um, o do terceiro é dois, e
-assim por diante.</p>
-<p>As listas são mutáveis, o que quer dizer que podem ser alteradas.
-Pode-se acrescentar elementos ao fim das listas usando a função
-<code>append</code>. Pode-se inserir elementos num dado índice usando a função
-<code>insert</code>. Pode-se remover elementos através do índice usando a função
-<code>pop</code>. A função <code>pop</code> retorna o elemento removido.</p>
-<p>As funções <code>append</code>, <code>insert</code> e <code>pop</code> só existem no contexto das
-listas. Por isso têm que ser chamadas a partir das próprias listas,
-usando o operador ponto <code>.</code>.</p>
-<p>Pode obter-se o número de elementos de uma lista usando a função
-<em>buitl-in</em> <code>len</code>. São as três primeiras letras da palavra inglesa
-<em>length</em>, que quer dizer comprimento. Neste contexto, a função <code>len</code>
-retorna o número de elementos da lista, ou o comprimentos da lista.</p>
-<p>Indexar uma lista num elemento que não existe, dá erro.</p>
-<h3 id="exemplos-no-ficheiro-exemploslistapy">Exemplos (no ficheiro <code>exemplos_lista.py</code>)</h3>
+<em>string</em>, e um booleano, por exemplo.</p>
+<h3 id="exemplos-no-ficheiro-exemplolistacriacaopy">Exemplos (no ficheiro <code>exemplo_lista_criacao.py</code>)</h3>
 <pre><code class="lang-python"><span class="hljs-comment"># uma lista com um número inteiro, uma string,</span>
 <span class="hljs-comment"># e um boleano</span>
 uma_lista = [<span class="hljs-number">10</span>, <span class="hljs-string">&apos;hello&apos;</span>, <span class="hljs-literal">False</span>]
+<span class="hljs-built_in">print</span>(uma_lista)
+</code></pre>
+
+<h2 id="listas-de-listas">Listas de listas</h2>
+<p>Os tipos dos valores nas listas podem ser quaisquer, até mesmo do tipo
+<code>list</code>. Isto é, uma lista pode ter elementos que são eles próprios
+listas.</p>
+<h3 id="exemplos-no-ficheiro-exemplolistacomlistaspy">Exemplos (no ficheiro <code>exemplo_lista_com_listas.py</code>)</h3>
+<pre><code class="lang-python"><span class="hljs-comment"># uma lista cujos elementos são listas</span>
+uma_lista = [[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>], [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>], [<span class="hljs-literal">True</span>, <span class="hljs-string">&apos;hello&apos;</span>, -<span class="hljs-number">2.0</span>]]
+<span class="hljs-built_in">print</span>(uma_lista)
+</code></pre>
+
+<h2 id="indexação">Indexação</h2>
+<p>Os valores nas listas podem ser obtidos pelo seu índice na
+sequência. Chama-se a isto indexação da lista, ou indexar a lista. Os
+índices das listas são números inteiros e iniciam-se em zero. Quer
+isto dizer que o índice do primeiro valor é zero, o do segundo é um, o
+do terceiro é dois, e assim por diante.</p>
+<h3 id="exemplos-no-ficheiro-exemploslistaindexacaopy">Exemplos (no ficheiro <code>exemplos_lista_indexacao.py</code>)</h3>
+<pre><code class="lang-python">uma_lista = [<span class="hljs-number">10</span>, <span class="hljs-string">&apos;hello&apos;</span>, <span class="hljs-literal">False</span>]
 <span class="hljs-built_in">print</span>(uma_lista)
 <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;primeiro elemento&apos;</span>)
 <span class="hljs-built_in">print</span>(uma_lista[<span class="hljs-number">0</span>])
@@ -476,19 +493,85 @@ uma_lista = [<span class="hljs-number">10</span>, <span class="hljs-string">&apo
 <span class="hljs-built_in">print</span>(uma_lista[<span class="hljs-number">1</span>])
 <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;terceiro elemento&apos;</span>)
 <span class="hljs-built_in">print</span>(uma_lista[<span class="hljs-number">2</span>])
-<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;acrescentar um float no fim&apos;</span>)
+</code></pre>
+
+<h2 id="erro---indexação-de-elemento-que-não-existe">Erro - indexação de elemento que não existe</h2>
+<p>Se se indexar uma lista num elemento que não existe,
+o interpretador Python não inventa nenhum valor pré-definido e dá
+erro.</p>
+<h3 id="exemplo-no-ficheiro-exemplolistaindexacaoerropy">Exemplo (no ficheiro <code>exemplo_lista_indexacao_erro.py</code>)</h3>
+<pre><code class="lang-python">uma_lista = [<span class="hljs-number">10</span>, <span class="hljs-string">&apos;hello&apos;</span>, <span class="hljs-literal">False</span>]
+<span class="hljs-comment"># a próxima linha de código dá erro porque o quarto elemento da lista</span>
+<span class="hljs-comment"># uma_lista não existe.</span>
+<span class="hljs-built_in">print</span>(uma_lista[<span class="hljs-number">3</span>])
+</code></pre>
+
+<h2 id="indexação-de-listas-de-listas">Indexação de listas de listas</h2>
+<p>Se um elemento de uma lista, obtido por indexação, é ele próprio uma
+lista, ele pode também ser indexado. A dupla indexação pode ser
+efetuada numa única instrução.</p>
+<h3 id="exemplos-no-ficheiro-exemplolistacomlistasindexacaopy">Exemplos (no ficheiro <code>exemplo_lista_com_listas_indexacao.py</code>)</h3>
+<pre><code class="lang-python"><span class="hljs-comment"># uma lista cujos elementos são listas</span>
+uma_lista = [[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>], [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>], [<span class="hljs-literal">True</span>, <span class="hljs-string">&apos;hello&apos;</span>, -<span class="hljs-number">2.0</span>]]
+<span class="hljs-built_in">print</span>(uma_lista)
+auxiliar = uma_lista[<span class="hljs-number">1</span>] <span class="hljs-comment"># este elemento é a lista [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;]</span>
+<span class="hljs-built_in">print</span>(auxiliar)
+auxiliar = auxiliar[<span class="hljs-number">2</span>] <span class="hljs-comment"># este elemento é a string &apos;c&apos;</span>
+<span class="hljs-built_in">print</span>(auxiliar)
+<span class="hljs-comment"># a dupla indexação pode ser efetuada numa única instrução</span>
+<span class="hljs-comment"># uma_lista[1] é uma lista que pode ser indexada para obter-se o</span>
+<span class="hljs-comment"># terceiro elemento, no índice 2</span>
+auxiliar = uma_lista[<span class="hljs-number">1</span>][<span class="hljs-number">2</span>]
+<span class="hljs-built_in">print</span>(auxiliar)
+</code></pre>
+
+<h2 id="alteração-dos-elementos-das-listas">Alteração dos elementos das listas</h2>
+<p>As listas são mutáveis, o que quer dizer que podem ser alteradas.</p>
+<p>Pode-se alterar cada um dos elementos de uma lista através do índice
+respetivo.</p>
+<h3 id="exemplos-no-ficheiro-exemploslistaalterarusandoindicepy">Exemplos (no ficheiro <code>exemplos_lista_alterar_usando_indice.py</code>)</h3>
+<pre><code class="lang-python">uma_lista = [<span class="hljs-number">10</span>, <span class="hljs-string">&apos;hello&apos;</span>, <span class="hljs-literal">False</span>]
+<span class="hljs-built_in">print</span>(uma_lista)
+uma_lista[<span class="hljs-number">0</span>] = <span class="hljs-number">100</span>
+<span class="hljs-built_in">print</span>(uma_lista)
+uma_lista[<span class="hljs-number">1</span>] = <span class="hljs-number">200</span>
+<span class="hljs-built_in">print</span>(uma_lista)
+uma_lista[<span class="hljs-number">2</span>] = <span class="hljs-number">300</span>
+<span class="hljs-built_in">print</span>(uma_lista)
+</code></pre>
+
+<p>Pode acrescentar-se elementos ao fim das listas usando a função
+<code>append</code>. Pode inserir-se elementos num dado índice usando a função
+<code>insert</code>. Pode remover-se elementos através do índice usando a função
+<code>pop</code>. A função <code>pop</code> retorna o elemento removido.</p>
+<p>As funções <code>append</code>, <code>insert</code> e <code>pop</code> só existem no contexto das
+listas. Por isso têm que ser chamadas a partir das próprias listas,
+usando o operador ponto <code>.</code>.</p>
+<h3 id="exemplos-no-ficheiro-exemploslistaalterarusandofuncoespy">Exemplos (no ficheiro <code>exemplos_lista_alterar_usando_funcoes.py</code>)</h3>
+<pre><code class="lang-python">uma_lista = [<span class="hljs-number">10</span>, <span class="hljs-string">&apos;hello&apos;</span>, <span class="hljs-literal">False</span>]
+<span class="hljs-built_in">print</span>(uma_lista)
+<span class="hljs-comment"># acrescentar um float no final da lista</span>
 uma_lista.append(<span class="hljs-number">2.0</span>)
 <span class="hljs-built_in">print</span>(uma_lista)
-<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;inserir uma string no terceiro elemento&apos;</span>)
+<span class="hljs-comment"># inserir uma string no terceiro elemento</span>
 uma_lista.insert(<span class="hljs-number">2</span>, <span class="hljs-string">&apos;world&apos;</span>)
 <span class="hljs-built_in">print</span>(uma_lista)
-<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;remover o primeiro elemento&apos;</span>)
-uma_lista.pop(<span class="hljs-number">0</span>)
+<span class="hljs-comment"># remover o primeiro elemento</span>
+elemento_removido = uma_lista.pop(<span class="hljs-number">0</span>)
 <span class="hljs-built_in">print</span>(uma_lista)
-<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;número de elemntos da lista&apos;</span>)
+<span class="hljs-built_in">print</span>(elemento_removido)
+</code></pre>
+
+<h2 id="número-de-elementos-de-listas">Número de elementos de listas</h2>
+<p>Pode obter-se o número de elementos de uma lista usando a função
+<em>buitl-in</em> <code>len</code>. São as três primeiras letras da palavra inglesa
+<em>length</em>, que quer dizer comprimento. Neste contexto, a função <code>len</code>
+retorna o número de elementos da lista, ou o comprimento da lista.</p>
+<h3 id="exemplos-no-ficheiro-exemploslistalenpy">Exemplos (no ficheiro <code>exemplos_lista_len.py</code>)</h3>
+<pre><code class="lang-python">uma_lista = [<span class="hljs-number">10</span>, <span class="hljs-string">&apos;hello&apos;</span>, <span class="hljs-literal">False</span>]
+<span class="hljs-built_in">print</span>(uma_lista)
+<span class="hljs-comment"># número de elemntos da lista</span>
 <span class="hljs-built_in">print</span>(<span class="hljs-built_in">len</span>(uma_lista))
-<span class="hljs-comment"># a próxima linha dá erro, porque o elemento quinto não existe</span>
-<span class="hljs-built_in">print</span>(uma_lista[<span class="hljs-number">4</span>])
 </code></pre>
 
                                 
@@ -533,7 +616,7 @@ uma_lista.pop(<span class="hljs-number">0</span>)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Listas","level":"1.17","depth":1,"next":{"title":"Ciclo for","level":"1.18","depth":1,"path":"ciclo_for/ciclo_for.md","ref":"ciclo_for/ciclo_for.md","articles":[]},"previous":{"title":"Execução Condicional - if","level":"1.16","depth":1,"path":"if/if.md","ref":"if/if.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"pt","gitbook":"*"},"file":{"path":"listas/listas.md","mtime":"2023-10-10T23:45:33.781Z","type":"markdown"},"gitbook":{"version":"5.1.0","time":"2023-10-11T00:01:16.672Z"},"basePath":"..","book":{"language":"pt"}});
+            gitbook.page.hasChanged({"page":{"title":"Listas","level":"1.17","depth":1,"next":{"title":"Ciclo for","level":"1.18","depth":1,"path":"ciclo_for/ciclo_for.md","ref":"ciclo_for/ciclo_for.md","articles":[]},"previous":{"title":"Execução Condicional - if","level":"1.16","depth":1,"path":"if/if.md","ref":"if/if.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"pt","gitbook":"*"},"file":{"path":"listas/listas.md","mtime":"2023-10-19T16:20:44.645Z","type":"markdown"},"gitbook":{"version":"5.1.0","time":"2023-10-19T19:45:50.494Z"},"basePath":"..","book":{"language":"pt"}});
         });
     </script>
 </div>
