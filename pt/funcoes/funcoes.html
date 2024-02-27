@@ -419,6 +419,162 @@
             
         </li>
     
+        <li class="chapter " data-level="1.21" data-path="../poo/resumo.html">
+            
+                <a href="../poo/resumo.html">
+            
+                    
+                    POO Programação Orientada por Objetos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="../poo/motivacao.html">
+            
+                <a href="../poo/motivacao.html">
+            
+                    
+                    POO Motivação
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="../poo/poo.html">
+            
+                <a href="../poo/poo.html">
+            
+                    
+                    POO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="../poo/criar_classes.html">
+            
+                <a href="../poo/criar_classes.html">
+            
+                    
+                    POO Criar classes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="../poo/criar_objetos.html">
+            
+                <a href="../poo/criar_objetos.html">
+            
+                    
+                    POO Criar objetos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="../poo/aceder_a_atributos.html">
+            
+                <a href="../poo/aceder_a_atributos.html">
+            
+                    
+                    POO Aceder a atributos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="../poo/vantagens.html">
+            
+                <a href="../poo/vantagens.html">
+            
+                    
+                    POO Vantagen
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28" data-path="../poo/print_de_objetos.html">
+            
+                <a href="../poo/print_de_objetos.html">
+            
+                    
+                    POO print de objetos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29" data-path="../poo/redefinicao_operadores.html">
+            
+                <a href="../poo/redefinicao_operadores.html">
+            
+                    
+                    POO (Re)definição de operadores
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.30" >
+            
+                <span>
+            
+                    
+                    isinstance
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.31" >
+            
+                <span>
+            
+                    
+                    herança
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.32" data-path="../import/import.md">
+            
+                <span>
+            
+                    
+                    Import
+            
+                </a>
+            
+
+            
+        </li>
+    
 
     
 
@@ -470,7 +626,9 @@ reutilizável. Pode ser usada em vários sítios.</p>
 <p>Já vimos isso com a função <code>print</code>. Podemos chamar a função <code>print</code> em
 vários sítios.</p>
 <p>E podemos criar as nossas próprias funções? Para fazerem o que nós
-quisermos? SIM, podemos.</p>
+quisermos? SIM, podemos. É por isso que as linguagens de programação
+são tão poderosas. Porque podemos pôr o computador a fazer o que
+quisermos.</p>
 <h2 id="definição-de-funções">Definição de funções</h2>
 <p>Para definir uma função usa-se a instrução <code>def</code>. São as letras iniciais
 da palavra inglesa <em>define</em>, que quer dizer &quot;definir&quot;.</p>
@@ -519,7 +677,7 @@ executado no corpo da função depois ser ser executado o <code>return</code>.</
 <p>A instrução <code>return</code> não é obrigatória. Mas uma função retorna sempre
 um valor. Quando não se usa a instrução <code>return</code> a função retorna
 <code>None</code>.</p>
-<h3 id="exemplos-no-ficheiro-exemplosretornofuncaopy">Exemplos (no ficheiro <code>exemplos_retorno_funcao.py</code>)</h3>
+<h3 id="exemplos-no-ficheiro-retornofuncaopy">Exemplos (no ficheiro <code>retorno_funcao.py</code>)</h3>
 <p>Escreva e execute este programa.</p>
 <pre><code class="lang-python">
 <span class="hljs-keyword">def</span> <span class="hljs-title function_">dobro</span>(<span class="hljs-params">um_numero</span>):
@@ -575,25 +733,76 @@ na mesma os parenntsis curvos. Neste caso ficam vazios.</p>
 </code></pre>
 
 <h2 id="contexto">Contexto</h2>
+<h3 id="variáveis-locais">Variáveis locais</h3>
 <p>Os argumentos da lista de argumentos da definição da função são
 variáveis locais à função. Isto quer dizer que não estão acessíveis
 fora da função e deixam de existir quando a execução da função
 termina.</p>
-<p>As variáveis inicializadas dentro de uma função também são locais à função.</p>
+<p>As variáveis inicializadas dentro de uma função também são locais à
+função (também deixam de existir quando a execução da função
+termina).</p>
+<h3 id="variáveis-globais">Variáveis globais</h3>
+<p>As variáveis inicializadas fora de uma função são designadas de
+variáveis globais. As variáveis globais estão acessíveis às funções.</p>
 <h3 id="exemplos-no-ficheiro-variaveislocaispy">Exemplos (no ficheiro <code>variaveis_locais.py</code>)</h3>
-<p>Escreva e execute este programa.</p>
-<pre><code class="lang-python">
-<span class="hljs-keyword">def</span> <span class="hljs-title function_">dobro</span>(<span class="hljs-params">x</span>):
+<p>Escreva e execute este programa. Qual é o <em>output</em>? (ver a versão seguinte com comentários)</p>
+<pre><code class="lang-python">fator = <span class="hljs-number">2</span>
 
-    y = <span class="hljs-number">2</span> * x
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">multiplica</span>(<span class="hljs-params">x</span>):
+
+    y = fator * x
+
+    <span class="hljs-built_in">print</span>(fator)
+    <span class="hljs-built_in">print</span>(x)
+    <span class="hljs-built_in">print</span>(y)
 
     <span class="hljs-keyword">return</span> y
 
-z = dobro(<span class="hljs-number">10</span>)
+
+z = multiplica(<span class="hljs-number">10</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;-----&apos;</span>)
 <span class="hljs-built_in">print</span>(z)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;-----&apos;</span>)
+
+<span class="hljs-built_in">print</span>(fator)
 <span class="hljs-built_in">print</span>(x)
 <span class="hljs-built_in">print</span>(y)
 </code></pre>
+
+<p>Versão com comentários</p>
+<pre><code class="lang-python"><span class="hljs-comment"># a variável fator está inicializada fora da função multiplica</span>
+<span class="hljs-comment"># é uma variável global (está inicializada no contexto global do programa)</span>
+<span class="hljs-comment"># a função multiplica pode usar esta variável</span>
+fator = <span class="hljs-number">2</span>
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">multiplica</span>(<span class="hljs-params">x</span>): <span class="hljs-comment"># o argumento x é uma variável local à função</span>
+                   <span class="hljs-comment"># só pode ser usado dentro da função</span>
+                   <span class="hljs-comment"># não pode ser usado fora da função porque não existe</span>
+                   <span class="hljs-comment"># fora da função. se for usado fora da função dá erro </span>
+
+    y = fator * x <span class="hljs-comment"># a variável y foi inicializada dentro da função</span>
+                  <span class="hljs-comment"># é uma variável local à função</span>
+                  <span class="hljs-comment"># só pode ser usado dentro da função</span>
+                  <span class="hljs-comment"># não pode ser usado fora da função porque não existe</span>
+                  <span class="hljs-comment"># fora da função. se for usado fora da função dá erro </span>
+
+    <span class="hljs-built_in">print</span>(fator) <span class="hljs-comment"># não dá erro. é uma variável global. é acedível daqui</span>
+    <span class="hljs-built_in">print</span>(x)     <span class="hljs-comment"># não dá erro. é uma variável local. é acedível daqui</span>
+    <span class="hljs-built_in">print</span>(y)     <span class="hljs-comment"># não dá erro. é uma variável local. é acedível daqui</span>
+
+    <span class="hljs-keyword">return</span> y
+
+
+z = multiplica(<span class="hljs-number">10</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;-----&apos;</span>) <span class="hljs-comment"># isto é um separador para tornar o output mais legível</span>
+<span class="hljs-built_in">print</span>(z)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;-----&apos;</span>) <span class="hljs-comment"># isto é um separador para tornar o output mais legível</span>
+
+<span class="hljs-built_in">print</span>(fator) <span class="hljs-comment"># não dá erro. é uma variável global. é acedível daqui</span>
+<span class="hljs-built_in">print</span>(x)     <span class="hljs-comment"># dá erro. é uma variável local. não é acedível daqui</span>
+<span class="hljs-built_in">print</span>(y)     <span class="hljs-comment"># dá erro. é uma variável local. não é acedível daqui</span>
+</code></pre>
+
 
                                 
                                 </section>
@@ -637,7 +846,7 @@ z = dobro(<span class="hljs-number">10</span>)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Funções","level":"1.12","depth":1,"next":{"title":"Aplicação - Preços v3","level":"1.13","depth":1,"path":"aplicacao_precos_v3/aplicacao_precos_v3.md","ref":"aplicacao_precos_v3/aplicacao_precos_v3.md","articles":[]},"previous":{"title":"Aplicação - Preços v2","level":"1.11","depth":1,"path":"aplicacao_precos_v2/aplicacao_precos_v2.md","ref":"aplicacao_precos_v2/aplicacao_precos_v2.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"pt","gitbook":"*"},"file":{"path":"funcoes/funcoes.md","mtime":"2023-09-22T06:55:54.470Z","type":"markdown"},"gitbook":{"version":"5.1.0","time":"2023-11-24T00:02:35.646Z"},"basePath":"..","book":{"language":"pt"}});
+            gitbook.page.hasChanged({"page":{"title":"Funções","level":"1.12","depth":1,"next":{"title":"Aplicação - Preços v3","level":"1.13","depth":1,"path":"aplicacao_precos_v3/aplicacao_precos_v3.md","ref":"aplicacao_precos_v3/aplicacao_precos_v3.md","articles":[]},"previous":{"title":"Aplicação - Preços v2","level":"1.11","depth":1,"path":"aplicacao_precos_v2/aplicacao_precos_v2.md","ref":"aplicacao_precos_v2/aplicacao_precos_v2.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"pt","gitbook":"*"},"file":{"path":"funcoes/funcoes.md","mtime":"2024-02-23T18:26:26.872Z","type":"markdown"},"gitbook":{"version":"5.1.0","time":"2024-02-27T22:55:04.498Z"},"basePath":"..","book":{"language":"pt"}});
         });
     </script>
 </div>
@@ -689,10 +898,6 @@ z = dobro(<span class="hljs-number">10</span>)
     </script>
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
-    
-        
-        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>

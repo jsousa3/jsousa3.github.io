@@ -1,11 +1,21 @@
+fator = 2
 
-def dobro(x):
-
-    y = 2 * x
-
+def multiplica(x):
+    
+    y = fator * x
+    
+    print(fator)
+    print(x)
+    print(y)
+    
     return y
 
-z = dobro(10)
+
+z = multiplica(10)
+print('-----')
 print(z)
+print('-----')
+
+print(fator)
 print(x)
 print(y)
