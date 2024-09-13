@@ -3,7 +3,7 @@
 <html lang="pt" >
     <head>
         <meta charset="UTF-8">
-        <title>POO Criar objetos · HonKit</title>
+        <title>Exercício 1 - Preços · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="HonKit 5.1.0">
@@ -56,10 +56,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="aceder_a_atributos.html" />
+    <link rel="next" href="../operadores_aritmeticos/operadores_aritmeticos.html" />
     
     
-    <link rel="prev" href="criar_classes.html" />
+    <link rel="prev" href="../comentarios/comentarios.html" />
     
 
     </head>
@@ -166,9 +166,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7" data-path="../exercicio_1_precos/exercicio_1_precos.html">
+        <li class="chapter active" data-level="1.7" data-path="exercicio_1_precos.html">
             
-                <a href="../exercicio_1_precos/exercicio_1_precos.html">
+                <a href="exercicio_1_precos.html">
             
                     
                     Exercício 1 - Preços
@@ -432,9 +432,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.22" data-path="resumo.html">
+        <li class="chapter " data-level="1.22" data-path="../poo/resumo.html">
             
-                <a href="resumo.html">
+                <a href="../poo/resumo.html">
             
                     
                     POO Programação Orientada por Objetos
@@ -445,9 +445,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.23" data-path="motivacao.html">
+        <li class="chapter " data-level="1.23" data-path="../poo/motivacao.html">
             
-                <a href="motivacao.html">
+                <a href="../poo/motivacao.html">
             
                     
                     POO Motivação
@@ -458,9 +458,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.24" data-path="poo.html">
+        <li class="chapter " data-level="1.24" data-path="../poo/poo.html">
             
-                <a href="poo.html">
+                <a href="../poo/poo.html">
             
                     
                     POO
@@ -471,9 +471,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.25" data-path="criar_classes.html">
+        <li class="chapter " data-level="1.25" data-path="../poo/criar_classes.html">
             
-                <a href="criar_classes.html">
+                <a href="../poo/criar_classes.html">
             
                     
                     POO Criar classes
@@ -484,9 +484,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.26" data-path="criar_objetos.html">
+        <li class="chapter " data-level="1.26" data-path="../poo/criar_objetos.html">
             
-                <a href="criar_objetos.html">
+                <a href="../poo/criar_objetos.html">
             
                     
                     POO Criar objetos
@@ -497,9 +497,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.27" data-path="aceder_a_atributos.html">
+        <li class="chapter " data-level="1.27" data-path="../poo/aceder_a_atributos.html">
             
-                <a href="aceder_a_atributos.html">
+                <a href="../poo/aceder_a_atributos.html">
             
                     
                     POO Aceder a atributos
@@ -510,9 +510,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.28" data-path="vantagens.html">
+        <li class="chapter " data-level="1.28" data-path="../poo/vantagens.html">
             
-                <a href="vantagens.html">
+                <a href="../poo/vantagens.html">
             
                     
                     POO Vantagen
@@ -523,9 +523,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.29" data-path="print_de_objetos.html">
+        <li class="chapter " data-level="1.29" data-path="../poo/print_de_objetos.html">
             
-                <a href="print_de_objetos.html">
+                <a href="../poo/print_de_objetos.html">
             
                     
                     POO print de objetos
@@ -536,9 +536,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.30" data-path="redefinicao_operadores.html">
+        <li class="chapter " data-level="1.30" data-path="../poo/redefinicao_operadores.html">
             
-                <a href="redefinicao_operadores.html">
+                <a href="../poo/redefinicao_operadores.html">
             
                     
                     POO (Re)definição de operadores
@@ -618,7 +618,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >POO Criar objetos</a>
+        <a href=".." >Exercício 1 - Preços</a>
     </h1>
 </div>
 
@@ -633,98 +633,46 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="criar-objetos">Criar objetos</h1>
-<p>Para cirar objetos de uma dada classe, usa-se o nome da classe como se
-fosse uma função, isto é, seguido de parentsis curvos. Passam-se,
-dentro dos parentsis, os valores de todos os argumentos do construtor
-à exceção do primeiro argumento, <code>self</code>. Porque quem fornece o argumento
-<code>self</code> é o intrepretador Python. Não é o programador.</p>
-<h3 id="exemplo-no-ficheiro-objetosprodutopy">Exemplo (no ficheiro <code>objetos_produto.py</code>)</h3>
-<p>Escreva e execute este programa. Note mais uma vez que este programa
-não produz <em>output</em> porque não tem nenhum <code>print</code>. Mas os objetos do
-tipo <code>Produto</code> foram criados.</p>
-<pre><code class="lang-python">
-<span class="hljs-keyword">class</span> <span class="hljs-title class_">Produto</span>:
-
-    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, valor_preco, valor_desconto</span>):
-
-        self.atributo_preco    = valor_preco
-        self.atributo_desconto = valor_desconto
-
-    <span class="hljs-comment"># método para calcular o valor a pagar</span>
-    <span class="hljs-keyword">def</span> <span class="hljs-title function_">f</span>(<span class="hljs-params">self</span>):
-
-        preco    = self.atributo_preco
-        desconto = self.atributo_desconto
-
-        valor_desconto = preco * desconto/<span class="hljs-number">100</span>
-        valor_a_pagar  = preco - valor_desconto
-
-        <span class="hljs-keyword">return</span> valor_a_pagar
-
-preco_1    = <span class="hljs-number">10</span>
-desconto_1 = <span class="hljs-number">10</span> <span class="hljs-comment"># por cento</span>
-produto_1  = Produto(preco_1, desconto_1) <span class="hljs-comment"># produto_1 é um novo valor</span>
-                                          <span class="hljs-comment"># do tipo Produto. é um</span>
-                                          <span class="hljs-comment"># objeto</span>
-
-preco_2    = <span class="hljs-number">20</span>
-desconto_2 = <span class="hljs-number">5</span> <span class="hljs-comment"># por cento</span>
-produto_2  = Produto(preco_2, desconto_2) <span class="hljs-comment"># produto_2 é um novo valor</span>
-                                          <span class="hljs-comment"># do tipo Produto. é um</span>
-                                          <span class="hljs-comment"># objeto</span>
-
-<span class="hljs-comment"># ambos os objetos têm os mesmos atributos:</span>
-<span class="hljs-comment"># atributos que armazenam valores:</span>
-<span class="hljs-comment">#  - atributo_preco,</span>
-<span class="hljs-comment">#  - atributo_desconto</span>
-<span class="hljs-comment"># atributo para executar operações (sobre os valores armazenados):</span>
-<span class="hljs-comment">#  - f</span>
-
-<span class="hljs-comment"># mas os valores dos atributos armazenados em cada objeto são diferentes</span>
-<span class="hljs-comment"># no produto_1 o preço é 10 e o desconto também é 10</span>
-<span class="hljs-comment"># no produto_2 o preço é 20 e o desconto é 5</span>
+                                <h1 id="exercício-1---preços">Exercício 1 - Preços</h1>
+<p>O preço de um produto é <code>20</code> euros e está com um desconto de <code>10%</code>. Os
+fatores de conversão euro/dolar e euro/libra, são, respetivamente,
+<code>1.1</code> e <code>0.9</code>.</p>
+<p>Escreva um programa que calcule o preço a pagar pelo
+produto, bem como o valor do desconto, em euros, dólares e libras.</p>
+<h2 id="solução">Solução</h2>
+<p>Usar os operadores aritméticos disponíveis em Pyhton.</p>
+<p>Escreva e execute este programa. Qual é o <em>output</em>?</p>
+<h3 id="programa-no-ficheiro-exercicio1precospy">Programa (no ficheiro <code>exercicio_1_precos.py</code>)</h3>
+<pre><code class="lang-python"><span class="hljs-number">20</span> - <span class="hljs-number">20</span>*<span class="hljs-number">10</span>/<span class="hljs-number">100</span>       <span class="hljs-comment"># preço a pagar em euros</span>
+(<span class="hljs-number">20</span> - <span class="hljs-number">20</span>*<span class="hljs-number">10</span>/<span class="hljs-number">100</span>)*<span class="hljs-number">1.1</span> <span class="hljs-comment"># preço a pagar em dólares</span>
+(<span class="hljs-number">20</span> - <span class="hljs-number">20</span>*<span class="hljs-number">10</span>/<span class="hljs-number">100</span>)*<span class="hljs-number">0.9</span> <span class="hljs-comment"># preço a pagar em libras</span>
+<span class="hljs-number">20</span>*<span class="hljs-number">10</span>/<span class="hljs-number">100</span>            <span class="hljs-comment"># desconto em euros</span>
+<span class="hljs-number">20</span>*<span class="hljs-number">10</span>/<span class="hljs-number">100</span>*<span class="hljs-number">1.1</span>        <span class="hljs-comment"># desconto em dólares</span>
+<span class="hljs-number">20</span>*<span class="hljs-number">10</span>/<span class="hljs-number">100</span>*<span class="hljs-number">0.9</span>        <span class="hljs-comment"># desconto em libras</span>
 </code></pre>
 
-<h3 id="exemplo-no-ficheiro-objetospessoapy">Exemplo (no ficheiro <code>objetos_pessoa.py</code>)</h3>
-<p>Escreva e execute este programa. Note mais uma vez que este programa
-não produz <em>output</em> porque não tem nenhum <code>print</code>. Mas os objetos do
-tipo <code>Pessoa</code> foram criados.</p>
-<pre><code class="lang-python">
-<span class="hljs-keyword">class</span> <span class="hljs-title class_">Pessoa</span>:
-
-    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, peso, altura</span>):
-
-        self.peso   = peso
-        self.altura = altura
-
-    <span class="hljs-comment"># método para calcular o IMC</span>
-    <span class="hljs-keyword">def</span> <span class="hljs-title function_">f</span>(<span class="hljs-params">self</span>):
-
-        <span class="hljs-keyword">return</span> self.peso / (self.altura * self.altura)
-
-peso_1   = <span class="hljs-number">80</span>  <span class="hljs-comment"># em Kg</span>
-altura_1 = <span class="hljs-number">1.8</span> <span class="hljs-comment"># em metros</span>
-pessoa_1 = Pessoa(peso_1, altura_1) <span class="hljs-comment"># pessoa_1 é um novo valor do tipo</span>
-                                    <span class="hljs-comment"># Pessoa. é um objeto</span>
-
-peso_2   = <span class="hljs-number">70</span>  <span class="hljs-comment"># em Kg</span>
-altura_2 = <span class="hljs-number">1.7</span> <span class="hljs-comment"># em metros</span>
-pessoa_2 = Pessoa(peso_2, altura_2) <span class="hljs-comment"># pessoa_2 é um novo valor do tipo</span>
-                                    <span class="hljs-comment"># Pessoa. é um objeto</span>
-
-<span class="hljs-comment"># ambos os objetos têm os mesmos atributos:</span>
-<span class="hljs-comment"># atributos que armazenam valores:</span>
-<span class="hljs-comment">#  - peso,</span>
-<span class="hljs-comment">#  - altura</span>
-<span class="hljs-comment"># atributo para executar operações (sobre os valores armazenados):</span>
-<span class="hljs-comment">#  - f</span>
-
-<span class="hljs-comment"># mas os valores dos atributos armazenados em cada objeto são diferentes</span>
-<span class="hljs-comment"># no objeto pessoa_1 o peso é 80 e a altura é 1.8</span>
-<span class="hljs-comment"># no objeto pessoa_2 o peso é 70 e a altura é 1.7</span>
+<h2 id="observação">Observação</h2>
+<p>Este programa está correcto. Calcula os valores em causa. E
+funciona/executa-se sem erros. Mas não mostra nenhum dos valores
+calculados. Como não tem <code>print</code>s, não tem output.</p>
+<h2 id="segunda-versão-com-output">Segunda versão. Com <em>output</em>.</h2>
+<p>Escreva e execute este programa.</p>
+<h3 id="programa-no-ficheiro-exercicio1precosv2py">Programa (no ficheiro <code>exercicio_1_precos_v2.py</code>)</h3>
+<pre><code class="lang-python"><span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;preço do produto:        &apos;</span>, <span class="hljs-number">20</span>, <span class="hljs-string">&apos;em euros&apos;</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;valor do desconto:       &apos;</span>, <span class="hljs-number">10</span>, <span class="hljs-string">&apos;porcento&apos;</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;preço a pagar em euros:  &apos;</span>, <span class="hljs-number">20</span> - <span class="hljs-number">20</span>*<span class="hljs-number">10</span>/<span class="hljs-number">100</span>)       <span class="hljs-comment"># preço a pagar em euros</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;preço a pagar em dólares:&apos;</span>, (<span class="hljs-number">20</span> - <span class="hljs-number">20</span>*<span class="hljs-number">10</span>/<span class="hljs-number">100</span>)*<span class="hljs-number">1.1</span>) <span class="hljs-comment"># preço a pagar em dólares</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;preço a pagar em libras: &apos;</span>, (<span class="hljs-number">20</span> - <span class="hljs-number">20</span>*<span class="hljs-number">10</span>/<span class="hljs-number">100</span>)*<span class="hljs-number">0.9</span>) <span class="hljs-comment"># preço a pagar em libras</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;desconto em euros:       &apos;</span>, <span class="hljs-number">20</span>*<span class="hljs-number">10</span>/<span class="hljs-number">100</span>)            <span class="hljs-comment"># desconto em euros</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;desconto em dólares:     &apos;</span>, <span class="hljs-number">20</span>*<span class="hljs-number">10</span>/<span class="hljs-number">100</span>*<span class="hljs-number">1.1</span>)        <span class="hljs-comment"># desconto em dólares</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;desconto em libras:      &apos;</span>, <span class="hljs-number">20</span>*<span class="hljs-number">10</span>/<span class="hljs-number">100</span>*<span class="hljs-number">0.9</span>)        <span class="hljs-comment"># desconto em libras</span>
 </code></pre>
 
+<p>Este programa já mostra os valores calculados, certo?</p>
+<h2 id="observação">Observação</h2>
+<p>Pode passar-se/fornecer-se à função <code>print</code> vários valores. Dentro dos
+parentsis. Separados por vírgulas. A função <code>print</code> faz <em>output</em> dos
+vários valores que recebeu, separando-os por um espaço.</p>
 
                                 
                                 </section>
@@ -752,12 +700,12 @@ pessoa_2 = Pessoa(peso_2, altura_2) <span class="hljs-comment"># pessoa_2 é um 
 
             
                 
-                <a href="criar_classes.html" class="navigation navigation-prev " aria-label="Previous page: POO Criar classes">
+                <a href="../comentarios/comentarios.html" class="navigation navigation-prev " aria-label="Previous page: Comentários">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="aceder_a_atributos.html" class="navigation navigation-next " aria-label="Next page: POO Aceder a atributos">
+                <a href="../operadores_aritmeticos/operadores_aritmeticos.html" class="navigation navigation-next " aria-label="Next page: Operadores Aritméticos">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -768,7 +716,7 @@ pessoa_2 = Pessoa(peso_2, altura_2) <span class="hljs-comment"># pessoa_2 é um 
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"POO Criar objetos","level":"1.26","depth":1,"next":{"title":"POO Aceder a atributos","level":"1.27","depth":1,"path":"poo/aceder_a_atributos.md","ref":"poo/aceder_a_atributos.md","articles":[]},"previous":{"title":"POO Criar classes","level":"1.25","depth":1,"path":"poo/criar_classes.md","ref":"poo/criar_classes.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"pt","gitbook":"*"},"file":{"path":"poo/criar_objetos.md","mtime":"2024-02-27T13:04:02.037Z","type":"markdown"},"gitbook":{"version":"5.1.0","time":"2024-09-13T08:00:57.520Z"},"basePath":"..","book":{"language":"pt"}});
+            gitbook.page.hasChanged({"page":{"title":"Exercício 1 - Preços","level":"1.7","depth":1,"next":{"title":"Operadores Aritméticos","level":"1.8","depth":1,"path":"operadores_aritmeticos/operadores_aritmeticos.md","ref":"operadores_aritmeticos/operadores_aritmeticos.md","articles":[]},"previous":{"title":"Comentários","level":"1.6","depth":1,"path":"comentarios/comentarios.md","ref":"comentarios/comentarios.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"pt","gitbook":"*"},"file":{"path":"exercicio_1_precos/exercicio_1_precos.md","mtime":"2024-09-12T10:22:48.857Z","type":"markdown"},"gitbook":{"version":"5.1.0","time":"2024-09-13T08:00:57.520Z"},"basePath":"..","book":{"language":"pt"}});
         });
     </script>
 </div>
