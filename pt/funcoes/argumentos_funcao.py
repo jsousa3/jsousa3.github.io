@@ -1,22 +1,47 @@
+# o nome desta função é preço_a_pagar
+# os argumentos da função são preço e desconto
 
-# esta função tem um argumento
-def dobro(x):
+def preço_a_pagar(preço, desconto): # esta linha é o cabeçalho da função
 
-    return 2 * x
+    # as próximas 6 linhas Python são o corpo da função
+    # quando a função é chamada o corpo da função é executado
 
-# esta função tem três argumentos
-def produto(x, y):
+    print('a executar a função preço_a_pagar... início')
 
-    return x * y
-
-# esta função não tem argumentos
-def hello():
-
-    print('Hello World!')
+    print('o valor do argumento preço é   :', preço)
+    print('o valor do argumento desconto é:', preço)
     
-print(dobro(10))
-print(produto(10,20))
-print(hello())
-print(dobro(1, 2))
-print(produto(3))
-print(hello(4))
+    fator = desconto/100 # fator do desconto entre zero e um
+    
+    valor_do_desconto = preço * fator
+
+    resultado = preço - valor_do_desconto
+    
+    print('a executar a função preço_a_pagar... fim')
+
+    return resultado
+
+def hello():
+    
+    print('Hello World')
+
+preço_1         = 20
+desconto_1      = 10
+preço_2         = 40
+desconto_2      = 10
+preço_1_a_pagar = preço_a_pagar(preço_1, desconto_1) # aqui chama-se a
+                                                     # função
+preço_2_a_pagar = preço_a_pagar(preço_2, desconto_2) # e aqui chama-se
+                                                     # a função outra
+                                                     # vez
+hello()
+print(preço_1_a_pagar)
+print(preço_2_a_pagar)
+hello()
+
+preço_3         = 20
+preço_3_a_pagar = preço_a_pagar(preço_3) # esta linha dá erro. falta
+                                         # um argumento. o desconto
+
+hello(10) # esta linha dá erro. a função hello não tem argumentos. não
+          # pode receber valores

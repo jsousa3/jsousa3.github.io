@@ -1,0 +1,11 @@
+9
+5
+14
+3.5
+49
+3
+1
+Traceback (most recent call last):
+  File "/home/jbs/develop/202309_hello_python_world_v2/pt/operadores_aritmeticos/exemplos_operadores_aritmeticos.py", line 18, in <module>
+    print('hello' / 'world')
+TypeError: unsupported operand type(s) for /: 'str' and 'str'

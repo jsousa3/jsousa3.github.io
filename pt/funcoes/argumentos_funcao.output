@@ -1,0 +1,16 @@
+a executar a função preço_a_pagar... início
+o valor do argumento preço é   : 20
+o valor do argumento desconto é: 20
+a executar a função preço_a_pagar... fim
+a executar a função preço_a_pagar... início
+o valor do argumento preço é   : 40
+o valor do argumento desconto é: 40
+a executar a função preço_a_pagar... fim
+Hello World
+18.0
+36.0
+Hello World
+Traceback (most recent call last):
+  File "/home/jbs/develop/202309_hello_python_world_v2/pt/funcoes/argumentos_funcao.py", line 43, in <module>
+    preço_3_a_pagar = preço_a_pagar(preço_3) # esta linha dá erro. falta
+TypeError: preço_a_pagar() missing 1 required positional argument: 'desconto'
