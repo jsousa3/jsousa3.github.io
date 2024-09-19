@@ -1,18 +1,20 @@
-def desconto_quantidade(quantidade):
-    if quantidade > 10:
-        desconto = 20 # em percentagem
-    elif quantidade > 5:
-        desconto = 10 # em percentagem
-    else:
-        desconto = 2 # em percentagem
-    return desconto # esta linha está fora do else. é sempre
-                    # executada, incondicionalmente
+# experimenta executar este programa alterando o valor da variável
+# quandidade
+quantidade = 3 # experimente, por exemplo, -1, 0, 1, 2, 10, 100
 
-print(desconto_quantidade(15)) # apesar de 15 ser maior que 10 e
-                               # também ser maior que 5, só um dos
-                               # ramos é que é executado. o primeiro
-                               # em que a condição correpondente seja
-                               # verdadeira. mesta caso, o ramo
-                               # correspondente a quantidade > 10
-print(desconto_quantidade(7))
-print(desconto_quantidade(3))
+if quantidade == 1: # condição 1
+    # bloco associado à condição 1
+    desconto = 10
+    print('o desconto aplicado é:', desconto, '%')
+elif quantidade == 2: # condição 2
+    # bloco associado à condição 2
+    desconto = 20
+    print('o desconto aplicado é:', desconto, '%')
+elif quantidade == 3: # condição 3
+    # bloco associado à condição 3
+    desconto = 30
+    print('o desconto aplicado é:', desconto, '%')
+else:
+    # bloco executado caso todas as condições sejam falsas
+    desconto = 40
+    print('o desconto aplicado é:', desconto, '%')

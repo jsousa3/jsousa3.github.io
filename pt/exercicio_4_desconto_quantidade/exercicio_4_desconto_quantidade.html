@@ -3,7 +3,7 @@
 <html lang="pt" >
     <head>
         <meta charset="UTF-8">
-        <title>float · HonKit</title>
+        <title>Exercício 4 - Desconto de quantidade · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="HonKit 5.1.0">
@@ -56,10 +56,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../bools/bools.html" />
+    <link rel="next" href="../if/if.html" />
     
     
-    <link rel="prev" href="../ints/ints.html" />
+    <link rel="prev" href="../funcoes/contexto.html" />
     
 
     </head>
@@ -277,9 +277,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.9.3" data-path="floats.html">
+        <li class="chapter " data-level="1.9.3" data-path="../floats/floats.html">
             
-                <a href="floats.html">
+                <a href="../floats/floats.html">
             
                     
                     float
@@ -463,9 +463,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.14" data-path="../exercicio_4_desconto_quantidade/exercicio_4_desconto_quantidade.html">
+        <li class="chapter active" data-level="1.14" data-path="exercicio_4_desconto_quantidade.html">
             
-                <a href="../exercicio_4_desconto_quantidade/exercicio_4_desconto_quantidade.html">
+                <a href="exercicio_4_desconto_quantidade.html">
             
                     
                     Exercício 4 - Desconto de quantidade
@@ -766,7 +766,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >float</a>
+        <a href=".." >Exercício 4 - Desconto de quantidade</a>
     </h1>
 </div>
 
@@ -781,28 +781,90 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="números-decimais">Números decimais</h1>
-<p>Os números decimais são do tipo <code>float</code>. <code>float</code> são as letras iniciais de <em>floating point</em>, que quer dizer vírgula flutuande. <em>Floating point</em> é o formato mais usado em computador para representar números decimais.</p>
-<h3 id="exemplos-no-ficheiro-exemplosfloatspy">Exemplos (no ficheiro <code>exemplos_floats.py</code>)</h3>
-<p>Escreve e execute este programa. Confirme o seu <em>output</em>.</p>
-<pre><code class="lang-python"><span class="hljs-built_in">print</span>(<span class="hljs-number">0.0001</span>)
-<span class="hljs-built_in">print</span>(<span class="hljs-number">20.1</span>)
-<span class="hljs-built_in">print</span>(<span class="hljs-number">0.0</span>)
-<span class="hljs-built_in">print</span>(-<span class="hljs-number">32.35</span>)
+                                <h1 id="exercício-4---desconto-de-quantidade">Exercício 4 - Desconto de quantidade</h1>
+<p>O preço de um produto é <code>40</code> euros. Há um desconto que depende das
+unidades compradas. Caso se compre uma unidade o desconto é
+<code>10%</code>. Caso se comprem duas unidades o desconto é <code>20%</code>. Caso se comprem
+três unidades o desconto é <code>30%</code>. Caso se comprem quatro ou mais
+unidades o desconto é <code>40%</code>.</p>
+<p>Escreva um programa que calcule o valor a pagar quando se compram
+uma, duas, três, quatro e cinco unidades.</p>
+<h2 id="solução">Solução</h2>
+<p>Usar a instrução de execução condicional <code>if elif else</code>.</p>
+<h3 id="programa-no-ficheiro-exercicio4descontoquantidadepy">Programa (no ficheiro <code>exercicio_4_desconto_quantidade.py</code>)</h3>
+<p>Escreva e execute este programa. Confirme o seu <em>output</em>.</p>
+<pre><code class="lang-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">desconto_em_percentagem</span>(<span class="hljs-params">quantidade</span>):
+
+    <span class="hljs-keyword">if</span> quantidade == <span class="hljs-number">1</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-number">10</span>
+    <span class="hljs-keyword">elif</span> quantidade == <span class="hljs-number">2</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-number">20</span>
+    <span class="hljs-keyword">elif</span> quantidade == <span class="hljs-number">3</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-number">30</span>
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-number">40</span>
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">valor_a_pagar</span>(<span class="hljs-params">preço, quantidade</span>):
+
+    desconto             = desconto_em_percentagem(quantidade)
+    desconto_por_unidade = preço*desconto/<span class="hljs-number">100</span>
+    resultado            = (preço - desconto_por_unidade) * quantidade
+    <span class="hljs-keyword">return</span> resultado
+
+preço           = <span class="hljs-number">40</span>
+quantidade_1    = <span class="hljs-number">1</span>
+valor_a_pagar_1 = valor_a_pagar(preço, quantidade_1)
+quantidade_2    = <span class="hljs-number">2</span>
+valor_a_pagar_2 = valor_a_pagar(preço, quantidade_2)
+quantidade_3    = <span class="hljs-number">3</span>
+valor_a_pagar_3 = valor_a_pagar(preço, quantidade_3)
+quantidade_4    = <span class="hljs-number">4</span>
+valor_a_pagar_4 = valor_a_pagar(preço, quantidade_4)
+quantidade_5    = <span class="hljs-number">5</span>
+valor_a_pagar_5 = valor_a_pagar(preço, quantidade_5)
+
+desconto_1 = desconto_em_percentagem(quantidade_1)
+desconto_2 = desconto_em_percentagem(quantidade_2)
+desconto_3 = desconto_em_percentagem(quantidade_3)
+desconto_4 = desconto_em_percentagem(quantidade_4)
+desconto_5 = desconto_em_percentagem(quantidade_5)
+
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;preço do produto:&apos;</span>, preço)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;quantidade:      &apos;</span>, quantidade_1)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;desconto:        &apos;</span>, desconto_1, <span class="hljs-string">&apos;%&apos;</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;valor a pagar:   &apos;</span>, valor_a_pagar_1)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;quantidade:      &apos;</span>, quantidade_2)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;desconto:        &apos;</span>, desconto_2, <span class="hljs-string">&apos;%&apos;</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;valor a pagar:   &apos;</span>, valor_a_pagar_2)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;quantidade:      &apos;</span>, quantidade_3)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;desconto:        &apos;</span>, desconto_3, <span class="hljs-string">&apos;%&apos;</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;valor a pagar:   &apos;</span>, valor_a_pagar_3)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;quantidade:      &apos;</span>, quantidade_4)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;desconto:        &apos;</span>, desconto_4, <span class="hljs-string">&apos;%&apos;</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;valor a pagar:   &apos;</span>, valor_a_pagar_4)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;quantidade:      &apos;</span>, quantidade_5)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;desconto:        &apos;</span>, desconto_5, <span class="hljs-string">&apos;%&apos;</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;valor a pagar:   &apos;</span>, valor_a_pagar_5)
 </code></pre>
 
 <h3 id="output"><em>Output</em></h3>
-<pre><code>0.0001
-20.1
-0.0
--32.35
+<pre><code>preço do produto: 40
+quantidade:       1
+desconto:         10 %
+valor a pagar:    36.0
+quantidade:       2
+desconto:         20 %
+valor a pagar:    64.0
+quantidade:       3
+desconto:         30 %
+valor a pagar:    84.0
+quantidade:       4
+desconto:         40 %
+valor a pagar:    96.0
+quantidade:       5
+desconto:         40 %
+valor a pagar:    120.0
 </code></pre>
-
-<h2 id="observação">Observação</h2>
-<p>O separdor decimal em Pyhton é o <code>.</code>, ponto (usado na maioria dos
-países de língua inglesa). Recorde-se que o separador decimal em
-Portugal é a <code>,</code>, vírgula. A vígula não é válida como separa decimal
-em Python.</p>
 
                                 
                                 </section>
@@ -830,12 +892,12 @@ em Python.</p>
 
             
                 
-                <a href="../ints/ints.html" class="navigation navigation-prev " aria-label="Previous page: int">
+                <a href="../funcoes/contexto.html" class="navigation navigation-prev " aria-label="Previous page: Contexto">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../bools/bools.html" class="navigation navigation-next " aria-label="Next page: bool">
+                <a href="../if/if.html" class="navigation navigation-next " aria-label="Next page: Execução Condicional - if elif else">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -846,7 +908,7 @@ em Python.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"float","level":"1.9.3","depth":2,"next":{"title":"bool","level":"1.9.4","depth":2,"path":"bools/bools.md","ref":"bools/bools.md","articles":[]},"previous":{"title":"int","level":"1.9.2","depth":2,"path":"ints/ints.md","ref":"ints/ints.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"pt","gitbook":"*"},"file":{"path":"floats/floats.md","mtime":"2024-09-14T08:07:28.737Z","type":"markdown"},"gitbook":{"version":"5.1.0","time":"2024-09-19T08:03:42.186Z"},"basePath":"..","book":{"language":"pt"}});
+            gitbook.page.hasChanged({"page":{"title":"Exercício 4 - Desconto de quantidade","level":"1.14","depth":1,"next":{"title":"Execução Condicional - if elif else","level":"1.15","depth":1,"path":"if/if.md","ref":"if/if.md","articles":[]},"previous":{"title":"Contexto","level":"1.13.5","depth":2,"path":"funcoes/contexto.md","ref":"funcoes/contexto.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"pt","gitbook":"*"},"file":{"path":"exercicio_4_desconto_quantidade/exercicio_4_desconto_quantidade.md","mtime":"2024-09-19T08:25:34.084Z","type":"markdown"},"gitbook":{"version":"5.1.0","time":"2024-09-19T08:03:42.186Z"},"basePath":"..","book":{"language":"pt"}});
         });
     </script>
 </div>

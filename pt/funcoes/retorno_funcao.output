@@ -1,11 +1,9 @@
 a executar a função preço_a_pagar... início
 o valor do argumento preço é   : 20
-o valor do argumento desconto é: 20
-a executar a função preço_a_pagar... fim
+o valor do argumento desconto é: 10
 a executar a função preço_a_pagar... início
 o valor do argumento preço é   : 40
-o valor do argumento desconto é: 40
-a executar a função preço_a_pagar... fim
+o valor do argumento desconto é: 10
 Hello World
 18.0
 36.0

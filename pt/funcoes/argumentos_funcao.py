@@ -1,26 +1,16 @@
-# o nome desta função é preço_a_pagar
-# os argumentos da função são preço e desconto
-
-def preço_a_pagar(preço, desconto): # esta linha é o cabeçalho da função
-
-    # as próximas 6 linhas Python são o corpo da função
-    # quando a função é chamada o corpo da função é executado
+def preço_a_pagar(preço, desconto):
 
     print('a executar a função preço_a_pagar... início')
-
     print('o valor do argumento preço é   :', preço)
-    print('o valor do argumento desconto é:', preço)
-    
+    print('o valor do argumento desconto é:', desconto)
     fator = desconto/100 # fator do desconto entre zero e um
-    
     valor_do_desconto = preço * fator
-
     resultado = preço - valor_do_desconto
-    
     print('a executar a função preço_a_pagar... fim')
-
     return resultado
 
+# definiu-se uma função para fazer o print 'Hello World'
+# esta função não tem argumentos
 def hello():
     
     print('Hello World')
