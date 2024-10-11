@@ -1,4 +1,4 @@
-# experimenta executar este programa alterando o valor da variável
+# experimente executar este programa alterando o valor da variável
 # quandidade
 quantidade = 3 # experimente, por exemplo, -1, 0, 1, 2, 10, 100
 

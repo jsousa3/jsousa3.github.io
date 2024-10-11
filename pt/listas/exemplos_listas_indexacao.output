@@ -1,0 +1,12 @@
+[97, 70, 15, 38, 92, 30, 86, 68, 6, 80]
+97
+70
+80
+[97, 70, 15, 38, 92, 30, 86, 68, 6, 80]
+80
+6
+97
+Traceback (most recent call last):
+  File "/home/jbs/develop/202309_hello_python_world_v2/pt/listas/exemplos_listas_indexacao.py", line 32, in <module>
+    elemento1         = lista_de_preços[10] # esta linha dá erro. tem que
+IndexError: list index out of range

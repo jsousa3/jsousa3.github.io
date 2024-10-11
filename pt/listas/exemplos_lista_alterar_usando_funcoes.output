@@ -1,0 +1,5 @@
+[10, 'hello', False]
+[10, 'hello', False, 2.0]
+[10, 'hello', 'world', False, 2.0]
+['hello', 'world', False, 2.0]
+10

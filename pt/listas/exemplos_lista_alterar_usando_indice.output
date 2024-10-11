@@ -1,0 +1,4 @@
+[10, 'hello', False]
+[100, 'hello', False]
+[100, 200, False]
+[100, 200, 300]
