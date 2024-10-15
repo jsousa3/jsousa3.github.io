@@ -1,0 +1,5 @@
+['Farinha', 1.23, 10, True]
+['Arroz', 1.23, 10, True]
+['Arroz', 0.8, 10, True]
+['Arroz', 0.8, 5, True]
+['Arroz', 0.8, 5, False]

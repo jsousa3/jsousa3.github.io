@@ -1,0 +1,20 @@
+[[['nome', 'farinha'], ['preço', 1.23], ['desconto', 10], ['em stock', True]], [['nome', 'arroz'], ['preço', 0.8], ['desconto', 5], ['em stock', False]]]
+[['nome', 'farinha'], ['preço', 1.23], ['desconto', 10], ['em stock', True]]
+['nome', 'farinha']
+nome
+[[['nome', 'farinha'], ['preço', 1.23], ['desconto', 10], ['em stock', True]], [['nome', 'arroz'], ['preço', 0.8], ['desconto', 5], ['em stock', False]]]
+[['nome', 'arroz'], ['preço', 0.8], ['desconto', 5], ['em stock', False]]
+['preço', 0.8]
+0.8
+[[['nome', 'farinha'], ['preço', 1.23], ['desconto', 10], ['em stock', True]], [['nome', 'arroz'], ['preço', 0.8], ['desconto', 5], ['em stock', False]]]
+[['nome', 'arroz'], ['preço', 0.8], ['desconto', 5], ['em stock', False]]
+['desconto', 5]
+5
+[[['nome', 'farinha'], ['preço', 1.23], ['desconto', 10], ['em stock', True]], [['nome', 'arroz'], ['preço', 0.8], ['desconto', 5], ['em stock', False]]]
+[['nome', 'arroz'], ['preço', 0.8], ['desconto', 5], ['em stock', False]]
+['em stock', False]
+False
+[[['nome', 'farinha'], ['preço', 1.23], ['desconto', 10], ['em stock', True]], [['nome', 'arroz'], ['preço', 0.8], ['desconto', 5], ['em stock', False]]]
+[['nome', 'farinha'], ['preço', 1.23], ['desconto', 10], ['em stock', True]]
+['desconto', 10]
+10

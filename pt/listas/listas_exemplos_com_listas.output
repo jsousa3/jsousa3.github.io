@@ -1,0 +1,5 @@
+[['nome', 'farinha'], ['preço', 1.23], ['desconto', 10], ['em stock', True]]
+#####
+[['nome', 'arroz'], ['preço', 0.8], ['desconto', 5], ['em stock', False]]
+#####
+[[['nome', 'farinha'], ['preço', 1.23], ['desconto', 10], ['em stock', True]], [['nome', 'arroz'], ['preço', 0.8], ['desconto', 5], ['em stock', False]]]

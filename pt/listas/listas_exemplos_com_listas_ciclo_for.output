@@ -1,0 +1,57 @@
+produto
+campo
+elemento nome
+elemento farinha
+campo
+elemento preço
+elemento 1.23
+campo
+elemento desconto
+elemento 10
+campo
+elemento em stock
+elemento True
+produto
+campo
+elemento nome
+elemento arroz
+campo
+elemento preço
+elemento 0.8
+campo
+elemento desconto
+elemento 5
+campo
+elemento em stock
+elemento False
+
+#############################
+##### agora com índices #####
+#############################
+
+produto
+campo
+elemento nome
+elemento farinha
+campo
+elemento preço
+elemento 1.23
+campo
+elemento desconto
+elemento 10
+campo
+elemento em stock
+elemento True
+produto
+campo
+elemento nome
+elemento arroz
+campo
+elemento preço
+elemento 0.8
+campo
+elemento desconto
+elemento 5
+campo
+elemento em stock
+elemento False
