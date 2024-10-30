@@ -3,7 +3,7 @@
 <html lang="pt" >
     <head>
         <meta charset="UTF-8">
-        <title>POO Vantagen · HonKit</title>
+        <title>Exercício 9 - Tabela de compras · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="HonKit 5.1.0">
@@ -56,10 +56,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="print_de_objetos.html" />
+    <link rel="next" href="../listas/listas_com_listas.html" />
     
     
-    <link rel="prev" href="aceder_a_atributos.html" />
+    <link rel="prev" href="../tuplos/tuplos.html" />
     
 
     </head>
@@ -670,9 +670,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.24" data-path="../exercicio_9_tabela_de_compras/exercicio_9_tabela_de_compras.html">
+        <li class="chapter active" data-level="1.24" data-path="exercicio_9_tabela_de_compras.html">
             
-                <a href="../exercicio_9_tabela_de_compras/exercicio_9_tabela_de_compras.html">
+                <a href="exercicio_9_tabela_de_compras.html">
             
                     
                     Exercício 9 - Tabela de compras
@@ -761,9 +761,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.31" data-path="resumo.html">
+        <li class="chapter " data-level="1.31" data-path="../poo/resumo.html">
             
-                <a href="resumo.html">
+                <a href="../poo/resumo.html">
             
                     
                     POO Programação Orientada por Objetos
@@ -774,9 +774,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.32" data-path="motivacao.html">
+        <li class="chapter " data-level="1.32" data-path="../poo/motivacao.html">
             
-                <a href="motivacao.html">
+                <a href="../poo/motivacao.html">
             
                     
                     POO Motivação
@@ -787,9 +787,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.33" data-path="poo.html">
+        <li class="chapter " data-level="1.33" data-path="../poo/poo.html">
             
-                <a href="poo.html">
+                <a href="../poo/poo.html">
             
                     
                     POO
@@ -800,9 +800,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.34" data-path="criar_classes.html">
+        <li class="chapter " data-level="1.34" data-path="../poo/criar_classes.html">
             
-                <a href="criar_classes.html">
+                <a href="../poo/criar_classes.html">
             
                     
                     POO Criar classes
@@ -813,9 +813,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.35" data-path="criar_objetos.html">
+        <li class="chapter " data-level="1.35" data-path="../poo/criar_objetos.html">
             
-                <a href="criar_objetos.html">
+                <a href="../poo/criar_objetos.html">
             
                     
                     POO Criar objetos
@@ -826,9 +826,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.36" data-path="aceder_a_atributos.html">
+        <li class="chapter " data-level="1.36" data-path="../poo/aceder_a_atributos.html">
             
-                <a href="aceder_a_atributos.html">
+                <a href="../poo/aceder_a_atributos.html">
             
                     
                     POO Aceder a atributos
@@ -839,9 +839,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.37" data-path="vantagens.html">
+        <li class="chapter " data-level="1.37" data-path="../poo/vantagens.html">
             
-                <a href="vantagens.html">
+                <a href="../poo/vantagens.html">
             
                     
                     POO Vantagen
@@ -852,9 +852,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.38" data-path="print_de_objetos.html">
+        <li class="chapter " data-level="1.38" data-path="../poo/print_de_objetos.html">
             
-                <a href="print_de_objetos.html">
+                <a href="../poo/print_de_objetos.html">
             
                     
                     POO print de objetos
@@ -865,9 +865,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.39" data-path="redefinicao_operadores.html">
+        <li class="chapter " data-level="1.39" data-path="../poo/redefinicao_operadores.html">
             
-                <a href="redefinicao_operadores.html">
+                <a href="../poo/redefinicao_operadores.html">
             
                     
                     POO (Re)definição de operadores
@@ -947,7 +947,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >POO Vantagen</a>
+        <a href=".." >Exercício 9 - Tabela de compras</a>
     </h1>
 </div>
 
@@ -962,34 +962,258 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="vantagem-da-programação-orientada-por-objetos">Vantagem da Programação Orientada por Objetos</h1>
-<p>Considere o programa <code>motivacao_poo.py</code>, na secção &quot;Motivação&quot;. Neste
-programa existem variáveis e existem funções. Mas as funções não estão
-associadas aos dados armazenados nas variáveis. E isto pode conduzir a
-situações em que as funções são executadas com dados que não lhes
-dizem respeito. Por exemplo, calcular o valor a pagar fornecendo um
-peso e uma altura. Não faz sentido. É possível. Mas não faz sentido. E
-claro, conduz à obtenção de resultados que estão errados.</p>
-<p>Considere, por outro lado, o <code>aceder_a_atributos.py</code>, na secção
-&quot;Aceder a atributos&quot;. Neste programa incluiram-se propositadamente as
-classes <code>Produto</code> e <code>Pessoa</code>, para permitir a criação, num mesmo
-programa, de objetos do tipo <code>Produto</code> e de objetos do tipo
-<code>Pessoa</code>. Em ambas as classes a operação disponível chama-se <code>f</code>. Num
-caso para calcular o valor a pagar por um produto, e no outro para
-calcular o índice de massa corporal de uma pessoa.</p>
-<h2 id="perguntas">Perguntas</h2>
-<p>Consegue executar o método <code>f</code>, da classe <code>Produto</code>, em objetos do
-tipo <code>Pessoa</code>?</p>
-<p>Ou, por outro lado, consegue executar o método <code>f</code>, da classe
-<code>Pessoa</code>, em objetos do tipo <code>Produto</code>?</p>
-<h2 id="respostas">Respostas</h2>
-<p>NÃO!!! NÃO!!!</p>
-<p>Porque os métodos estão associados aos dados através dos objetos.</p>
-<p>E isto é uma enormíssima vantagem da Programação Orientada por
-Objetos, em relação à Programação Funcional (só com variáveis e
-funções). Porque permite evitar que as operações sejam realizadas
-sobre dados que não lhes dizem respeito, ou seja, permite evitar a
-obtenção de resultados errados.</p>
+                                <h1 id="exercício-9---tabela-de-compras">Exercício 9 - Tabela de compras</h1>
+<p>Considere a tabela que se segue:</p>
+<table>
+<thead>
+<tr>
+<th>Compras</th>
+<th>Produto 1</th>
+<th>Produto 2</th>
+<th>...</th>
+<th>Produto m</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cliente 1</td>
+<td>0</td>
+<td>2</td>
+<td></td>
+<td>0</td>
+</tr>
+<tr>
+<td>Cliente 2</td>
+<td>3</td>
+<td>0</td>
+<td></td>
+<td>0</td>
+</tr>
+<tr>
+<td>...</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Cliente n</td>
+<td>0</td>
+<td>0</td>
+<td></td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>Há <code>n</code> clientes. A tabela tem <code>n</code> linhas. Uma para cada cliente.</p>
+<p>Há <code>m</code> produtos. A tabela tem <code>m</code> colunas. Uma para cada produto.</p>
+<p>A tabela permite registar que quantidades de produtos foram compradas
+por cada cliente.</p>
+<p>Por exemplo, o cliente 2 comprou 3 unidades do produto 1. O cliente 1
+comprou 1 unidade do produto 2. Etc.</p>
+<p>Escreva:</p>
+<ol>
+<li><p>Uma função que receba como argumentos um número de linhas <code>n</code>, um
+número de colunas <code>m</code>, crie uma tabela com <code>n</code> linhas e <code>m</code> colunas, e
+retorne a tabela criada. Todos os números na tabela deverão ser
+inicializados a zero.</p>
+</li>
+<li><p>Uma função que receba como argumento uma tabela, e que faça
+<em>output</em> da tabela recebida. Esta função não retorna nada.</p>
+</li>
+<li><p>Uma função que receba como argumentos, uma tabela, um número de
+linha e um número de coluna. E retorne o valor que está na tabela na
+linha e coluna cujos números foram recebidas como argumentos. Note-se
+que os números de linha e de coluna se iniciam em um.</p>
+</li>
+<li><p>Uma função que receba como argumentos, uma tabela, um número de
+linha, um número de coluna, e um valor. Esta função coloca o valor
+recebido como argumento na tabela recebida como argumento. Na linha e
+coluna cujos números também recebeu como argumentos. Note-se mais uma
+vez que os números de linha e de coluna se iniciam em um. Esta função
+não retorna nada.</p>
+</li>
+<li><p>Alguns exemplos que ilustrem o funcionamento destas funções.</p>
+</li>
+</ol>
+<h2 id="solução">Solução</h2>
+<p>Usar listas com listas.</p>
+<p>A tabela é uma lista com linhas. Cada linha é por sua vez uma lista,
+com números. Todas as linhas têm o mesmo número de elementos.</p>
+<h2 id="primeira-versão">Primeira versão</h2>
+<p>Para um número fixo de 3 linhas, e para um número fixo de 5 colunas.</p>
+<h3 id="programa-no-ficheiro-exercicio9tabeladecompraspy">Programa (no ficheiro <code>exercicio_9_tabela_de_compras.py</code>)</h3>
+<p>Escreva e execute este programa. Confirme o seu <em>output</em>.</p>
+<pre><code class="lang-python">
+<span class="hljs-comment"># função para criar uma tabela</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">cria_tabela</span>():
+
+    tabela = [
+        [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>],
+        [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>],
+        [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>]
+    ]
+
+    <span class="hljs-keyword">return</span> tabela
+
+<span class="hljs-comment"># função para fazer output de uma tabela</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">mostra_tabela</span>(<span class="hljs-params">tabela</span>):
+
+    <span class="hljs-keyword">for</span> índice_linha <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">3</span>):
+        linha = tabela[índice_linha]
+        <span class="hljs-built_in">print</span>(linha)
+
+<span class="hljs-comment"># função para retornar o número numa linha e coluna de uma tabela</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">retorna_valor</span>(<span class="hljs-params">tabela, número_linha, número_coluna</span>):
+
+    índice_linha  = número_linha - <span class="hljs-number">1</span>
+    índice_coluna = número_coluna - <span class="hljs-number">1</span>
+
+    valor = tabela[índice_linha][índice_coluna]
+
+    <span class="hljs-keyword">return</span> valor
+
+<span class="hljs-comment"># função para guardar numa linha e coluna um valor</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">altera_valor</span>(<span class="hljs-params">tabela, número_linha, número_coluna, valor</span>):
+
+    índice_linha  = número_linha - <span class="hljs-number">1</span>
+    índice_coluna = número_coluna - <span class="hljs-number">1</span>
+
+    tabela[índice_linha][índice_coluna] = valor
+
+<span class="hljs-comment"># exeplos</span>
+tabela = cria_tabela()
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;tabela&apos;</span>)
+mostra_tabela(tabela)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;valores iniciais&apos;</span>)
+valor_2_1 = retorna_valor(tabela, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;linha&apos;</span>, <span class="hljs-number">2</span>, <span class="hljs-string">&apos;coluna&apos;</span>, <span class="hljs-number">1</span>, <span class="hljs-string">&apos;valor&apos;</span>, valor_2_1)
+valor_1_2 = retorna_valor(tabela, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;linha&apos;</span>, <span class="hljs-number">1</span>, <span class="hljs-string">&apos;coluna&apos;</span>, <span class="hljs-number">2</span>, <span class="hljs-string">&apos;valor&apos;</span>, valor_1_2)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;a alterar valores...&apos;</span>)
+altera_valor(tabela, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">3</span>)
+altera_valor(tabela, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;a alterar valores... fim.&apos;</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;valores alterados&apos;</span>)
+valor_2_1 = retorna_valor(tabela, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;linha&apos;</span>, <span class="hljs-number">2</span>, <span class="hljs-string">&apos;coluna&apos;</span>, <span class="hljs-number">1</span>, <span class="hljs-string">&apos;valor&apos;</span>, valor_2_1)
+valor_1_2 = retorna_valor(tabela, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;linha&apos;</span>, <span class="hljs-number">1</span>, <span class="hljs-string">&apos;coluna&apos;</span>, <span class="hljs-number">2</span>, <span class="hljs-string">&apos;valor&apos;</span>, valor_1_2)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;tabela&apos;</span>)
+mostra_tabela(tabela)
+</code></pre>
+
+<h3 id="output"><em>Output</em></h3>
+<pre><code>tabela
+[0, 0, 0, 0, 0]
+[0, 0, 0, 0, 0]
+[0, 0, 0, 0, 0]
+valores iniciais
+linha 2 coluna 1 valor 0
+linha 1 coluna 2 valor 0
+a alterar valores...
+a alterar valores... fim.
+valores alterados
+linha 2 coluna 1 valor 3
+linha 1 coluna 2 valor 2
+tabela
+[0, 2, 0, 0, 0]
+[3, 0, 0, 0, 0]
+[0, 0, 0, 0, 0]
+</code></pre>
+
+<h2 id="segunda-versão">Segunda versão</h2>
+<p>Para um número de linhas e para um número de colunas quaisquer.</p>
+<h3 id="programa-no-ficheiro-exercicio9tabeladecomprasv2py">Programa (no ficheiro <code>exercicio_9_tabela_de_compras_v2.py</code>)</h3>
+<p>Escreva e execute este programa. Confirme o seu <em>output</em>.</p>
+<pre><code class="lang-python">
+<span class="hljs-comment"># função para criar uma tabela</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">cria_tabela</span>(<span class="hljs-params">número_de_linhas, número_de_colunas</span>):
+
+    tabela = []
+
+    <span class="hljs-keyword">for</span> índice_linha <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(número_de_linhas):
+        nova_linha = []
+        <span class="hljs-keyword">for</span> índice_coluna <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(número_de_colunas):
+            nova_linha.append(<span class="hljs-number">0</span>)
+        tabela.append(nova_linha)
+
+    <span class="hljs-keyword">return</span> tabela
+
+<span class="hljs-comment"># função para fazer output de uma tabela</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">mostra_tabela</span>(<span class="hljs-params">tabela</span>):
+
+    <span class="hljs-keyword">for</span> índice_linha <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(tabela)):
+        linha = tabela[índice_linha]
+        <span class="hljs-built_in">print</span>(linha)
+
+<span class="hljs-comment"># função para retornar o número numa linha e coluna de uma tabela</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">retorna_valor</span>(<span class="hljs-params">tabela, número_linha, número_coluna</span>):
+
+    índice_linha  = número_linha - <span class="hljs-number">1</span>
+    índice_coluna = número_coluna - <span class="hljs-number">1</span>
+
+    valor = tabela[índice_linha][índice_coluna]
+
+    <span class="hljs-keyword">return</span> valor
+
+<span class="hljs-comment"># função para guardar numa linha e coluna um valor</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">altera_valor</span>(<span class="hljs-params">tabela, número_linha, número_coluna, valor</span>):
+
+    índice_linha  = número_linha - <span class="hljs-number">1</span>
+    índice_coluna = número_coluna - <span class="hljs-number">1</span>
+
+    tabela[índice_linha][índice_coluna] = valor
+
+<span class="hljs-comment"># exeplos</span>
+tabela = cria_tabela(<span class="hljs-number">7</span>, <span class="hljs-number">10</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;tabela&apos;</span>)
+mostra_tabela(tabela)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;valores iniciais&apos;</span>)
+valor_2_1 = retorna_valor(tabela, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;linha&apos;</span>, <span class="hljs-number">2</span>, <span class="hljs-string">&apos;coluna&apos;</span>, <span class="hljs-number">1</span>, <span class="hljs-string">&apos;valor&apos;</span>, valor_2_1)
+valor_1_2 = retorna_valor(tabela, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;linha&apos;</span>, <span class="hljs-number">1</span>, <span class="hljs-string">&apos;coluna&apos;</span>, <span class="hljs-number">2</span>, <span class="hljs-string">&apos;valor&apos;</span>, valor_1_2)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;a alterar valores...&apos;</span>)
+altera_valor(tabela, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">3</span>)
+altera_valor(tabela, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;a alterar valores... fim.&apos;</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;valores alterados&apos;</span>)
+valor_2_1 = retorna_valor(tabela, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;linha&apos;</span>, <span class="hljs-number">2</span>, <span class="hljs-string">&apos;coluna&apos;</span>, <span class="hljs-number">1</span>, <span class="hljs-string">&apos;valor&apos;</span>, valor_2_1)
+valor_1_2 = retorna_valor(tabela, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;linha&apos;</span>, <span class="hljs-number">1</span>, <span class="hljs-string">&apos;coluna&apos;</span>, <span class="hljs-number">2</span>, <span class="hljs-string">&apos;valor&apos;</span>, valor_1_2)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;tabela&apos;</span>)
+mostra_tabela(tabela)
+</code></pre>
+
+<h3 id="output"><em>Output</em></h3>
+<pre><code>tabela
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+valores iniciais
+linha 2 coluna 1 valor 0
+linha 1 coluna 2 valor 0
+a alterar valores...
+a alterar valores... fim.
+valores alterados
+linha 2 coluna 1 valor 3
+linha 1 coluna 2 valor 2
+tabela
+[0, 2, 0, 0, 0, 0, 0, 0, 0, 0]
+[3, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+</code></pre>
+
 
                                 
                                 </section>
@@ -1017,12 +1241,12 @@ obtenção de resultados errados.</p>
 
             
                 
-                <a href="aceder_a_atributos.html" class="navigation navigation-prev " aria-label="Previous page: POO Aceder a atributos">
+                <a href="../tuplos/tuplos.html" class="navigation navigation-prev " aria-label="Previous page: Tuplos">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="print_de_objetos.html" class="navigation navigation-next " aria-label="Next page: POO print de objetos">
+                <a href="../listas/listas_com_listas.html" class="navigation navigation-next " aria-label="Next page: Listas com listas">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1033,7 +1257,7 @@ obtenção de resultados errados.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"POO Vantagen","level":"1.37","depth":1,"next":{"title":"POO print de objetos","level":"1.38","depth":1,"path":"poo/print_de_objetos.md","ref":"poo/print_de_objetos.md","articles":[]},"previous":{"title":"POO Aceder a atributos","level":"1.36","depth":1,"path":"poo/aceder_a_atributos.md","ref":"poo/aceder_a_atributos.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"pt","gitbook":"*"},"file":{"path":"poo/vantagens.md","mtime":"2024-02-27T16:24:05.557Z","type":"markdown"},"gitbook":{"version":"5.1.0","time":"2024-10-30T00:32:29.181Z"},"basePath":"..","book":{"language":"pt"}});
+            gitbook.page.hasChanged({"page":{"title":"Exercício 9 - Tabela de compras","level":"1.24","depth":1,"next":{"title":"Listas com listas","level":"1.25","depth":1,"path":"listas/listas_com_listas.md","ref":"listas/listas_com_listas.md","articles":[]},"previous":{"title":"Tuplos","level":"1.23","depth":1,"path":"tuplos/tuplos.md","ref":"tuplos/tuplos.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"pt","gitbook":"*"},"file":{"path":"exercicio_9_tabela_de_compras/exercicio_9_tabela_de_compras.md","mtime":"2024-10-29T23:44:01.198Z","type":"markdown"},"gitbook":{"version":"5.1.0","time":"2024-10-30T00:32:29.181Z"},"basePath":"..","book":{"language":"pt"}});
         });
     </script>
 </div>

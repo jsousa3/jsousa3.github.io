@@ -1,57 +1,42 @@
-produto
-campo
-elemento nome
-elemento farinha
-campo
-elemento preço
-elemento 1.23
-campo
-elemento desconto
-elemento 10
-campo
-elemento em stock
-elemento True
-produto
-campo
-elemento nome
-elemento arroz
-campo
-elemento preço
-elemento 0.8
-campo
-elemento desconto
-elemento 5
-campo
-elemento em stock
-elemento False
+[[0, 2, 0, 0, 0], [3, 0, 7, 0, 9], [1, 0, 5, 0, 1]]
+linha = [0, 2, 0, 0, 0]
+valor = 0
+valor = 2
+valor = 0
+valor = 0
+valor = 0
+linha = [3, 0, 7, 0, 9]
+valor = 3
+valor = 0
+valor = 7
+valor = 0
+valor = 9
+linha = [1, 0, 5, 0, 1]
+valor = 1
+valor = 0
+valor = 5
+valor = 0
+valor = 1
 
 #############################
 ##### agora com índices #####
 #############################
 
-produto
-campo
-elemento nome
-elemento farinha
-campo
-elemento preço
-elemento 1.23
-campo
-elemento desconto
-elemento 10
-campo
-elemento em stock
-elemento True
-produto
-campo
-elemento nome
-elemento arroz
-campo
-elemento preço
-elemento 0.8
-campo
-elemento desconto
-elemento 5
-campo
-elemento em stock
-elemento False
+linha = [0, 2, 0, 0, 0]
+valor = 0
+valor = 2
+valor = 0
+valor = 0
+valor = 0
+linha = [3, 0, 7, 0, 9]
+valor = 3
+valor = 0
+valor = 7
+valor = 0
+valor = 9
+linha = [1, 0, 5, 0, 1]
+valor = 1
+valor = 0
+valor = 5
+valor = 0
+valor = 1

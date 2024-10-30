@@ -1,11 +1,7 @@
 # uma lista com listas
-produto1 = [['nome', 'farinha'], ['preço', 1.23], ['desconto', 10], ['em stock', True]]
-print(produto1)
-print('#####')
-# outra lista com listas
-produto2 = [['nome', 'arroz'], ['preço', 0.80], ['desconto', 5], ['em stock', False]]
-print(produto2)
-print('#####')
-# uma lista, com listas com listas
-lista_de_produtos = [produto1, produto2]
-print(lista_de_produtos)
+tabela = [
+    [0, 2, 0, 0, 0],
+    [3, 0, 7, 0, 9],
+    [1, 0, 5, 0, 1]
+]
+print(tabela)

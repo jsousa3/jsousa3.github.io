@@ -1,0 +1,16 @@
+tabela
+[0, 0, 0, 0, 0]
+[0, 0, 0, 0, 0]
+[0, 0, 0, 0, 0]
+valores iniciais
+linha 2 coluna 1 valor 0
+linha 1 coluna 2 valor 0
+a alterar valores...
+a alterar valores... fim.
+valores alterados
+linha 2 coluna 1 valor 3
+linha 1 coluna 2 valor 2
+tabela
+[0, 2, 0, 0, 0]
+[3, 0, 0, 0, 0]
+[0, 0, 0, 0, 0]

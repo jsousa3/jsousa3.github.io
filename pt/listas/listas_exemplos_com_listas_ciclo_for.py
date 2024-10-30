@@ -1,15 +1,15 @@
-# uma lista, com listas com listas
-lista_de_produtos = [
-    [['nome', 'farinha'], ['preço', 1.23], ['desconto', 10], ['em stock', True]],
-    [['nome', 'arroz'], ['preço', 0.80], ['desconto', 5], ['em stock', False]]
+# uma lista com listas
+tabela = [
+    [0, 2, 0, 0, 0],
+    [3, 0, 7, 0, 9],
+    [1, 0, 5, 0, 1]
 ]
+print(tabela)
 
-for produto in lista_de_produtos:
-    print('produto')
-    for campo in produto:
-        print('campo')
-        for elemento in campo:
-            print('elemento', elemento)
+for linha in tabela:
+    print('linha =', linha)
+    for valor in linha:
+        print('valor =', valor)
 
 # agora com índices
 print('''
@@ -18,13 +18,10 @@ print('''
 #############################
 ''')
 
-for índice_produto in range(len(lista_de_produtos)):
-    print('produto')
-    produto = lista_de_produtos[índice_produto]
-    for índice_campo in range(len(produto)):
-        print('campo')
-        campo = produto[índice_campo]
-        for índice_elemento in range(len(campo)):
-            elemento = campo[índice_elemento]
-            print('elemento', elemento)
+for índice_linha in range(len(tabela)):
+    linha = tabela[índice_linha ]
+    print('linha =', linha)
+    for índice_coluna in range(len(linha)):
+        valor = linha[índice_coluna]
+        print('valor =', valor)
 
