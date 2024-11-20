@@ -3,7 +3,7 @@
 <html lang="pt" >
     <head>
         <meta charset="UTF-8">
-        <title>Chamar · HonKit</title>
+        <title>f-strings · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="HonKit 5.1.0">
@@ -56,10 +56,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="argumentos.html" />
+    <link rel="next" href="../aplicacao_precos/aplicacao_precos.html" />
     
     
-    <link rel="prev" href="definicao.html" />
+    <link rel="prev" href="../exercicio_11_etiquetas/exercicio_11_etiquetas.html" />
     
 
     </head>
@@ -251,9 +251,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.9.1" data-path="../strings/strings.html">
+        <li class="chapter " data-level="1.9.1" data-path="strings.html">
             
-                <a href="../strings/strings.html">
+                <a href="strings.html">
             
                     
                     str
@@ -379,9 +379,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.13" data-path="funcoes.html">
+        <li class="chapter " data-level="1.13" data-path="../funcoes/funcoes.html">
             
-                <a href="funcoes.html">
+                <a href="../funcoes/funcoes.html">
             
                     
                     Funções
@@ -393,9 +393,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.13.1" data-path="definicao.html">
+        <li class="chapter " data-level="1.13.1" data-path="../funcoes/definicao.html">
             
-                <a href="definicao.html">
+                <a href="../funcoes/definicao.html">
             
                     
                     Definir
@@ -406,9 +406,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.13.2" data-path="chamar.html">
+        <li class="chapter " data-level="1.13.2" data-path="../funcoes/chamar.html">
             
-                <a href="chamar.html">
+                <a href="../funcoes/chamar.html">
             
                     
                     Chamar
@@ -419,9 +419,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.13.3" data-path="argumentos.html">
+        <li class="chapter " data-level="1.13.3" data-path="../funcoes/argumentos.html">
             
-                <a href="argumentos.html">
+                <a href="../funcoes/argumentos.html">
             
                     
                     Argumentos
@@ -432,9 +432,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.13.4" data-path="retorno.html">
+        <li class="chapter " data-level="1.13.4" data-path="../funcoes/retorno.html">
             
-                <a href="retorno.html">
+                <a href="../funcoes/retorno.html">
             
                     
                     Retorno
@@ -445,9 +445,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.13.5" data-path="contexto.html">
+        <li class="chapter " data-level="1.13.5" data-path="../funcoes/contexto.html">
             
-                <a href="contexto.html">
+                <a href="../funcoes/contexto.html">
             
                     
                     Contexto
@@ -709,9 +709,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.27" data-path="../strings/fstrings.html">
+        <li class="chapter active" data-level="1.27" data-path="fstrings.html">
             
-                <a href="../strings/fstrings.html">
+                <a href="fstrings.html">
             
                     
                     f-strings
@@ -973,7 +973,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Chamar</a>
+        <a href=".." >f-strings</a>
     </h1>
 </div>
 
@@ -988,91 +988,26 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="chamar-funções">Chamar funções</h1>
-<p>Para executar uma função chama-se a função. Para chamar a função
-usa-se o nome da função seguido de parentsis curvos. E fornece-se
-tantos valores quantos o número de argumentos da função, separados por
-vírgulas, dentro dos parentsis curvos.</p>
-<h3 id="exemplo-no-ficheiro-chamarfuncaopy">Exemplo (no ficheiro <code>chamar_funcao.py</code>)</h3>
-<p>Escreva e execute este programa. Qual é o <em>output</em>?</p>
-<pre><code class="lang-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">preço_a_pagar</span>(<span class="hljs-params">preço, desconto</span>):
-
-    <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;a executar a função preço_a_pagar... início&apos;</span>)
-    fator = desconto/<span class="hljs-number">100</span> <span class="hljs-comment"># fator do desconto entre zero e um</span>
-    valor_do_desconto = preço * fator
-    resultado = preço - valor_do_desconto
-    <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;a executar a função preço_a_pagar... fim&apos;</span>)
-    <span class="hljs-keyword">return</span> resultado
-
-<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Hello World&apos;</span>)
-
-preço_1         = <span class="hljs-number">20</span>
-desconto_1      = <span class="hljs-number">10</span>
-preço_2         = <span class="hljs-number">40</span>
-desconto_2      = <span class="hljs-number">10</span>
-preço_1_a_pagar = preço_a_pagar(preço_1, desconto_1) <span class="hljs-comment"># aqui chama-se a</span>
-                                                     <span class="hljs-comment"># função</span>
-preço_2_a_pagar = preço_a_pagar(preço_2, desconto_2) <span class="hljs-comment"># e aqui chama-se</span>
-                                                     <span class="hljs-comment"># a função outra</span>
-                                                     <span class="hljs-comment"># vez</span>
-
-<span class="hljs-built_in">print</span>(preço_1_a_pagar)
-<span class="hljs-built_in">print</span>(preço_2_a_pagar)
-</code></pre>
-
-<h3 id="output"><em>Output</em></h3>
-<pre><code>Hello World
-a executar a função preço_a_pagar... início
-a executar a função preço_a_pagar... fim
-a executar a função preço_a_pagar... início
-a executar a função preço_a_pagar... fim
-18.0
-36.0
-</code></pre>
-
-<h2 id="mais-sobre-chamar-funções">Mais sobre chamar funções</h2>
-<p>Uma função só pode ser chamada depois de ter sido definida.</p>
-<h3 id="exemplo-no-ficheiro-chamarfuncaonaodefinidapy">Exemplo (no ficheiro <code>chamar_funcao_nao_definida.py</code>)</h3>
-<p>Escreva e execute este programa. Qual é o <em>output</em>?</p>
-<pre><code class="lang-python">preço_1         = <span class="hljs-number">20</span>
-desconto_1      = <span class="hljs-number">10</span>
-<span class="hljs-comment"># a linha que se segue dá erro. porque a função preço_a_pagar ainda</span>
-<span class="hljs-comment"># não está definida</span>
-preço_1_a_pagar = preço_a_pagar(preço_1, desconto_1)
-
-<span class="hljs-built_in">print</span>(preço_1_a_pagar)
-
-<span class="hljs-comment"># o nome desta função é preço_a_pagar</span>
-<span class="hljs-comment"># os argumentos da função são preço e desconto</span>
-
-<span class="hljs-keyword">def</span> <span class="hljs-title function_">preço_a_pagar</span>(<span class="hljs-params">preço, desconto</span>): <span class="hljs-comment"># esta linha é o cabeçalho da função</span>
-
-    <span class="hljs-comment"># as próximas 6 linhas Python são o corpo da função</span>
-    <span class="hljs-comment"># quando a função é chamada o corpo da função é executado</span>
-
-    <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;a executar a função preço_a_pagar... início&apos;</span>)
-
-    fator = desconto/<span class="hljs-number">100</span> <span class="hljs-comment"># fator do desconto entre zero e um</span>
-
-    valor_do_desconto = preço * fator
-
-    resultado = preço - valor_do_desconto
-
-    <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;a executar a função preço_a_pagar... fim&apos;</span>)
-
-    <span class="hljs-keyword">return</span> resultado
-
-<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Hello World&apos;</span>) <span class="hljs-comment"># esta linha não faz parte da função. por isso</span>
-                     <span class="hljs-comment"># não é executada quando a função é</span>
-                     <span class="hljs-comment"># executada/chamada</span>
-</code></pre>
-
-<h3 id="output"><em>Output</em></h3>
-<pre><code>Traceback (most recent call last):
-  File &quot;/home/jbs/develop/202309_hello_python_world_v2/pt/funcoes/chamar_funcao_nao_definida.py&quot;, line 5, in 
-    preço_1_a_pagar = preço_a_pagar(preço_1, desconto_1)
-NameError: name &apos;preço_a_pagar&apos; is not defined
-</code></pre>
+                                <h1 id="f-strings"><em>f-strings</em></h1>
+<p><em>f-string</em> é a designação abreviada para <em>formatted string literal</em>,
+ que quer dizer <em>string</em> formatada.</p>
+<h2 id="criação">Criação</h2>
+<p>Para criar uma <em>f-string</em> coloca-se um <code>f</code> antes do limitador inicial
+da string. Qualquer dos limitadores pode ser usado (aspas, plicas,
+aspas triplas ou plicas triplas).</p>
+<h2 id="substituição-de-variáveis">Substituição de variáveis</h2>
+<p>As variáveis incluidas entre chavetas são substitídas pelos seus valores.</p>
+<h2 id="formatação---número-de-casas-decimais-só-para-números">Formatação - número de casas decimais (só para números)</h2>
+<h2 id="formatação---tamanho-ocupado">Formatação - tamanho ocupado</h2>
+<h2 id="formatação---zeros-à-esquerda-só-para-números">Formatação - zeros à esquerda (só para números)</h2>
+<h2 id="formatação---alinhamento">Formatação - alinhamento</h2>
+<h2 id="formatação---percentagem-junto-ao-número-só-para-números">Formatação - percentagem junto ao número (só para números)</h2>
+<h2 id="formatação---incluir-sinal--só-para-números">Formatação - incluir sinal  (só para números)</h2>
+<h2 id="muito-útil---incluir-o-nome-das-variáveis-usadas">Muito útil - incluir o nome das variáveis usadas</h2>
+<h2 id="incluir-chavetas">Incluir chavetas</h2>
+<p>Para incluir chavetas numa <em>f-string</em> precede-se as chavetas com o
+caracter de <em>escape</em>. O caracter de escape é a barra ao contrário, ou
+<em>backslash</em>, <code>\</code>.</p>
 
                                 
                                 </section>
@@ -1100,12 +1035,12 @@ NameError: name &apos;preço_a_pagar&apos; is not defined
 
             
                 
-                <a href="definicao.html" class="navigation navigation-prev " aria-label="Previous page: Definir">
+                <a href="../exercicio_11_etiquetas/exercicio_11_etiquetas.html" class="navigation navigation-prev " aria-label="Previous page: Exercício 11 - Etiquetas">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="argumentos.html" class="navigation navigation-next " aria-label="Next page: Argumentos">
+                <a href="../aplicacao_precos/aplicacao_precos.html" class="navigation navigation-next " aria-label="Next page: Aplicação - Preços">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1116,7 +1051,7 @@ NameError: name &apos;preço_a_pagar&apos; is not defined
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Chamar","level":"1.13.2","depth":2,"next":{"title":"Argumentos","level":"1.13.3","depth":2,"path":"funcoes/argumentos.md","ref":"funcoes/argumentos.md","articles":[]},"previous":{"title":"Definir","level":"1.13.1","depth":2,"path":"funcoes/definicao.md","ref":"funcoes/definicao.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"pt","gitbook":"*"},"file":{"path":"funcoes/chamar.md","mtime":"2024-09-15T22:28:30.779Z","type":"markdown"},"gitbook":{"version":"5.1.0","time":"2024-11-20T08:14:43.522Z"},"basePath":"..","book":{"language":"pt"}});
+            gitbook.page.hasChanged({"page":{"title":"f-strings","level":"1.27","depth":1,"next":{"title":"Aplicação - Preços","level":"1.28","depth":1,"path":"aplicacao_precos/aplicacao_precos.md","ref":"aplicacao_precos/aplicacao_precos.md","articles":[]},"previous":{"title":"Exercício 11 - Etiquetas","level":"1.26","depth":1,"path":"exercicio_11_etiquetas/exercicio_11_etiquetas.md","ref":"exercicio_11_etiquetas/exercicio_11_etiquetas.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"pt","gitbook":"*"},"file":{"path":"strings/fstrings.md","mtime":"2024-11-14T23:45:23.114Z","type":"markdown"},"gitbook":{"version":"5.1.0","time":"2024-11-20T08:14:43.522Z"},"basePath":"..","book":{"language":"pt"}});
         });
     </script>
 </div>
