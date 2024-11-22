@@ -992,22 +992,331 @@
 <p><em>f-string</em> é a designação abreviada para <em>formatted string literal</em>,
  que quer dizer <em>string</em> formatada.</p>
 <h2 id="criação">Criação</h2>
-<p>Para criar uma <em>f-string</em> coloca-se um <code>f</code> antes do limitador inicial
+<p>Para criar-se uma <em>f-string</em>, coloca-se um <code>f</code> antes do limitador inicial
 da string. Qualquer dos limitadores pode ser usado (aspas, plicas,
 aspas triplas ou plicas triplas).</p>
+<h3 id="programa-no-ficheiro-fstringscriacaopy">Programa (no ficheiro <code>fstrings_criacao.py</code>)</h3>
+<p>Escreva e execute este programa. Confirme o seu <em>output</em>.</p>
+<pre><code class="lang-python">s1 = <span class="hljs-string">f&apos;isto é uma f-string&apos;</span>
+s2 = <span class="hljs-string">f&apos;&apos;&apos;e isto
+é outra
+f-string&apos;&apos;&apos;</span>
+<span class="hljs-built_in">print</span>(s1)
+<span class="hljs-built_in">print</span>(s2)
+</code></pre>
+
+<h3 id="output"><em>Output</em></h3>
+<pre><code>isto é uma f-string
+e isto
+é outra
+f-string
+</code></pre>
+
+
+
+
+
 <h2 id="substituição-de-variáveis">Substituição de variáveis</h2>
 <p>As variáveis incluidas entre chavetas são substitídas pelos seus valores.</p>
-<h2 id="formatação---número-de-casas-decimais-só-para-números">Formatação - número de casas decimais (só para números)</h2>
-<h2 id="formatação---tamanho-ocupado">Formatação - tamanho ocupado</h2>
-<h2 id="formatação---zeros-à-esquerda-só-para-números">Formatação - zeros à esquerda (só para números)</h2>
-<h2 id="formatação---alinhamento">Formatação - alinhamento</h2>
-<h2 id="formatação---percentagem-junto-ao-número-só-para-números">Formatação - percentagem junto ao número (só para números)</h2>
-<h2 id="formatação---incluir-sinal--só-para-números">Formatação - incluir sinal  (só para números)</h2>
+<h3 id="programa-no-ficheiro-fstringssubstituicaopy">Programa (no ficheiro <code>fstrings_substituicao.py</code>)</h3>
+<p>Escreva e execute este programa. Confirme o seu <em>output</em>.</p>
+<pre><code class="lang-python">moeda                   = <span class="hljs-string">&apos;EUR&apos;</span>
+preço                   = <span class="hljs-number">20</span>
+desconto_em_percentagem = <span class="hljs-number">10</span>
+preço_a_pagar           = <span class="hljs-number">18</span>
+s1 = <span class="hljs-string">f&apos;&apos;&apos;
+moeda:         <span class="hljs-subst">{moeda}</span>
+preço:         <span class="hljs-subst">{preço}</span>
+desconto:      <span class="hljs-subst">{desconto_em_percentagem}</span>%
+preço a pagar: <span class="hljs-subst">{preço_a_pagar}</span>
+&apos;&apos;&apos;</span>
+<span class="hljs-built_in">print</span>(s1)
+</code></pre>
+
+<h3 id="output"><em>Output</em></h3>
+<pre><code>
+moeda:         EUR
+preço:         20
+desconto:      10%
+preço a pagar: 18
+
+</code></pre>
+
+
+
+
+
 <h2 id="muito-útil---incluir-o-nome-das-variáveis-usadas">Muito útil - incluir o nome das variáveis usadas</h2>
-<h2 id="incluir-chavetas">Incluir chavetas</h2>
-<p>Para incluir chavetas numa <em>f-string</em> precede-se as chavetas com o
-caracter de <em>escape</em>. O caracter de escape é a barra ao contrário, ou
-<em>backslash</em>, <code>\</code>.</p>
+<p>Muitas vezes, quando se está a verificar o funcionamento de um
+programa, faz-se <code>print</code> dos nomes das variáveis e dos seus
+valores. Isso obriga a ter que se escrever duas vezes o nome das
+variáveis. Com <em>f-strings</em> só se tem que escrever uma vez o nome das
+variáveis.</p>
+<h3 id="programa-no-ficheiro-fstringsnomesvariaveispy">Programa (no ficheiro <code>fstrings_nomes_variaveis.py</code>)</h3>
+<p>Escreva e execute este programa. Confirme o seu <em>output</em>.</p>
+<pre><code class="lang-python">moeda                   = <span class="hljs-string">&apos;EUR&apos;</span>
+preço                   = <span class="hljs-number">20</span>
+desconto_em_percentagem = <span class="hljs-number">0.1</span>
+preço_a_pagar           = <span class="hljs-number">18</span>
+
+<span class="hljs-comment"># sem f-strings</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;moeda =&apos;</span>, moeda)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;preço =&apos;</span>, preço)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;desconto_em_percentagem =&apos;</span>, desconto_em_percentagem)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;preço_a_pagar =&apos;</span>, preço_a_pagar)
+
+<span class="hljs-comment"># com f-strings (esta versão dá muito menos trabalho a escrever)</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">f&apos;<span class="hljs-subst">{moeda = }</span>&apos;</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">f&apos;<span class="hljs-subst">{preço = }</span>&apos;</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">f&apos;<span class="hljs-subst">{desconto_em_percentagem = }</span>&apos;</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">f&apos;<span class="hljs-subst">{preço_a_pagar = }</span>&apos;</span>)
+</code></pre>
+
+<h3 id="output"><em>Output</em></h3>
+<pre><code>moeda = EUR
+preço = 20
+desconto_em_percentagem = 0.1
+preço_a_pagar = 18
+moeda = &apos;EUR&apos;
+preço = 20
+desconto_em_percentagem = 0.1
+preço_a_pagar = 18
+</code></pre>
+
+
+
+
+
+<h2 id="formatação---número-de-casas-decimais-só-para-números">Formatação - número de casas decimais (só para números)</h2>
+<p>Pode formatar-se cada variável incluída dentro das chavetas, colocando
+<code>:</code> a seguir ao nome da variável, e acrescentado a formatação
+pretendida a seguir aos <code>:</code>. Para formatar-se o número de casas
+decimais de um número, acrescenta-se a seguir ao <code>:</code>, um <code>.</code>, o número
+de casas decimais pretendido, e um <code>f</code> (o <code>f</code>, de <code>fixed-point
+notation</code>, indica que se pretende usar um número fixo de casas
+decimais).</p>
+<h3 id="programa-no-ficheiro-fstringscasasdecimaispy">Programa (no ficheiro <code>fstrings_casas_decimais.py</code>)</h3>
+<p>Escreva e execute este programa. Confirme o seu <em>output</em>.</p>
+<pre><code class="lang-python">moeda                   = <span class="hljs-string">&apos;EUR&apos;</span>
+preço                   = <span class="hljs-number">20</span>
+desconto_em_percentagem = <span class="hljs-number">10</span>
+preço_a_pagar           = <span class="hljs-number">18</span>
+s1 = <span class="hljs-string">f&apos;&apos;&apos;
+moeda:         <span class="hljs-subst">{moeda}</span>
+preço:         <span class="hljs-subst">{preço:<span class="hljs-number">.1</span>f}</span>
+desconto:      <span class="hljs-subst">{desconto_em_percentagem:<span class="hljs-number">.5</span>f}</span>%
+preço a pagar: <span class="hljs-subst">{preço_a_pagar:<span class="hljs-number">.2</span>f}</span>
+&apos;&apos;&apos;</span>
+<span class="hljs-built_in">print</span>(s1)
+</code></pre>
+
+<h3 id="output"><em>Output</em></h3>
+<pre><code>
+moeda:         EUR
+preço:         20.0
+desconto:      10.00000%
+preço a pagar: 18.00
+
+</code></pre>
+
+
+
+
+
+<h2 id="formatação---tamanho-ocupado">Formatação - tamanho ocupado</h2>
+<p>Pode indicar-se qual o número de carateres que o valor formatada
+deverá ocupar. Para tal acrescenta-se esse número de carateres depois
+do <code>:</code> (e antes da formatação das casas decimais caso exista).</p>
+<h3 id="programa-no-ficheiro-fstringstamanhoocupadopy">Programa (no ficheiro <code>fstrings_tamanho_ocupado.py</code>)</h3>
+<p>Escreva e execute este programa. Confirme o seu <em>output</em>.</p>
+<pre><code class="lang-python">moeda                   = <span class="hljs-string">&apos;EUR&apos;</span>
+preço                   = <span class="hljs-number">20</span>
+desconto_em_percentagem = <span class="hljs-number">10</span>
+preço_a_pagar           = <span class="hljs-number">18</span>
+s1 = <span class="hljs-string">f&apos;&apos;&apos;
+moeda:         <span class="hljs-subst">{moeda:<span class="hljs-number">10</span>}</span>
+preço:         <span class="hljs-subst">{preço:<span class="hljs-number">10.1</span>f}</span>
+desconto:      <span class="hljs-subst">{desconto_em_percentagem:<span class="hljs-number">10.5</span>f}</span>%
+preço a pagar: <span class="hljs-subst">{preço_a_pagar:<span class="hljs-number">10.2</span>f}</span>
+&apos;&apos;&apos;</span>
+<span class="hljs-built_in">print</span>(s1)
+</code></pre>
+
+<h3 id="output"><em>Output</em></h3>
+<pre><code>
+moeda:         EUR       
+preço:               20.0
+desconto:        10.00000%
+preço a pagar:      18.00
+
+</code></pre>
+
+
+
+
+
+<h2 id="formatação---zeros-à-esquerda-só-para-números">Formatação - zeros à esquerda (só para números)</h2>
+<p>Para acrescentarem-se zeros à esquerda precede-se o número de
+carateres a ocupar com um zero.</p>
+<h3 id="programa-no-ficheiro-fstringszerosesquerdapy">Programa (no ficheiro <code>fstrings_zeros_esquerda.py</code>)</h3>
+<p>Escreva e execute este programa. Confirme o seu <em>output</em>.</p>
+<pre><code class="lang-python">moeda                   = <span class="hljs-string">&apos;EUR&apos;</span>
+preço                   = <span class="hljs-number">20</span>
+desconto_em_percentagem = <span class="hljs-number">10</span>
+preço_a_pagar           = <span class="hljs-number">18</span>
+s1 = <span class="hljs-string">f&apos;&apos;&apos;
+moeda:         <span class="hljs-subst">{moeda:<span class="hljs-number">10</span>}</span>
+preço:         <span class="hljs-subst">{preço:<span class="hljs-number">010.1</span>f}</span>
+desconto:      <span class="hljs-subst">{desconto_em_percentagem:<span class="hljs-number">010.5</span>f}</span>%
+preço a pagar: <span class="hljs-subst">{preço_a_pagar:<span class="hljs-number">010.2</span>f}</span>
+&apos;&apos;&apos;</span>
+<span class="hljs-built_in">print</span>(s1)
+</code></pre>
+
+<h3 id="output"><em>Output</em></h3>
+<pre><code>
+moeda:         EUR       
+preço:         00000020.0
+desconto:      0010.00000%
+preço a pagar: 0000018.00
+
+</code></pre>
+
+
+
+
+
+<h2 id="formatação---alinhamento">Formatação - alinhamento</h2>
+<p>Para alinhar-se o valor formatado no espaço disponível, precede-se
+toda a formatação com <code>^</code> para centrar, com <code>&lt;</code> para linha à esquerda,
+e com <code>&gt;</code> para alinha à diretita.</p>
+<h3 id="programa-no-ficheiro-fstringsalinhamentopy">Programa (no ficheiro <code>fstrings_alinhamento.py</code>)</h3>
+<p>Escreva e execute este programa. Confirme o seu <em>output</em>.</p>
+<pre><code class="lang-python">moeda                   = <span class="hljs-string">&apos;EUR&apos;</span>
+preço                   = <span class="hljs-number">20</span>
+desconto_em_percentagem = <span class="hljs-number">10</span>
+preço_a_pagar           = <span class="hljs-number">18</span>
+s1 = <span class="hljs-string">f&apos;&apos;&apos;
+moeda:         <span class="hljs-subst">{moeda:^<span class="hljs-number">10</span>}</span>
+preço:         <span class="hljs-subst">{preço:&gt;<span class="hljs-number">10.1</span>f}</span>
+desconto:      <span class="hljs-subst">{desconto_em_percentagem:&lt;<span class="hljs-number">10.5</span>f}</span>%
+preço a pagar: <span class="hljs-subst">{preço_a_pagar:^<span class="hljs-number">10.2</span>f}</span>
+&apos;&apos;&apos;</span>
+<span class="hljs-built_in">print</span>(s1)
+</code></pre>
+
+<h3 id="output"><em>Output</em></h3>
+<pre><code>
+moeda:            EUR    
+preço:               20.0
+desconto:      10.00000  %
+preço a pagar:   18.00   
+
+</code></pre>
+
+
+
+
+
+<h2 id="formatação---percentagem-junto-ao-número-só-para-números">Formatação - percentagem junto ao número (só para números)</h2>
+<p>No caso de se querer incluir o símbolo de percentagem na formação
+(útil para ele não ficar separado do número no caso do alinhamento à
+esquerda e ao centro) inclui-se o símbolo de percentagem <code>%</code> no final
+da própria formatação (dentro das chavetas). Considera-se valores a
+formatar como percentagem estão en tre zero e um, e por isso são
+multiplicados por cem pela própria formatação.</p>
+<h3 id="programa-no-ficheiro-fstringspercentagempy">Programa (no ficheiro <code>fstrings_percentagem.py</code>)</h3>
+<p>Escreva e execute este programa. Confirme o seu <em>output</em>.</p>
+<pre><code class="lang-python">moeda                   = <span class="hljs-string">&apos;EUR&apos;</span>
+preço                   = <span class="hljs-number">20</span>
+desconto_em_percentagem = <span class="hljs-number">0.1</span>
+preço_a_pagar           = <span class="hljs-number">18</span>
+s1 = <span class="hljs-string">f&apos;&apos;&apos;
+moeda:         <span class="hljs-subst">{moeda:^<span class="hljs-number">10</span>}</span>
+preço:         <span class="hljs-subst">{preço:&gt;<span class="hljs-number">10.1</span>f}</span>
+desconto:      <span class="hljs-subst">{desconto_em_percentagem:&lt;<span class="hljs-number">10.5</span>%}</span>
+preço a pagar: <span class="hljs-subst">{preço_a_pagar:^<span class="hljs-number">10.2</span>f}</span>
+&apos;&apos;&apos;</span>
+<span class="hljs-built_in">print</span>(s1)
+</code></pre>
+
+<h3 id="output"><em>Output</em></h3>
+<pre><code>
+moeda:            EUR    
+preço:               20.0
+desconto:      10.00000% 
+preço a pagar:   18.00   
+
+</code></pre>
+
+
+
+
+
+<h2 id="formatação---incluir-sinal--só-para-números">Formatação - incluir sinal  (só para números)</h2>
+<p>Para inclui-se o sinal dos números inclu-se o sinal <code>+</code> depois do
+alinhamento.</p>
+<h3 id="programa-no-ficheiro-fstringssinalpy">Programa (no ficheiro <code>fstrings_sinal.py</code>)</h3>
+<p>Escreva e execute este programa. Confirme o seu <em>output</em>.</p>
+<pre><code class="lang-python">moeda                   = <span class="hljs-string">&apos;EUR&apos;</span>
+preço                   = <span class="hljs-number">20</span>
+desconto_em_percentagem = <span class="hljs-number">0.1</span>
+preço_a_pagar           = <span class="hljs-number">18</span>
+s1 = <span class="hljs-string">f&apos;&apos;&apos;
+moeda:         <span class="hljs-subst">{moeda:^<span class="hljs-number">10</span>}</span>
+preço:         <span class="hljs-subst">{preço:&gt;+<span class="hljs-number">10.1</span>f}</span>
+desconto:      <span class="hljs-subst">{desconto_em_percentagem:&lt;+<span class="hljs-number">10.5</span>%}</span>
+preço a pagar: <span class="hljs-subst">{preço_a_pagar:^+<span class="hljs-number">10.2</span>f}</span>
+&apos;&apos;&apos;</span>
+<span class="hljs-built_in">print</span>(s1)
+</code></pre>
+
+<h3 id="output"><em>Output</em></h3>
+<pre><code>
+moeda:            EUR    
+preço:              +20.0
+desconto:      +10.00000%
+preço a pagar:   +18.00  
+
+</code></pre>
+
+
+
+
+
+<h2 id="curiosidade---incluir-chavetas">Curiosidade - incluir chavetas</h2>
+<p>Para incluir chavetas numa <em>f-string</em> duplicam-se as chavetas.</p>
+<h3 id="programa-no-ficheiro-fstringschavetaspy">Programa (no ficheiro <code>fstrings_chavetas.py</code>)</h3>
+<p>Escreva e execute este programa. Confirme o seu <em>output</em>.</p>
+<!-- fstrings_chavetas.py can't be display from file. raises an error. don't know why :-(. the work around is to display it's content inline. -->
+<pre><code class="lang-python">moeda                   = <span class="hljs-string">&apos;EUR&apos;</span>
+preço                   = <span class="hljs-number">20</span>
+desconto_em_percentagem = <span class="hljs-number">0.1</span>
+preço_a_pagar           = <span class="hljs-number">18</span>
+s1 = <span class="hljs-string">f&apos;&apos;&apos;
+{{moeda}}:         <span class="hljs-subst">{moeda:^<span class="hljs-number">10</span>}</span>
+{{preço}}:         <span class="hljs-subst">{preço:&gt;+<span class="hljs-number">10.1</span>f}</span>
+{{desconto}}:      <span class="hljs-subst">{desconto_em_percentagem:&lt;+<span class="hljs-number">10.5</span>%}</span>
+{{preço a pagar}}: <span class="hljs-subst">{preço_a_pagar:^+<span class="hljs-number">10.2</span>f}</span>
+&apos;&apos;&apos;</span>
+<span class="hljs-built_in">print</span>(s1)
+</code></pre>
+<h3 id="output"><em>Output</em></h3>
+<pre><code>
+{moeda}:            EUR    
+{preço}:              +20.0
+{desconto}:      +10.00000%
+{preço a pagar}:   +18.00  
+
+</code></pre>
+
+
+
+
+
+<h2 id="documetação">Documetação</h2>
+<p>A documentação oficial desta mini linguagem de formatação está aqui:</p>
+<p><a href="https://docs.python.org/3/library/string.html#formatspec" target="_blank">Format Specification Mini-Language</a></p>
 
                                 
                                 </section>
@@ -1051,7 +1360,7 @@ caracter de <em>escape</em>. O caracter de escape é a barra ao contrário, ou
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"f-strings","level":"1.27","depth":1,"next":{"title":"Aplicação - Preços","level":"1.28","depth":1,"path":"aplicacao_precos/aplicacao_precos.md","ref":"aplicacao_precos/aplicacao_precos.md","articles":[]},"previous":{"title":"Exercício 11 - Etiquetas","level":"1.26","depth":1,"path":"exercicio_11_etiquetas/exercicio_11_etiquetas.md","ref":"exercicio_11_etiquetas/exercicio_11_etiquetas.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"pt","gitbook":"*"},"file":{"path":"strings/fstrings.md","mtime":"2024-11-14T23:45:23.114Z","type":"markdown"},"gitbook":{"version":"5.1.0","time":"2024-11-20T08:14:43.522Z"},"basePath":"..","book":{"language":"pt"}});
+            gitbook.page.hasChanged({"page":{"title":"f-strings","level":"1.27","depth":1,"next":{"title":"Aplicação - Preços","level":"1.28","depth":1,"path":"aplicacao_precos/aplicacao_precos.md","ref":"aplicacao_precos/aplicacao_precos.md","articles":[]},"previous":{"title":"Exercício 11 - Etiquetas","level":"1.26","depth":1,"path":"exercicio_11_etiquetas/exercicio_11_etiquetas.md","ref":"exercicio_11_etiquetas/exercicio_11_etiquetas.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"pt","gitbook":"*"},"file":{"path":"strings/fstrings.md","mtime":"2024-11-21T11:52:13.766Z","type":"markdown"},"gitbook":{"version":"5.1.0","time":"2024-11-21T18:45:21.370Z"},"basePath":"..","book":{"language":"pt"}});
         });
     </script>
 </div>
