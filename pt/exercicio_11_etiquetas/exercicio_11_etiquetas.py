@@ -1,7 +1,13 @@
 
-preço_eur = 20
-desconto  = 10    # este valor é em percentagem
-eur_jpy   = 150.0 # jpy - Japanese Yen
+# códigos
+código_eur        = 'EUR'
+código_jpy        = 'JPY'
+preço_eur         = 20
+preço_jpy         = 3000
+desconto          = 10    # este valor é em percentagem
+preço_a_pagar_eur = 18
+preço_a_pagar_jpy = 2700
+
 
 def converte(preço, fator_de_conversão):
 

@@ -989,10 +989,13 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="exercício-11---etiquetas">Exercício 11 - Etiquetas</h1>
-<p>O preço de um produto é 20 euros e está com um desconto de 10%. O
-fator de conversão euro/yen é 150.0.</p>
-<p>Escreva uma função que recebe como argumentos o preço em euros, o
-desconto em percentagem, e o fator de conversão euro/yen. E retorna a
+<p>O preço de um produto é 20 euros, está com um desconto de 10%, e
+portanto o valor a pagar é 18 euros. O fator de conversão euro/yen é
+150.0. Por isso o preço do produto em yenes é 3000 e o valor a pagar
+em yenes é 2700. O código do euro é <code>EUR</code> e do yene é <code>JPY</code>.</p>
+<p>Escreva uma função que recebe como argumentos os códigos de duas
+moedas, os preços de um produto nessas duas moedas, um desconto e os
+valores a pagar pelo produto nessas duas moedas. A função retorna a
 etiqueta que se segue. A etiqueta é uma <em>string</em>.</p>
 <pre><code>*************************
 *   EUR    *    JPY     *
@@ -1025,9 +1028,15 @@ inseridos.</p>
 <h3 id="programa-no-ficheiro-exercicio11etiquetaspy">Programa (no ficheiro <code>exercicio_11_etiquetas.py</code>)</h3>
 <p>Escreva e execute este programa. Confirme o seu <em>output</em>.</p>
 <pre><code class="lang-python">
-preço_eur = <span class="hljs-number">20</span>
-desconto  = <span class="hljs-number">10</span>    <span class="hljs-comment"># este valor é em percentagem</span>
-eur_jpy   = <span class="hljs-number">150.0</span> <span class="hljs-comment"># jpy - Japanese Yen</span>
+<span class="hljs-comment"># códigos</span>
+código_eur        = <span class="hljs-string">&apos;EUR&apos;</span>
+código_jpy        = <span class="hljs-string">&apos;JPY&apos;</span>
+preço_eur         = <span class="hljs-number">20</span>
+preço_jpy         = <span class="hljs-number">3000</span>
+desconto          = <span class="hljs-number">10</span>    <span class="hljs-comment"># este valor é em percentagem</span>
+preço_a_pagar_eur = <span class="hljs-number">18</span>
+preço_a_pagar_jpy = <span class="hljs-number">2700</span>
+
 
 <span class="hljs-keyword">def</span> <span class="hljs-title function_">converte</span>(<span class="hljs-params">preço, fator_de_conversão</span>):
 
@@ -1119,7 +1128,7 @@ etiqueta_1 = etiqueta(preço_eur, desconto, eur_jpy)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Exercício 11 - Etiquetas","level":"1.26","depth":1,"next":{"title":"f-strings","level":"1.27","depth":1,"path":"strings/fstrings.md","ref":"strings/fstrings.md","articles":[]},"previous":{"title":"Listas com listas","level":"1.25","depth":1,"path":"listas/listas_com_listas.md","ref":"listas/listas_com_listas.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"pt","gitbook":"*"},"file":{"path":"exercicio_11_etiquetas/exercicio_11_etiquetas.md","mtime":"2024-11-14T22:51:11.178Z","type":"markdown"},"gitbook":{"version":"5.1.0","time":"2024-11-21T18:45:21.370Z"},"basePath":"..","book":{"language":"pt"}});
+            gitbook.page.hasChanged({"page":{"title":"Exercício 11 - Etiquetas","level":"1.26","depth":1,"next":{"title":"f-strings","level":"1.27","depth":1,"path":"strings/fstrings.md","ref":"strings/fstrings.md","articles":[]},"previous":{"title":"Listas com listas","level":"1.25","depth":1,"path":"listas/listas_com_listas.md","ref":"listas/listas_com_listas.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"pt","gitbook":"*"},"file":{"path":"exercicio_11_etiquetas/exercicio_11_etiquetas.md","mtime":"2024-11-23T18:59:40.633Z","type":"markdown"},"gitbook":{"version":"5.1.0","time":"2024-11-23T18:11:11.196Z"},"basePath":"..","book":{"language":"pt"}});
         });
     </script>
 </div>
