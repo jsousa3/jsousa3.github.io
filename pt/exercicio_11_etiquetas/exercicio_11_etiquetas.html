@@ -1028,49 +1028,40 @@ inseridos.</p>
 <h3 id="programa-no-ficheiro-exercicio11etiquetaspy">Programa (no ficheiro <code>exercicio_11_etiquetas.py</code>)</h3>
 <p>Escreva e execute este programa. Confirme o seu <em>output</em>.</p>
 <pre><code class="lang-python">
-<span class="hljs-comment"># códigos</span>
 código_eur        = <span class="hljs-string">&apos;EUR&apos;</span>
 código_jpy        = <span class="hljs-string">&apos;JPY&apos;</span>
 preço_eur         = <span class="hljs-number">20</span>
 preço_jpy         = <span class="hljs-number">3000</span>
 desconto          = <span class="hljs-number">10</span>    <span class="hljs-comment"># este valor é em percentagem</span>
-preço_a_pagar_eur = <span class="hljs-number">18</span>
-preço_a_pagar_jpy = <span class="hljs-number">2700</span>
+valor_a_pagar_eur = <span class="hljs-number">18</span>
+valor_a_pagar_jpy = <span class="hljs-number">2700</span>
 
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">retorna_etiqueta</span>(<span class="hljs-params">código_moeda_1,
+                     código_moeda_2,
+                     preço_moeda_1,
+                     preço_moeda_2,
+                     desconto,
+                     valor_a_pagar_modeda_1,
+                     valor_a_pagar_modeda_2</span>):
 
-<span class="hljs-keyword">def</span> <span class="hljs-title function_">converte</span>(<span class="hljs-params">preço, fator_de_conversão</span>):
-
-    <span class="hljs-keyword">return</span> preço * fator_de_conversão
-
-<span class="hljs-keyword">def</span> <span class="hljs-title function_">preço_a_pagar</span>(<span class="hljs-params">preço, desconto</span>):
-
-    <span class="hljs-keyword">return</span> preço * (<span class="hljs-number">100</span> - desconto)/<span class="hljs-number">100</span>
-
-<span class="hljs-keyword">def</span> <span class="hljs-title function_">etiqueta</span>(<span class="hljs-params">preço_eur, desconto, eur_jpy</span>):
-
-    preço_jpy = converte(preço_eur, eur_jpy)
-    preço_a_pagar_eur = preço_a_pagar(preço_eur, desconto)
-    preço_a_pagar_jpy = preço_a_pagar(preço_jpy, desconto)
-
-    <span class="hljs-comment"># códigos</span>
-    eur = <span class="hljs-string">&apos;EUR&apos;</span>
-    jpy = <span class="hljs-string">&apos;JPY&apos;</span>
-    separador = <span class="hljs-string">&apos;*************************&apos;</span>
-
-    resultado = <span class="hljs-string">f&apos;&apos;&apos;<span class="hljs-subst">{separador}</span>
-* <span class="hljs-subst">{eur:^<span class="hljs-number">8</span>}</span> * <span class="hljs-subst">{jpy:^<span class="hljs-number">10</span>}</span> *
-<span class="hljs-subst">{separador}</span>
-* <span class="hljs-subst">{preço_eur:^<span class="hljs-number">8.2</span>f}</span> * <span class="hljs-subst">{preço_jpy:^<span class="hljs-number">10.2</span>f}</span> *
-<span class="hljs-subst">{separador}</span>
+    resultado = <span class="hljs-string">f&apos;&apos;&apos;*************************
+* <span class="hljs-subst">{código_moeda_1:^<span class="hljs-number">8</span>}</span> * <span class="hljs-subst">{código_moeda_2:^<span class="hljs-number">10</span>}</span> *
+*************************
+* <span class="hljs-subst">{preço_moeda_1:^<span class="hljs-number">8.2</span>f}</span> * <span class="hljs-subst">{preço_moeda_2:^<span class="hljs-number">10.2</span>f}</span> *
+*************************
 * <span class="hljs-subst">{desconto/<span class="hljs-number">100</span>:^<span class="hljs-number">21.0</span>%}</span> *
-<span class="hljs-subst">{separador}</span>
-* <span class="hljs-subst">{preço_a_pagar_eur:^<span class="hljs-number">8.2</span>f}</span> * <span class="hljs-subst">{preço_a_pagar_jpy:^<span class="hljs-number">10.2</span>f}</span> *
-<span class="hljs-subst">{separador}</span>&apos;&apos;&apos;</span>
+*************************
+* <span class="hljs-subst">{valor_a_pagar_modeda_1:^<span class="hljs-number">8.2</span>f}</span> * <span class="hljs-subst">{valor_a_pagar_modeda_2:^<span class="hljs-number">10.2</span>f}</span> *
+*************************&apos;&apos;&apos;</span>
 
     <span class="hljs-keyword">return</span> resultado
 
-etiqueta_1 = etiqueta(preço_eur, desconto, eur_jpy)
-<span class="hljs-built_in">print</span>(etiqueta_1)
+etiqueta = retorna_etiqueta(código_eur, código_jpy,
+                            preço_eur, preço_jpy,
+                            desconto,
+                            valor_a_pagar_eur, valor_a_pagar_jpy)
+<span class="hljs-built_in">print</span>(etiqueta)
+
 </code></pre>
 
 <h3 id="output"><em>Output</em></h3>
@@ -1128,7 +1119,7 @@ etiqueta_1 = etiqueta(preço_eur, desconto, eur_jpy)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Exercício 11 - Etiquetas","level":"1.26","depth":1,"next":{"title":"f-strings","level":"1.27","depth":1,"path":"strings/fstrings.md","ref":"strings/fstrings.md","articles":[]},"previous":{"title":"Listas com listas","level":"1.25","depth":1,"path":"listas/listas_com_listas.md","ref":"listas/listas_com_listas.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"pt","gitbook":"*"},"file":{"path":"exercicio_11_etiquetas/exercicio_11_etiquetas.md","mtime":"2024-11-23T18:59:40.633Z","type":"markdown"},"gitbook":{"version":"5.1.0","time":"2024-11-23T18:11:11.196Z"},"basePath":"..","book":{"language":"pt"}});
+            gitbook.page.hasChanged({"page":{"title":"Exercício 11 - Etiquetas","level":"1.26","depth":1,"next":{"title":"f-strings","level":"1.27","depth":1,"path":"strings/fstrings.md","ref":"strings/fstrings.md","articles":[]},"previous":{"title":"Listas com listas","level":"1.25","depth":1,"path":"listas/listas_com_listas.md","ref":"listas/listas_com_listas.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"pt","gitbook":"*"},"file":{"path":"exercicio_11_etiquetas/exercicio_11_etiquetas.md","mtime":"2024-11-23T19:24:40.747Z","type":"markdown"},"gitbook":{"version":"5.1.0","time":"2024-11-23T18:11:11.196Z"},"basePath":"..","book":{"language":"pt"}});
         });
     </script>
 </div>

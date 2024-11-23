@@ -1,44 +1,35 @@
 
-# códigos
 código_eur        = 'EUR'
 código_jpy        = 'JPY'
 preço_eur         = 20
 preço_jpy         = 3000
 desconto          = 10    # este valor é em percentagem
-preço_a_pagar_eur = 18
-preço_a_pagar_jpy = 2700
+valor_a_pagar_eur = 18
+valor_a_pagar_jpy = 2700
 
-
-def converte(preço, fator_de_conversão):
-
-    return preço * fator_de_conversão
-
-def preço_a_pagar(preço, desconto):
-
-    return preço * (100 - desconto)/100
-
-def etiqueta(preço_eur, desconto, eur_jpy):
+def retorna_etiqueta(código_moeda_1,
+                     código_moeda_2,
+                     preço_moeda_1,
+                     preço_moeda_2,
+                     desconto,
+                     valor_a_pagar_modeda_1,
+                     valor_a_pagar_modeda_2):
     
-    preço_jpy = converte(preço_eur, eur_jpy)
-    preço_a_pagar_eur = preço_a_pagar(preço_eur, desconto)
-    preço_a_pagar_jpy = preço_a_pagar(preço_jpy, desconto)
-
-    # códigos
-    eur = 'EUR'
-    jpy = 'JPY'
-    separador = '*************************'
-    
-    resultado = f'''{separador}
-* {eur:^8} * {jpy:^10} *
-{separador}
-* {preço_eur:^8.2f} * {preço_jpy:^10.2f} *
-{separador}
+    resultado = f'''*************************
+* {código_moeda_1:^8} * {código_moeda_2:^10} *
+*************************
+* {preço_moeda_1:^8.2f} * {preço_moeda_2:^10.2f} *
+*************************
 * {desconto/100:^21.0%} *
-{separador}
-* {preço_a_pagar_eur:^8.2f} * {preço_a_pagar_jpy:^10.2f} *
-{separador}'''
+*************************
+* {valor_a_pagar_modeda_1:^8.2f} * {valor_a_pagar_modeda_2:^10.2f} *
+*************************'''
     
     return resultado
 
-etiqueta_1 = etiqueta(preço_eur, desconto, eur_jpy)
-print(etiqueta_1)
+etiqueta = retorna_etiqueta(código_eur, código_jpy,
+                            preço_eur, preço_jpy,
+                            desconto,
+                            valor_a_pagar_eur, valor_a_pagar_jpy)
+print(etiqueta)
+
