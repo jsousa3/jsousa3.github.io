@@ -3,7 +3,7 @@
 <html lang="pt" >
     <head>
         <meta charset="UTF-8">
-        <title>Operadores · HonKit</title>
+        <title>Exercício 13 - Pares código/taxa · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="HonKit 5.1.0">
@@ -56,10 +56,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../operadores_aritmeticos/operadores_aritmeticos.html" />
+    <link rel="next" href="../dicionarios/dicionarios.html" />
     
     
-    <link rel="prev" href="../exercicio_1_precos/exercicio_1_precos.html" />
+    <link rel="prev" href="../exercicio_12_ficheiro/exercicio_12_ficheiro.html" />
     
 
     </head>
@@ -179,9 +179,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.8" data-path="operadores.html">
+        <li class="chapter " data-level="1.8" data-path="../operadores/operadores.html">
             
-                <a href="operadores.html">
+                <a href="../operadores/operadores.html">
             
                     
                     Operadores
@@ -735,9 +735,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.29" data-path="../exercicio_13_pares_codigo_taxa/exercicio_13_pares_codigo_taxa.html">
+        <li class="chapter active" data-level="1.29" data-path="exercicio_13_pares_codigo_taxa.html">
             
-                <a href="../exercicio_13_pares_codigo_taxa/exercicio_13_pares_codigo_taxa.html">
+                <a href="exercicio_13_pares_codigo_taxa.html">
             
                     
                     Exercício 13 - Pares código/taxa
@@ -1012,7 +1012,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Operadores</a>
+        <a href=".." >Exercício 13 - Pares código/taxa</a>
     </h1>
 </div>
 
@@ -1027,10 +1027,68 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="operadores">Operadores</h1>
-<p>Os operadores são usados para efetuar operações entre valores.</p>
-<p>Para além de operadores aritméticos, existem em Python, operadores de
-comparação e operadores lógicos, entre outros.</p>
+                                <h1 id="exercício-13---pares-de-código-de-moedataxa-de-câmbio-para-eur">Exercício 13 - Pares de código de moeda/taxa de câmbio (para EUR)</h1>
+<p>Considere a tabela que se segue. A primeira linha tem códigos de
+moedas. A segunda linha tem taxas de câmbio. A taxa de câmbio de uma
+moeda numa dada coluna da primeira linha, está na segunda linha na
+mesma coluna.</p>
+<pre><code>&apos;USD&apos;  &apos;JPY&apos;  &apos;GBP&apos;   &apos;CHF&apos;  &apos;BRL&apos;
+1.0527 159.74 0.82555 0.9267 6.3811
+</code></pre><p>Escreva um programa que, dado um código de moeda,  permita obter a taxa de câmbio respetiva </p>
+<h2 id="solução---usando-listas">Solução - Usando listas</h2>
+<h3 id="programa-no-ficheiro-exercicio13parescodigotaxapy">Programa (no ficheiro <code>exercicio_13_pares_codigo_taxa.py</code>)</h3>
+<p>Escreva e execute este programa. Confirme o seu <em>output</em>.</p>
+<pre><code class="lang-python">
+lista_códigos      = [<span class="hljs-string">&apos;USD&apos;</span>, <span class="hljs-string">&apos;JPY&apos;</span>, <span class="hljs-string">&apos;GBP&apos;</span>, <span class="hljs-string">&apos;CHF&apos;</span>, <span class="hljs-string">&apos;BRL&apos;</span>]
+lista_taxas_câmbio = [<span class="hljs-number">1.0527</span>, <span class="hljs-number">159.74</span>, <span class="hljs-number">0.82555</span>, <span class="hljs-number">0.9267</span>, <span class="hljs-number">6.3811</span>]
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">retorna_índice</span>(<span class="hljs-params">código_moeda, lista_códigos</span>):
+
+    resultado = <span class="hljs-literal">None</span>
+
+    <span class="hljs-keyword">for</span> índice <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(lista_códigos)):
+        código_na_lista = lista_códigos[índice]
+        <span class="hljs-keyword">if</span> código_na_lista == código_moeda:
+            resultado = índice
+
+    <span class="hljs-keyword">return</span> resultado
+
+<span class="hljs-comment"># na próxima linha python pode substituir-se GBP por qualquer um dos</span>
+<span class="hljs-comment"># códigos na lista lista_códigos</span>
+índice_taxa     = retorna_índice(<span class="hljs-string">&apos;GBP&apos;</span>, lista_códigos)
+taxa_pretendida = lista_taxas_câmbio[índice_taxa]
+<span class="hljs-built_in">print</span>(taxa_pretendida)
+</code></pre>
+
+<h3 id="output"><em>Output</em></h3>
+<pre><code>0.82555
+</code></pre>
+
+<h2 id="solução---usando-dicionários">Solução - Usando dicionários</h2>
+<p>As duas listas usadas na solução anterior representam implicitamente,
+através de um índice, pares código/taxa.</p>
+<p>Mas existe um valor Python que permite representar explicitamente
+pares. Esse valor é o dicionário.</p>
+<h3 id="programa-no-ficheiro-exercicio13parescodigotaxav2py">Programa (no ficheiro <code>exercicio_13_pares_codigo_taxa_v2.py</code>)</h3>
+<p>Escreva e execute este programa. Confirme o seu <em>output</em>.</p>
+<pre><code class="lang-python"><span class="hljs-comment"># dicionário de taxas de câmbios:</span>
+<span class="hljs-comment"># - chaves: códigos de moeda</span>
+<span class="hljs-comment"># - valores: taxas de câmbio</span>
+taxas_câmbio = {<span class="hljs-string">&apos;USD&apos;</span>:<span class="hljs-number">1.0527</span>, <span class="hljs-string">&apos;JPY&apos;</span>:<span class="hljs-number">159.74</span>, <span class="hljs-string">&apos;GBP&apos;</span>:<span class="hljs-number">0.82555</span>, <span class="hljs-string">&apos;CHF&apos;</span>:<span class="hljs-number">0.9267</span>, <span class="hljs-string">&apos;BRL&apos;</span>:<span class="hljs-number">6.3811</span>}
+
+<span class="hljs-comment"># na próxima linha python pode substituir-se GBP por qualquer um dos</span>
+<span class="hljs-comment"># códigos no dicionário taxas_câmbio</span>
+taxa_pretendida = taxas_câmbio[<span class="hljs-string">&apos;GBP&apos;</span>]
+<span class="hljs-built_in">print</span>(taxa_pretendida)
+</code></pre>
+
+<h3 id="output"><em>Output</em></h3>
+<pre><code>0.82555
+</code></pre>
+
+<h2 id="observação-1">Observação 1</h2>
+<p>   A solução usando listas tem 12 linhas (Python). A solução usando
+   dicionários tem 3 linhas (Python). Qual das soluções prefere?</p>
 
                                 
                                 </section>
@@ -1058,12 +1116,12 @@ comparação e operadores lógicos, entre outros.</p>
 
             
                 
-                <a href="../exercicio_1_precos/exercicio_1_precos.html" class="navigation navigation-prev " aria-label="Previous page: Exercício 1 - Preços">
+                <a href="../exercicio_12_ficheiro/exercicio_12_ficheiro.html" class="navigation navigation-prev " aria-label="Previous page: Exercício 12 - Ficheiro de códigos">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../operadores_aritmeticos/operadores_aritmeticos.html" class="navigation navigation-next " aria-label="Next page: Operadores Aritméticos">
+                <a href="../dicionarios/dicionarios.html" class="navigation navigation-next " aria-label="Next page: Dicionários">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1074,7 +1132,7 @@ comparação e operadores lógicos, entre outros.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Operadores","level":"1.8","depth":1,"next":{"title":"Operadores Aritméticos","level":"1.8.1","depth":2,"path":"operadores_aritmeticos/operadores_aritmeticos.md","ref":"operadores_aritmeticos/operadores_aritmeticos.md","articles":[]},"previous":{"title":"Exercício 1 - Preços","level":"1.7","depth":1,"path":"exercicio_1_precos/exercicio_1_precos.md","ref":"exercicio_1_precos/exercicio_1_precos.md","articles":[]},"articles":[{"title":"Operadores Aritméticos","level":"1.8.1","depth":2,"path":"operadores_aritmeticos/operadores_aritmeticos.md","ref":"operadores_aritmeticos/operadores_aritmeticos.md","articles":[]},{"title":"Operadores de Comparação","level":"1.8.2","depth":2,"path":"operadores_de_comparacao/operadores_de_comparacao.md","ref":"operadores_de_comparacao/operadores_de_comparacao.md","articles":[]},{"title":"Operadores Lógicos","level":"1.8.3","depth":2,"path":"operadores_logicos/operadores_logicos.md","ref":"operadores_logicos/operadores_logicos.md","articles":[]}],"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"pt","gitbook":"*"},"file":{"path":"operadores/operadores.md","mtime":"2024-09-13T17:04:43.573Z","type":"markdown"},"gitbook":{"version":"5.1.0","time":"2024-12-13T10:27:29.338Z"},"basePath":"..","book":{"language":"pt"}});
+            gitbook.page.hasChanged({"page":{"title":"Exercício 13 - Pares código/taxa","level":"1.29","depth":1,"next":{"title":"Dicionários","level":"1.30","depth":1,"path":"dicionarios/dicionarios.md","ref":"dicionarios/dicionarios.md","articles":[]},"previous":{"title":"Exercício 12 - Ficheiro de códigos","level":"1.28","depth":1,"path":"exercicio_12_ficheiro/exercicio_12_ficheiro.md","ref":"exercicio_12_ficheiro/exercicio_12_ficheiro.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"pt","gitbook":"*"},"file":{"path":"exercicio_13_pares_codigo_taxa/exercicio_13_pares_codigo_taxa.md","mtime":"2024-12-13T09:39:59.552Z","type":"markdown"},"gitbook":{"version":"5.1.0","time":"2024-12-13T10:27:29.338Z"},"basePath":"..","book":{"language":"pt"}});
         });
     </script>
 </div>

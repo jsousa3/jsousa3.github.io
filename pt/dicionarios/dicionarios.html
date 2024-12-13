@@ -3,7 +3,7 @@
 <html lang="pt" >
     <head>
         <meta charset="UTF-8">
-        <title>Operadores · HonKit</title>
+        <title>Dicionários · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="HonKit 5.1.0">
@@ -56,10 +56,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../operadores_aritmeticos/operadores_aritmeticos.html" />
+    <link rel="next" href="../aplicacao_precos/aplicacao_precos.html" />
     
     
-    <link rel="prev" href="../exercicio_1_precos/exercicio_1_precos.html" />
+    <link rel="prev" href="../exercicio_13_pares_codigo_taxa/exercicio_13_pares_codigo_taxa.html" />
     
 
     </head>
@@ -179,9 +179,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.8" data-path="operadores.html">
+        <li class="chapter " data-level="1.8" data-path="../operadores/operadores.html">
             
-                <a href="operadores.html">
+                <a href="../operadores/operadores.html">
             
                     
                     Operadores
@@ -748,9 +748,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.30" data-path="../dicionarios/dicionarios.html">
+        <li class="chapter active" data-level="1.30" data-path="dicionarios.html">
             
-                <a href="../dicionarios/dicionarios.html">
+                <a href="dicionarios.html">
             
                     
                     Dicionários
@@ -1012,7 +1012,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Operadores</a>
+        <a href=".." >Dicionários</a>
     </h1>
 </div>
 
@@ -1027,10 +1027,98 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="operadores">Operadores</h1>
-<p>Os operadores são usados para efetuar operações entre valores.</p>
-<p>Para além de operadores aritméticos, existem em Python, operadores de
-comparação e operadores lógicos, entre outros.</p>
+                                <h1 id="dicionários">Dicionários</h1>
+<p>Os dicionários são valores do tipo <code>dict</code>. <code>dict</code> são as primeiras
+letras da palavra inglesa <em>dictionary</em>, que quer dizer
+&quot;dicionário&quot;. Os dicionários servem para armazenar pares
+chave/valor. Fazem a associação entre chaves e os respetivos
+valores. Da mesma forma que um dicionário de uso corrente faz a
+associação entre as palavras e os seus significados.</p>
+<h2 id="chaves">Chaves</h2>
+<p>As chaves podem ser valores, como números inteiros, números decimais e
+<em>strings</em> ou ainda estruturas de dados imutáveis como tuplos. Têm que
+ser únicas.</p>
+<h2 id="valores">Valores</h2>
+<p>Os valores podem ser de qualquer tipo.</p>
+<h2 id="criar-dicionários">Criar dicionários</h2>
+<p>Para criar um dicionário colocam-se os pares chave/valor do
+cicionário, separados por vírgulas, entre chavetas. Os pares
+chave/valor são separados por dois pontos, <code>:</code>.</p>
+<h3 id="exemplo">Exemplo</h3>
+<pre><code class="lang-python">taxas_câmbio = {<span class="hljs-string">&apos;USD&apos;</span>:<span class="hljs-number">1.0527</span>, <span class="hljs-string">&apos;JPY&apos;</span>:<span class="hljs-number">159.74</span>, <span class="hljs-string">&apos;GBP&apos;</span>:<span class="hljs-number">0.82555</span>, <span class="hljs-string">&apos;CHF&apos;</span>:<span class="hljs-number">0.9267</span>, <span class="hljs-string">&apos;BRL&apos;</span>:<span class="hljs-number">6.3811</span>}
+<span class="hljs-built_in">print</span>(taxas_câmbio)
+</code></pre>
+<h2 id="obter-valor-indexar">Obter valor (indexar)</h2>
+<p>Para se obter o valor associado a uma chave usa-se a chave como se
+fosse um índice de uma lista. Entre parentsis retos.</p>
+<h3 id="exemplo">Exemplo</h3>
+<pre><code class="lang-python"><span class="hljs-built_in">print</span>(taxas_câmbio[<span class="hljs-string">&apos;GBP&apos;</span>])
+</code></pre>
+<p>Na verdade não se deveria chamar a este processo &quot;indexar&quot;. Porque as
+chaves não são índices. Usa-se este termo apenas porque é útil fazer a
+analogia com as listas.</p>
+<p>Neste contexto pode entender-se os diciońarios como extensões das
+listas de forma a poder usar índices que não são números inteiror.</p>
+<h2 id="alterar-par-chavevalor">Alterar par chave/valor</h2>
+<p>Os dicionários podem ser alterados.</p>
+<h3 id="exemplo">Exemplo</h3>
+<pre><code class="lang-python">taxas_câmbio[<span class="hljs-string">&apos;GBP&apos;</span>] = <span class="hljs-number">0.9</span>
+<span class="hljs-built_in">print</span>(taxas_câmbio)
+</code></pre>
+<h2 id="adicinar-par-chavevalor">Adicinar par chave/valor</h2>
+<h3 id="exemplo">Exemplo</h3>
+<pre><code class="lang-python">taxas_câmbio[<span class="hljs-string">&apos;xpto&apos;</span>] = <span class="hljs-number">0.0</span>
+<span class="hljs-built_in">print</span>(taxas_câmbio)
+</code></pre>
+<h2 id="remover-par-chavevalor">Remover par chave/valor</h2>
+<h3 id="exemplo">Exemplo</h3>
+<pre><code class="lang-python">taxas_câmbio.pop(<span class="hljs-string">&apos;xpto&apos;</span>)
+<span class="hljs-built_in">print</span>(taxas_câmbio)
+</code></pre>
+<h2 id="percorrer-todos-os-pares-chavevalor">Percorrer todos os pares chave/valor</h2>
+<p>O ciclo <code>for</code>, sobre um dicionário, permite obter todas as chaves dos
+pares que estão no dicionário. Com essas chaves podem obter-se os
+valores correspondentes.</p>
+<h3 id="exemplo">Exemplo</h3>
+<pre><code class="lang-python"><span class="hljs-keyword">for</span> chave <span class="hljs-keyword">in</span> taxas_câmbio:
+    valor = taxas_câmbio[chave]
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;----&apos;</span>)
+    <span class="hljs-built_in">print</span>(chave)
+    <span class="hljs-built_in">print</span>(valor)
+</code></pre>
+<h2 id="erro">Erro</h2>
+<p>Se se tentar aceder ao valor de uma chave que não existe, o
+interpretador dá erro. Porque não sabe que valor retornar. Não existe
+nenhum valor.</p>
+<h3 id="exemplo">Exemplo</h3>
+<pre><code class="lang-python"><span class="hljs-built_in">print</span>(taxas_câmbio[<span class="hljs-string">&apos;EUR&apos;</span>])
+</code></pre>
+<h2 id="verificar-a-existência-de-chave">Verificar a existência de chave</h2>
+<p>A existência de uma dada chave pode ser verificada com o operador de
+pertença <code>in</code>.</p>
+<h3 id="exemplo">Exemplo</h3>
+<pre><code class="lang-python">código = <span class="hljs-string">&apos;EUR&apos;</span> <span class="hljs-comment"># altere este código para &apos;GBP&apos; e volte a executar</span>
+<span class="hljs-built_in">print</span>(código)
+<span class="hljs-keyword">if</span> código <span class="hljs-keyword">in</span> taxas_câmbio:
+   taxa = taxas_câmbio[taxa]
+   <span class="hljs-built_in">print</span>(taxa)
+<span class="hljs-keyword">else</span>:
+   <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;código não existente&apos;</span>)
+</code></pre>
+<h2 id="obter-todas-as-chaves">Obter todas as chaves</h2>
+<h3 id="exemplo">Exemplo</h3>
+<pre><code class="lang-python">chaves = taxas_câmbio.keys()
+<span class="hljs-built_in">print</span>(chaves)
+</code></pre>
+<h2 id="obter-todos-os-valores">Obter todos os valores</h2>
+<h3 id="exemplo">Exemplo</h3>
+<pre><code class="lang-python">valores = taxas_câmbio.values()
+<span class="hljs-built_in">print</span>(valores)
+</code></pre>
+<h2 id="obter-número-de-elementos">Obter número de elementos</h2>
+<h3 id="exemplo">Exemplo</h3>
+<pre><code class="lang-python"><span class="hljs-built_in">print</span>(<span class="hljs-built_in">len</span>(taxas_câmbio))
+</code></pre>
 
                                 
                                 </section>
@@ -1058,12 +1146,12 @@ comparação e operadores lógicos, entre outros.</p>
 
             
                 
-                <a href="../exercicio_1_precos/exercicio_1_precos.html" class="navigation navigation-prev " aria-label="Previous page: Exercício 1 - Preços">
+                <a href="../exercicio_13_pares_codigo_taxa/exercicio_13_pares_codigo_taxa.html" class="navigation navigation-prev " aria-label="Previous page: Exercício 13 - Pares código/taxa">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../operadores_aritmeticos/operadores_aritmeticos.html" class="navigation navigation-next " aria-label="Next page: Operadores Aritméticos">
+                <a href="../aplicacao_precos/aplicacao_precos.html" class="navigation navigation-next " aria-label="Next page: Aplicação - Preços">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1074,7 +1162,7 @@ comparação e operadores lógicos, entre outros.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Operadores","level":"1.8","depth":1,"next":{"title":"Operadores Aritméticos","level":"1.8.1","depth":2,"path":"operadores_aritmeticos/operadores_aritmeticos.md","ref":"operadores_aritmeticos/operadores_aritmeticos.md","articles":[]},"previous":{"title":"Exercício 1 - Preços","level":"1.7","depth":1,"path":"exercicio_1_precos/exercicio_1_precos.md","ref":"exercicio_1_precos/exercicio_1_precos.md","articles":[]},"articles":[{"title":"Operadores Aritméticos","level":"1.8.1","depth":2,"path":"operadores_aritmeticos/operadores_aritmeticos.md","ref":"operadores_aritmeticos/operadores_aritmeticos.md","articles":[]},{"title":"Operadores de Comparação","level":"1.8.2","depth":2,"path":"operadores_de_comparacao/operadores_de_comparacao.md","ref":"operadores_de_comparacao/operadores_de_comparacao.md","articles":[]},{"title":"Operadores Lógicos","level":"1.8.3","depth":2,"path":"operadores_logicos/operadores_logicos.md","ref":"operadores_logicos/operadores_logicos.md","articles":[]}],"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"pt","gitbook":"*"},"file":{"path":"operadores/operadores.md","mtime":"2024-09-13T17:04:43.573Z","type":"markdown"},"gitbook":{"version":"5.1.0","time":"2024-12-13T10:27:29.338Z"},"basePath":"..","book":{"language":"pt"}});
+            gitbook.page.hasChanged({"page":{"title":"Dicionários","level":"1.30","depth":1,"next":{"title":"Aplicação - Preços","level":"1.31","depth":1,"path":"aplicacao_precos/aplicacao_precos.md","ref":"aplicacao_precos/aplicacao_precos.md","articles":[]},"previous":{"title":"Exercício 13 - Pares código/taxa","level":"1.29","depth":1,"path":"exercicio_13_pares_codigo_taxa/exercicio_13_pares_codigo_taxa.md","ref":"exercicio_13_pares_codigo_taxa/exercicio_13_pares_codigo_taxa.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"pt","gitbook":"*"},"file":{"path":"dicionarios/dicionarios.md","mtime":"2024-12-13T10:26:43.242Z","type":"markdown"},"gitbook":{"version":"5.1.0","time":"2024-12-13T10:27:29.338Z"},"basePath":"..","book":{"language":"pt"}});
         });
     </script>
 </div>
