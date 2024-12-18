@@ -3,7 +3,7 @@
 <html lang="pt" >
     <head>
         <meta charset="UTF-8">
-        <title>POO Criar objetos · HonKit</title>
+        <title>Conjuntos · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="HonKit 5.1.0">
@@ -56,10 +56,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="aceder_a_atributos.html" />
+    <link rel="next" href="../aplicacao_precos/aplicacao_precos.html" />
     
     
-    <link rel="prev" href="criar_classes.html" />
+    <link rel="prev" href="../exercicio_14_descontos_sem_repeticoes/exercicio_14_descontos_sem_repeticoes.html" />
     
 
     </head>
@@ -774,9 +774,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.32" data-path="../conjuntos/conjuntos.html">
+        <li class="chapter active" data-level="1.32" data-path="conjuntos.html">
             
-                <a href="../conjuntos/conjuntos.html">
+                <a href="conjuntos.html">
             
                     
                     Conjuntos
@@ -852,9 +852,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.38" data-path="resumo.html">
+        <li class="chapter " data-level="1.38" data-path="../poo/resumo.html">
             
-                <a href="resumo.html">
+                <a href="../poo/resumo.html">
             
                     
                     POO Programação Orientada por Objetos
@@ -865,9 +865,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.39" data-path="motivacao.html">
+        <li class="chapter " data-level="1.39" data-path="../poo/motivacao.html">
             
-                <a href="motivacao.html">
+                <a href="../poo/motivacao.html">
             
                     
                     POO Motivação
@@ -878,9 +878,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.40" data-path="poo.html">
+        <li class="chapter " data-level="1.40" data-path="../poo/poo.html">
             
-                <a href="poo.html">
+                <a href="../poo/poo.html">
             
                     
                     POO
@@ -891,9 +891,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.41" data-path="criar_classes.html">
+        <li class="chapter " data-level="1.41" data-path="../poo/criar_classes.html">
             
-                <a href="criar_classes.html">
+                <a href="../poo/criar_classes.html">
             
                     
                     POO Criar classes
@@ -904,9 +904,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.42" data-path="criar_objetos.html">
+        <li class="chapter " data-level="1.42" data-path="../poo/criar_objetos.html">
             
-                <a href="criar_objetos.html">
+                <a href="../poo/criar_objetos.html">
             
                     
                     POO Criar objetos
@@ -917,9 +917,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.43" data-path="aceder_a_atributos.html">
+        <li class="chapter " data-level="1.43" data-path="../poo/aceder_a_atributos.html">
             
-                <a href="aceder_a_atributos.html">
+                <a href="../poo/aceder_a_atributos.html">
             
                     
                     POO Aceder a atributos
@@ -930,9 +930,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.44" data-path="vantagens.html">
+        <li class="chapter " data-level="1.44" data-path="../poo/vantagens.html">
             
-                <a href="vantagens.html">
+                <a href="../poo/vantagens.html">
             
                     
                     POO Vantagen
@@ -943,9 +943,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.45" data-path="print_de_objetos.html">
+        <li class="chapter " data-level="1.45" data-path="../poo/print_de_objetos.html">
             
-                <a href="print_de_objetos.html">
+                <a href="../poo/print_de_objetos.html">
             
                     
                     POO print de objetos
@@ -956,9 +956,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.46" data-path="redefinicao_operadores.html">
+        <li class="chapter " data-level="1.46" data-path="../poo/redefinicao_operadores.html">
             
-                <a href="redefinicao_operadores.html">
+                <a href="../poo/redefinicao_operadores.html">
             
                     
                     POO (Re)definição de operadores
@@ -1038,7 +1038,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >POO Criar objetos</a>
+        <a href=".." >Conjuntos</a>
     </h1>
 </div>
 
@@ -1053,98 +1053,113 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="criar-objetos">Criar objetos</h1>
-<p>Para cirar objetos de uma dada classe, usa-se o nome da classe como se
-fosse uma função, isto é, seguido de parentsis curvos. Passam-se,
-dentro dos parentsis, os valores de todos os argumentos do construtor
-à exceção do primeiro argumento, <code>self</code>. Porque quem fornece o argumento
-<code>self</code> é o intrepretador Python. Não é o programador.</p>
-<h3 id="exemplo-no-ficheiro-objetosprodutopy">Exemplo (no ficheiro <code>objetos_produto.py</code>)</h3>
-<p>Escreva e execute este programa. Note mais uma vez que este programa
-não produz <em>output</em> porque não tem nenhum <code>print</code>. Mas os objetos do
-tipo <code>Produto</code> foram criados.</p>
-<pre><code class="lang-python">
-<span class="hljs-keyword">class</span> <span class="hljs-title class_">Produto</span>:
-
-    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, valor_preco, valor_desconto</span>):
-
-        self.atributo_preco    = valor_preco
-        self.atributo_desconto = valor_desconto
-
-    <span class="hljs-comment"># método para calcular o valor a pagar</span>
-    <span class="hljs-keyword">def</span> <span class="hljs-title function_">f</span>(<span class="hljs-params">self</span>):
-
-        preco    = self.atributo_preco
-        desconto = self.atributo_desconto
-
-        valor_desconto = preco * desconto/<span class="hljs-number">100</span>
-        valor_a_pagar  = preco - valor_desconto
-
-        <span class="hljs-keyword">return</span> valor_a_pagar
-
-preco_1    = <span class="hljs-number">10</span>
-desconto_1 = <span class="hljs-number">10</span> <span class="hljs-comment"># por cento</span>
-produto_1  = Produto(preco_1, desconto_1) <span class="hljs-comment"># produto_1 é um novo valor</span>
-                                          <span class="hljs-comment"># do tipo Produto. é um</span>
-                                          <span class="hljs-comment"># objeto</span>
-
-preco_2    = <span class="hljs-number">20</span>
-desconto_2 = <span class="hljs-number">5</span> <span class="hljs-comment"># por cento</span>
-produto_2  = Produto(preco_2, desconto_2) <span class="hljs-comment"># produto_2 é um novo valor</span>
-                                          <span class="hljs-comment"># do tipo Produto. é um</span>
-                                          <span class="hljs-comment"># objeto</span>
-
-<span class="hljs-comment"># ambos os objetos têm os mesmos atributos:</span>
-<span class="hljs-comment"># atributos que armazenam valores:</span>
-<span class="hljs-comment">#  - atributo_preco,</span>
-<span class="hljs-comment">#  - atributo_desconto</span>
-<span class="hljs-comment"># atributo para executar operações (sobre os valores armazenados):</span>
-<span class="hljs-comment">#  - f</span>
-
-<span class="hljs-comment"># mas os valores dos atributos armazenados em cada objeto são diferentes</span>
-<span class="hljs-comment"># no produto_1 o preço é 10 e o desconto também é 10</span>
-<span class="hljs-comment"># no produto_2 o preço é 20 e o desconto é 5</span>
+                                <h1 id="conjuntos">Conjuntos</h1>
+<p>Os conjuntos são valores do tipo <code>set</code>. <em>Set</em> quer dizer conjunto,
+em inglês.</p>
+<p>Os conjuntos em Python têm as mesmas propriedades que os conjuntos em
+matemática, nomeadamente:</p>
+<ul>
+<li><p>os elementos repetidos não contam;</p>
+</li>
+<li><p>a ordem dos elementos não se define, isto é, os elementos dos
+conjuntos não estão ordenados.</p>
+</li>
+</ul>
+<p>Os conjuntos em Python suportam as relações e as operações elementares
+dos conjuntos em matemática, nomeadamente, suportam as relações de
+pertença e de inclusam, e suportam as operações de união, interseção,
+diferença e diferenças exclusiva.</p>
+<h2 id="criar-conjuntos">Criar conjuntos</h2>
+<h3 id="exemplo">Exemplo</h3>
+<pre><code class="lang-python">descontos_loja_1 = {<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>}
+descontos_loja_2 = {<span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">3</span>}
 </code></pre>
-
-<h3 id="exemplo-no-ficheiro-objetospessoapy">Exemplo (no ficheiro <code>objetos_pessoa.py</code>)</h3>
-<p>Escreva e execute este programa. Note mais uma vez que este programa
-não produz <em>output</em> porque não tem nenhum <code>print</code>. Mas os objetos do
-tipo <code>Pessoa</code> foram criados.</p>
-<pre><code class="lang-python">
-<span class="hljs-keyword">class</span> <span class="hljs-title class_">Pessoa</span>:
-
-    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, peso, altura</span>):
-
-        self.peso   = peso
-        self.altura = altura
-
-    <span class="hljs-comment"># método para calcular o IMC</span>
-    <span class="hljs-keyword">def</span> <span class="hljs-title function_">f</span>(<span class="hljs-params">self</span>):
-
-        <span class="hljs-keyword">return</span> self.peso / (self.altura * self.altura)
-
-peso_1   = <span class="hljs-number">80</span>  <span class="hljs-comment"># em Kg</span>
-altura_1 = <span class="hljs-number">1.8</span> <span class="hljs-comment"># em metros</span>
-pessoa_1 = Pessoa(peso_1, altura_1) <span class="hljs-comment"># pessoa_1 é um novo valor do tipo</span>
-                                    <span class="hljs-comment"># Pessoa. é um objeto</span>
-
-peso_2   = <span class="hljs-number">70</span>  <span class="hljs-comment"># em Kg</span>
-altura_2 = <span class="hljs-number">1.7</span> <span class="hljs-comment"># em metros</span>
-pessoa_2 = Pessoa(peso_2, altura_2) <span class="hljs-comment"># pessoa_2 é um novo valor do tipo</span>
-                                    <span class="hljs-comment"># Pessoa. é um objeto</span>
-
-<span class="hljs-comment"># ambos os objetos têm os mesmos atributos:</span>
-<span class="hljs-comment"># atributos que armazenam valores:</span>
-<span class="hljs-comment">#  - peso,</span>
-<span class="hljs-comment">#  - altura</span>
-<span class="hljs-comment"># atributo para executar operações (sobre os valores armazenados):</span>
-<span class="hljs-comment">#  - f</span>
-
-<span class="hljs-comment"># mas os valores dos atributos armazenados em cada objeto são diferentes</span>
-<span class="hljs-comment"># no objeto pessoa_1 o peso é 80 e a altura é 1.8</span>
-<span class="hljs-comment"># no objeto pessoa_2 o peso é 70 e a altura é 1.7</span>
+<h2 id="diferença-para-a-criação-de-dicionários">Diferença para a criação de dicionários</h2>
+<p>Tanto para criar conjuntos como para criar dicionários, colocam-se os
+elementos separados por vírgulas, entre chavetas. A diferença é que os
+elementos dos dicionários são pares chave/valor, em que a chave está
+separada do valor por dois pontso <code>:</code>.</p>
+<h3 id="exemplo">Exemplo</h3>
+<pre><code class="lang-python"><span class="hljs-comment"># um dicionário</span>
+taxas_câmbio = {<span class="hljs-string">&apos;USD&apos;</span>:<span class="hljs-number">1.0527</span>, <span class="hljs-string">&apos;JPY&apos;</span>:<span class="hljs-number">159.74</span>, <span class="hljs-string">&apos;GBP&apos;</span>:<span class="hljs-number">0.82555</span>, <span class="hljs-string">&apos;CHF&apos;</span>:<span class="hljs-number">0.9267</span>, <span class="hljs-string">&apos;BRL&apos;</span>:<span class="hljs-number">6.3811</span>}
+<span class="hljs-comment"># um conjunto</span>
+descontos_loja_1 = {<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>}
 </code></pre>
-
+<h2 id="não-há-elementos-repetidos">Não há elementos repetidos</h2>
+<h3 id="exemplo">Exemplo</h3>
+<pre><code class="lang-python">descontos_loja_1 = {<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>}
+<span class="hljs-built_in">print</span>(descontos_loja_1)
+</code></pre>
+<h2 id="conjunto-vazio">Conjunto vazio</h2>
+<p>Como <code>{}</code> é usado para criar um dicionário vazio, não se poderia usar
+o mesmo para criar um conjunto vazio. Por isso, para criar um conjunto
+vazio usa-se a função <code>set</code> sem qualquer argumento (ou seja cria-se um
+conjunto sem qualquer elemento, isto é cria-se um conjunto vazio).</p>
+<h3 id="exemplo">Exemplo</h3>
+<pre><code class="lang-python">conjunto_vazio = <span class="hljs-built_in">set</span>()
+</code></pre>
+<h2 id="número-de-elementos-dos-conjuntos">Número de elementos dos conjuntos</h2>
+<h3 id="exemplo">Exemplo</h3>
+<pre><code class="lang-python">descontos_loja_1 = {<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>}
+descontos_loja_2 = {<span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">3</span>}
+conjunto_vazio = <span class="hljs-built_in">set</span>()
+<span class="hljs-built_in">print</span>(<span class="hljs-built_in">len</span>(descontos_loja_1))
+<span class="hljs-built_in">print</span>(<span class="hljs-built_in">len</span>(descontos_loja_2))
+<span class="hljs-built_in">print</span>(<span class="hljs-built_in">len</span>(conjunto_vazio))
+</code></pre>
+<p>Note-se que o conjunto <code>descontos_loja_1</code> tem três elementos (e não
+quatro) porque os elementos repetidos não contam.</p>
+<h2 id="relações-de-pertença-e-de-inclusão">Relações de pertença e de inclusão</h2>
+<h3 id="exemplo">Exemplo</h3>
+<pre><code class="lang-python">descontos_loja_1 = {<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>}
+<span class="hljs-comment"># relação de pertenção: retorna True se o elemnto está no conjunto</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-number">1</span> <span class="hljs-keyword">in</span> descontos_loja_1)
+<span class="hljs-built_in">print</span>(<span class="hljs-number">5</span> <span class="hljs-keyword">in</span> descontos_loja_1)
+<span class="hljs-comment"># relação de inclusão: retorna True se um conjunto está inclido noutro</span>
+<span class="hljs-built_in">print</span>({<span class="hljs-number">1</span>, <span class="hljs-number">2</span>} &lt;= descontos_loja_1)
+<span class="hljs-built_in">print</span>({<span class="hljs-number">3</span>, <span class="hljs-number">4</span>} &lt;= descontos_loja_1)
+</code></pre>
+<h2 id="operações-elementares">Operações elementares</h2>
+<h3 id="exemplo">Exemplo</h3>
+<pre><code class="lang-python">descontos_loja_1 = {<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>}
+descontos_loja_2 = {<span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">3</span>}
+<span class="hljs-comment"># união</span>
+<span class="hljs-built_in">print</span>(descontos_loja_1 | descontos_loja_2)
+<span class="hljs-comment"># interseção</span>
+<span class="hljs-built_in">print</span>(descontos_loja_1 &amp; descontos_loja_2)
+<span class="hljs-comment"># diferença</span>
+<span class="hljs-built_in">print</span>(descontos_loja_1 - descontos_loja_2)
+<span class="hljs-comment"># diferença exclusiva</span>
+<span class="hljs-built_in">print</span>(descontos_loja_1 ^ descontos_loja_2)
+</code></pre>
+<h2 id="os-elementos-não-estão-ordenados---indexação---dá-erro">Os elementos não estão ordenados - indexação - dá erro</h2>
+<p>A indexação com um índice inteiro pressupõe uma ordem dos
+elementos. Como os elementos dos conjuntos não estão ordenados, a
+indexação dá erro.</p>
+<h3 id="exemplo">Exemplo</h3>
+<pre><code class="lang-python">descontos_loja_1 = {<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>}
+<span class="hljs-built_in">print</span>(descontos_loja_1[<span class="hljs-number">0</span>])
+</code></pre>
+<h2 id="acrescentar-elemento">Acrescentar elemento</h2>
+<h3 id="exemplo">Exemplo</h3>
+<pre><code class="lang-python">descontos_loja_1 = {<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>}
+descontos_loja_1.add(<span class="hljs-number">7</span>)
+<span class="hljs-built_in">print</span>(descontos_loja_1)
+</code></pre>
+<h2 id="remover-elemento">Remover elemento</h2>
+<h3 id="exemplo">Exemplo</h3>
+<pre><code class="lang-python">descontos_loja_1 = {<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>}
+descontos_loja_1.remove(<span class="hljs-number">1</span>)
+<span class="hljs-built_in">print</span>(descontos_loja_1)
+</code></pre>
+<h2 id="percorrer-todos-os-elementos">Percorrer todos os elementos</h2>
+<p>O ciclo <code>for</code>, sobre um conjunto, permite obter todos os elementos que
+estão no dicionário.</p>
+<h3 id="exemplo">Exemplo</h3>
+<pre><code class="lang-python">descontos_loja_1 = {<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>}
+<span class="hljs-keyword">for</span> desconto <span class="hljs-keyword">in</span> descontos_loja_1:
+    <span class="hljs-built_in">print</span>(desconto)
+</code></pre>
 
                                 
                                 </section>
@@ -1172,12 +1187,12 @@ pessoa_2 = Pessoa(peso_2, altura_2) <span class="hljs-comment"># pessoa_2 é um 
 
             
                 
-                <a href="criar_classes.html" class="navigation navigation-prev " aria-label="Previous page: POO Criar classes">
+                <a href="../exercicio_14_descontos_sem_repeticoes/exercicio_14_descontos_sem_repeticoes.html" class="navigation navigation-prev " aria-label="Previous page: Exercício 14 - Descontos sem repeticoes">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="aceder_a_atributos.html" class="navigation navigation-next " aria-label="Next page: POO Aceder a atributos">
+                <a href="../aplicacao_precos/aplicacao_precos.html" class="navigation navigation-next " aria-label="Next page: Aplicação - Preços">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1188,7 +1203,7 @@ pessoa_2 = Pessoa(peso_2, altura_2) <span class="hljs-comment"># pessoa_2 é um 
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"POO Criar objetos","level":"1.42","depth":1,"next":{"title":"POO Aceder a atributos","level":"1.43","depth":1,"path":"poo/aceder_a_atributos.md","ref":"poo/aceder_a_atributos.md","articles":[]},"previous":{"title":"POO Criar classes","level":"1.41","depth":1,"path":"poo/criar_classes.md","ref":"poo/criar_classes.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"pt","gitbook":"*"},"file":{"path":"poo/criar_objetos.md","mtime":"2024-02-27T13:04:02.037Z","type":"markdown"},"gitbook":{"version":"5.1.0","time":"2024-12-18T02:23:37.820Z"},"basePath":"..","book":{"language":"pt"}});
+            gitbook.page.hasChanged({"page":{"title":"Conjuntos","level":"1.32","depth":1,"next":{"title":"Aplicação - Preços","level":"1.33","depth":1,"path":"aplicacao_precos/aplicacao_precos.md","ref":"aplicacao_precos/aplicacao_precos.md","articles":[]},"previous":{"title":"Exercício 14 - Descontos sem repeticoes","level":"1.31","depth":1,"path":"exercicio_14_descontos_sem_repeticoes/exercicio_14_descontos_sem_repeticoes.md","ref":"exercicio_14_descontos_sem_repeticoes/exercicio_14_descontos_sem_repeticoes.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"pt","gitbook":"*"},"file":{"path":"conjuntos/conjuntos.md","mtime":"2024-12-18T03:00:53.189Z","type":"markdown"},"gitbook":{"version":"5.1.0","time":"2024-12-18T02:23:37.820Z"},"basePath":"..","book":{"language":"pt"}});
         });
     </script>
 </div>
